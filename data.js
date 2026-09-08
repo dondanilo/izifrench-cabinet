@@ -505,6 +505,1910 @@ const VERBS = [
     present: {"je": "explique", "tu": "expliques", "il/elle": "explique", "nous": "expliquons", "vous": "expliquez", "ils/elles": "expliquent"},
     preterite: {"je": "ai expliqué", "tu": "as expliqué", "il/elle": "a expliqué", "nous": "avons expliqué", "vous": "avez expliqué", "ils/elles": "ont expliqué"},
     future: {"je": "expliquerai", "tu": "expliqueras", "il/elle": "expliquera", "nous": "expliquerons", "vous": "expliquerez", "ils/elles": "expliqueront"}
+  },
+  {
+    id: 63, infinitive: "aider", translation: "помогать",
+    transcription: "эдэ́",
+    example: {"greek": "Vous pouvez m'aider, s'il vous plaît ?", "ru": "Можете мне помочь, пожалуйста?"},
+    present: {"je": "aide", "tu": "aides", "il/elle": "aide", "nous": "aidons", "vous": "aidez", "ils/elles": "aident"},
+    preterite: {"je": "ai aidé", "tu": "as aidé", "il/elle": "a aidé", "nous": "avons aidé", "vous": "avez aidé", "ils/elles": "ont aidé"},
+    future: {"je": "aiderai", "tu": "aideras", "il/elle": "aidera", "nous": "aiderons", "vous": "aiderez", "ils/elles": "aideront"}
+  },
+  {
+    id: 64, infinitive: "apporter", translation: "приносить",
+    transcription: "апортэ́",
+    example: {"greek": "Apportez votre passeport et le justificatif.", "ru": "Принесите паспорт и подтверждающий документ."},
+    present: {"je": "apporte", "tu": "apportes", "il/elle": "apporte", "nous": "apportons", "vous": "apportez", "ils/elles": "apportent"},
+    preterite: {"je": "ai apporté", "tu": "as apporté", "il/elle": "a apporté", "nous": "avons apporté", "vous": "avez apporté", "ils/elles": "ont apporté"},
+    future: {"je": "apporterai", "tu": "apporteras", "il/elle": "apportera", "nous": "apporterons", "vous": "apporterez", "ils/elles": "apporteront"}
+  },
+  {
+    id: 65, infinitive: "arrêter", translation: "останавливать / прекращать",
+    transcription: "арэтэ́",
+    example: {"greek": "J'ai arrêté de fumer il y a un an.", "ru": "Я бросил курить год назад."},
+    present: {"je": "arrête", "tu": "arrêtes", "il/elle": "arrête", "nous": "arrêtons", "vous": "arrêtez", "ils/elles": "arrêtent"},
+    preterite: {"je": "ai arrêté", "tu": "as arrêté", "il/elle": "a arrêté", "nous": "avons arrêté", "vous": "avez arrêté", "ils/elles": "ont arrêté"},
+    future: {"je": "arrêterai", "tu": "arrêteras", "il/elle": "arrêtera", "nous": "arrêterons", "vous": "arrêterez", "ils/elles": "arrêteront"}
+  },
+  {
+    id: 66, infinitive: "assurer", translation: "страховать / обеспечивать",
+    transcription: "асюрэ́",
+    example: {"greek": "Il faut assurer le logement avant la signature.", "ru": "Жильё нужно застраховать до подписания договора."},
+    present: {"je": "assure", "tu": "assures", "il/elle": "assure", "nous": "assurons", "vous": "assurez", "ils/elles": "assurent"},
+    preterite: {"je": "ai assuré", "tu": "as assuré", "il/elle": "a assuré", "nous": "avons assuré", "vous": "avez assuré", "ils/elles": "ont assuré"},
+    future: {"je": "assurerai", "tu": "assureras", "il/elle": "assurera", "nous": "assurerons", "vous": "assurerez", "ils/elles": "assureront"}
+  },
+  {
+    id: 67, infinitive: "avancer", translation: "продвигаться",
+    transcription: "авансэ́",
+    example: {"greek": "Mon dossier avance lentement.", "ru": "Моё дело продвигается медленно."},
+    present: {"je": "avance", "tu": "avances", "il/elle": "avance", "nous": "avançons", "vous": "avancez", "ils/elles": "avancent"},
+    preterite: {"je": "ai avancé", "tu": "as avancé", "il/elle": "a avancé", "nous": "avons avancé", "vous": "avez avancé", "ils/elles": "ont avancé"},
+    future: {"je": "avancerai", "tu": "avanceras", "il/elle": "avancera", "nous": "avancerons", "vous": "avancerez", "ils/elles": "avanceront"}
+  },
+  {
+    id: 68, infinitive: "baisser", translation: "опускать / снижать",
+    transcription: "бэсэ́",
+    example: {"greek": "Baissez le chauffage, il fait trop chaud.", "ru": "Убавьте отопление, слишком жарко."},
+    present: {"je": "baisse", "tu": "baisses", "il/elle": "baisse", "nous": "baissons", "vous": "baissez", "ils/elles": "baissent"},
+    preterite: {"je": "ai baissé", "tu": "as baissé", "il/elle": "a baissé", "nous": "avons baissé", "vous": "avez baissé", "ils/elles": "ont baissé"},
+    future: {"je": "baisserai", "tu": "baisseras", "il/elle": "baissera", "nous": "baisserons", "vous": "baisserez", "ils/elles": "baisseront"}
+  },
+  {
+    id: 69, infinitive: "bouger", translation: "двигаться",
+    transcription: "бужэ́",
+    example: {"greek": "Ne bougez pas, je reviens tout de suite.", "ru": "Не двигайтесь, я сейчас вернусь."},
+    present: {"je": "bouge", "tu": "bouges", "il/elle": "bouge", "nous": "bougeons", "vous": "bougez", "ils/elles": "bougent"},
+    preterite: {"je": "ai bougé", "tu": "as bougé", "il/elle": "a bougé", "nous": "avons bougé", "vous": "avez bougé", "ils/elles": "ont bougé"},
+    future: {"je": "bougerai", "tu": "bougeras", "il/elle": "bougera", "nous": "bougerons", "vous": "bougerez", "ils/elles": "bougeront"}
+  },
+  {
+    id: 70, infinitive: "casser", translation: "ломать",
+    transcription: "касэ́",
+    example: {"greek": "J'ai cassé un verre, désolé.", "ru": "Я разбил стакан, извините."},
+    present: {"je": "casse", "tu": "casses", "il/elle": "casse", "nous": "cassons", "vous": "cassez", "ils/elles": "cassent"},
+    preterite: {"je": "ai cassé", "tu": "as cassé", "il/elle": "a cassé", "nous": "avons cassé", "vous": "avez cassé", "ils/elles": "ont cassé"},
+    future: {"je": "casserai", "tu": "casseras", "il/elle": "cassera", "nous": "casserons", "vous": "casserez", "ils/elles": "casseront"}
+  },
+  {
+    id: 71, infinitive: "chanter", translation: "петь",
+    transcription: "шантэ́",
+    example: {"greek": "Mes enfants chantent en français à l'école.", "ru": "Мои дети поют по-французски в школе."},
+    present: {"je": "chante", "tu": "chantes", "il/elle": "chante", "nous": "chantons", "vous": "chantez", "ils/elles": "chantent"},
+    preterite: {"je": "ai chanté", "tu": "as chanté", "il/elle": "a chanté", "nous": "avons chanté", "vous": "avez chanté", "ils/elles": "ont chanté"},
+    future: {"je": "chanterai", "tu": "chanteras", "il/elle": "chantera", "nous": "chanterons", "vous": "chanterez", "ils/elles": "chanteront"}
+  },
+  {
+    id: 72, infinitive: "chauffer", translation: "греть",
+    transcription: "шофэ́",
+    example: {"greek": "L'appartement chauffe mal en hiver.", "ru": "Квартира плохо прогревается зимой."},
+    present: {"je": "chauffe", "tu": "chauffes", "il/elle": "chauffe", "nous": "chauffons", "vous": "chauffez", "ils/elles": "chauffent"},
+    preterite: {"je": "ai chauffé", "tu": "as chauffé", "il/elle": "a chauffé", "nous": "avons chauffé", "vous": "avez chauffé", "ils/elles": "ont chauffé"},
+    future: {"je": "chaufferai", "tu": "chaufferas", "il/elle": "chauffera", "nous": "chaufferons", "vous": "chaufferez", "ils/elles": "chaufferont"}
+  },
+  {
+    id: 73, infinitive: "compter", translation: "считать",
+    transcription: "контэ́",
+    example: {"greek": "Je compte rester deux ans en France.", "ru": "Я рассчитываю пробыть во Франции два года."},
+    present: {"je": "compte", "tu": "comptes", "il/elle": "compte", "nous": "comptons", "vous": "comptez", "ils/elles": "comptent"},
+    preterite: {"je": "ai compté", "tu": "as compté", "il/elle": "a compté", "nous": "avons compté", "vous": "avez compté", "ils/elles": "ont compté"},
+    future: {"je": "compterai", "tu": "compteras", "il/elle": "comptera", "nous": "compterons", "vous": "compterez", "ils/elles": "compteront"}
+  },
+  {
+    id: 74, infinitive: "conseiller", translation: "советовать",
+    transcription: "консэйе́",
+    example: {"greek": "Qu'est-ce que vous me conseillez ?", "ru": "Что вы мне посоветуете?"},
+    present: {"je": "conseille", "tu": "conseilles", "il/elle": "conseille", "nous": "conseillons", "vous": "conseillez", "ils/elles": "conseillent"},
+    preterite: {"je": "ai conseillé", "tu": "as conseillé", "il/elle": "a conseillé", "nous": "avons conseillé", "vous": "avez conseillé", "ils/elles": "ont conseillé"},
+    future: {"je": "conseillerai", "tu": "conseilleras", "il/elle": "conseillera", "nous": "conseillerons", "vous": "conseillerez", "ils/elles": "conseilleront"}
+  },
+  {
+    id: 75, infinitive: "continuer", translation: "продолжать",
+    transcription: "континюэ́",
+    example: {"greek": "Continuez tout droit jusqu'au feu.", "ru": "Продолжайте прямо до светофора."},
+    present: {"je": "continue", "tu": "continues", "il/elle": "continue", "nous": "continuons", "vous": "continuez", "ils/elles": "continuent"},
+    preterite: {"je": "ai continué", "tu": "as continué", "il/elle": "a continué", "nous": "avons continué", "vous": "avez continué", "ils/elles": "ont continué"},
+    future: {"je": "continuerai", "tu": "continueras", "il/elle": "continuera", "nous": "continuerons", "vous": "continuerez", "ils/elles": "continueront"}
+  },
+  {
+    id: 76, infinitive: "couper", translation: "резать / отключать",
+    transcription: "купэ́",
+    example: {"greek": "Ils ont coupé l'eau ce matin.", "ru": "Сегодня утром отключили воду."},
+    present: {"je": "coupe", "tu": "coupes", "il/elle": "coupe", "nous": "coupons", "vous": "coupez", "ils/elles": "coupent"},
+    preterite: {"je": "ai coupé", "tu": "as coupé", "il/elle": "a coupé", "nous": "avons coupé", "vous": "avez coupé", "ils/elles": "ont coupé"},
+    future: {"je": "couperai", "tu": "couperas", "il/elle": "coupera", "nous": "couperons", "vous": "couperez", "ils/elles": "couperont"}
+  },
+  {
+    id: 77, infinitive: "coûter", translation: "стоить",
+    transcription: "кутэ́",
+    example: {"greek": "Ça coûte combien par mois ?", "ru": "Сколько это стоит в месяц?"},
+    present: {"je": "coûte", "tu": "coûtes", "il/elle": "coûte", "nous": "coûtons", "vous": "coûtez", "ils/elles": "coûtent"},
+    preterite: {"je": "ai coûté", "tu": "as coûté", "il/elle": "a coûté", "nous": "avons coûté", "vous": "avez coûté", "ils/elles": "ont coûté"},
+    future: {"je": "coûterai", "tu": "coûteras", "il/elle": "coûtera", "nous": "coûterons", "vous": "coûterez", "ils/elles": "coûteront"}
+  },
+  {
+    id: 78, infinitive: "créer", translation: "создавать",
+    transcription: "креэ́",
+    example: {"greek": "Je dois créer un compte sur le site.", "ru": "Мне нужно создать аккаунт на сайте."},
+    present: {"je": "crée", "tu": "crées", "il/elle": "crée", "nous": "créons", "vous": "créez", "ils/elles": "créent"},
+    preterite: {"je": "ai créé", "tu": "as créé", "il/elle": "a créé", "nous": "avons créé", "vous": "avez créé", "ils/elles": "ont créé"},
+    future: {"je": "créerai", "tu": "créeras", "il/elle": "créera", "nous": "créerons", "vous": "créerez", "ils/elles": "créeront"}
+  },
+  {
+    id: 79, infinitive: "danser", translation: "танцевать",
+    transcription: "дансэ́",
+    example: {"greek": "On danse au bal des pompiers le 14 juillet.", "ru": "Четырнадцатого июля танцуют на балу у пожарных."},
+    present: {"je": "danse", "tu": "danses", "il/elle": "danse", "nous": "dansons", "vous": "dansez", "ils/elles": "dansent"},
+    preterite: {"je": "ai dansé", "tu": "as dansé", "il/elle": "a dansé", "nous": "avons dansé", "vous": "avez dansé", "ils/elles": "ont dansé"},
+    future: {"je": "danserai", "tu": "danseras", "il/elle": "dansera", "nous": "danserons", "vous": "danserez", "ils/elles": "danseront"}
+  },
+  {
+    id: 80, infinitive: "décider", translation: "решать",
+    transcription: "десидэ́",
+    example: {"greek": "Nous avons décidé de déménager à Lyon.", "ru": "Мы решили переехать в Лион."},
+    present: {"je": "décide", "tu": "décides", "il/elle": "décide", "nous": "décidons", "vous": "décidez", "ils/elles": "décident"},
+    preterite: {"je": "ai décidé", "tu": "as décidé", "il/elle": "a décidé", "nous": "avons décidé", "vous": "avez décidé", "ils/elles": "ont décidé"},
+    future: {"je": "déciderai", "tu": "décideras", "il/elle": "décidera", "nous": "déciderons", "vous": "déciderez", "ils/elles": "décideront"}
+  },
+  {
+    id: 81, infinitive: "déclarer", translation: "заявлять / декларировать",
+    transcription: "деклярэ́",
+    example: {"greek": "Il faut déclarer tout changement à la CAF.", "ru": "О любом изменении нужно сообщить в CAF."},
+    present: {"je": "déclare", "tu": "déclares", "il/elle": "déclare", "nous": "déclarons", "vous": "déclarez", "ils/elles": "déclarent"},
+    preterite: {"je": "ai déclaré", "tu": "as déclaré", "il/elle": "a déclaré", "nous": "avons déclaré", "vous": "avez déclaré", "ils/elles": "ont déclaré"},
+    future: {"je": "déclarerai", "tu": "déclareras", "il/elle": "déclarera", "nous": "déclarerons", "vous": "déclarerez", "ils/elles": "déclareront"}
+  },
+  {
+    id: 82, infinitive: "déjeuner", translation: "обедать",
+    transcription: "дежёнэ́",
+    example: {"greek": "On déjeune ensemble à midi ?", "ru": "Пообедаем вместе в полдень?"},
+    present: {"je": "déjeune", "tu": "déjeunes", "il/elle": "déjeune", "nous": "déjeunons", "vous": "déjeunez", "ils/elles": "déjeunent"},
+    preterite: {"je": "ai déjeuné", "tu": "as déjeuné", "il/elle": "a déjeuné", "nous": "avons déjeuné", "vous": "avez déjeuné", "ils/elles": "ont déjeuné"},
+    future: {"je": "déjeunerai", "tu": "déjeuneras", "il/elle": "déjeunera", "nous": "déjeunerons", "vous": "déjeunerez", "ils/elles": "déjeuneront"}
+  },
+  {
+    id: 83, infinitive: "déménager", translation: "переезжать",
+    transcription: "деменажэ́",
+    example: {"greek": "Nous déménageons le mois prochain.", "ru": "Мы переезжаем в следующем месяце."},
+    present: {"je": "déménage", "tu": "déménages", "il/elle": "déménage", "nous": "déménageons", "vous": "déménagez", "ils/elles": "déménagent"},
+    preterite: {"je": "ai déménagé", "tu": "as déménagé", "il/elle": "a déménagé", "nous": "avons déménagé", "vous": "avez déménagé", "ils/elles": "ont déménagé"},
+    future: {"je": "déménagerai", "tu": "déménageras", "il/elle": "déménagera", "nous": "déménagerons", "vous": "déménagerez", "ils/elles": "déménageront"}
+  },
+  {
+    id: 84, infinitive: "dépenser", translation: "тратить",
+    transcription: "депансэ́",
+    example: {"greek": "Je dépense trop en courses.", "ru": "Я слишком много трачу на продукты."},
+    present: {"je": "dépense", "tu": "dépenses", "il/elle": "dépense", "nous": "dépensons", "vous": "dépensez", "ils/elles": "dépensent"},
+    preterite: {"je": "ai dépensé", "tu": "as dépensé", "il/elle": "a dépensé", "nous": "avons dépensé", "vous": "avez dépensé", "ils/elles": "ont dépensé"},
+    future: {"je": "dépenserai", "tu": "dépenseras", "il/elle": "dépensera", "nous": "dépenserons", "vous": "dépenserez", "ils/elles": "dépenseront"}
+  },
+  {
+    id: 85, infinitive: "dessiner", translation: "рисовать",
+    transcription: "дэсинэ́",
+    example: {"greek": "Ma fille dessine tous les soirs.", "ru": "Моя дочь рисует каждый вечер."},
+    present: {"je": "dessine", "tu": "dessines", "il/elle": "dessine", "nous": "dessinons", "vous": "dessinez", "ils/elles": "dessinent"},
+    preterite: {"je": "ai dessiné", "tu": "as dessiné", "il/elle": "a dessiné", "nous": "avons dessiné", "vous": "avez dessiné", "ils/elles": "ont dessiné"},
+    future: {"je": "dessinerai", "tu": "dessineras", "il/elle": "dessinera", "nous": "dessinerons", "vous": "dessinerez", "ils/elles": "dessineront"}
+  },
+  {
+    id: 86, infinitive: "discuter", translation: "обсуждать",
+    transcription: "дискютэ́",
+    example: {"greek": "On peut en discuter demain ?", "ru": "Можем обсудить это завтра?"},
+    present: {"je": "discute", "tu": "discutes", "il/elle": "discute", "nous": "discutons", "vous": "discutez", "ils/elles": "discutent"},
+    preterite: {"je": "ai discuté", "tu": "as discuté", "il/elle": "a discuté", "nous": "avons discuté", "vous": "avez discuté", "ils/elles": "ont discuté"},
+    future: {"je": "discuterai", "tu": "discuteras", "il/elle": "discutera", "nous": "discuterons", "vous": "discuterez", "ils/elles": "discuteront"}
+  },
+  {
+    id: 87, infinitive: "économiser", translation: "экономить",
+    transcription: "экономизэ́",
+    example: {"greek": "J'économise pour un appartement.", "ru": "Я коплю на квартиру."},
+    present: {"je": "économise", "tu": "économises", "il/elle": "économise", "nous": "économisons", "vous": "économisez", "ils/elles": "économisent"},
+    preterite: {"je": "ai économisé", "tu": "as économisé", "il/elle": "a économisé", "nous": "avons économisé", "vous": "avez économisé", "ils/elles": "ont économisé"},
+    future: {"je": "économiserai", "tu": "économiseras", "il/elle": "économisera", "nous": "économiserons", "vous": "économiserez", "ils/elles": "économiseront"}
+  },
+  {
+    id: 88, infinitive: "emmener", translation: "отводить / брать с собой",
+    transcription: "амёнэ́",
+    example: {"greek": "J'emmène les enfants à l'école à huit heures.", "ru": "Я отвожу детей в школу в восемь."},
+    present: {"je": "emmène", "tu": "emmènes", "il/elle": "emmène", "nous": "emmenons", "vous": "emmenez", "ils/elles": "emmènent"},
+    preterite: {"je": "ai emmené", "tu": "as emmené", "il/elle": "a emmené", "nous": "avons emmené", "vous": "avez emmené", "ils/elles": "ont emmené"},
+    future: {"je": "emmènerai", "tu": "emmèneras", "il/elle": "emmènera", "nous": "emmènerons", "vous": "emmènerez", "ils/elles": "emmèneront"}
+  },
+  {
+    id: 89, infinitive: "employer", translation: "нанимать / использовать",
+    transcription: "амплуайе́",
+    example: {"greek": "Cette entreprise emploie trente personnes.", "ru": "Эта компания нанимает тридцать человек."},
+    present: {"je": "emploie", "tu": "emploies", "il/elle": "emploie", "nous": "employons", "vous": "employez", "ils/elles": "emploient"},
+    preterite: {"je": "ai employé", "tu": "as employé", "il/elle": "a employé", "nous": "avons employé", "vous": "avez employé", "ils/elles": "ont employé"},
+    future: {"je": "emploierai", "tu": "emploieras", "il/elle": "emploiera", "nous": "emploierons", "vous": "emploierez", "ils/elles": "emploieront"}
+  },
+  {
+    id: 90, infinitive: "emprunter", translation: "брать взаймы",
+    transcription: "ампрюнтэ́",
+    example: {"greek": "J'ai emprunté un livre à la médiathèque.", "ru": "Я взял книгу в медиатеке."},
+    present: {"je": "emprunte", "tu": "empruntes", "il/elle": "emprunte", "nous": "empruntons", "vous": "empruntez", "ils/elles": "empruntent"},
+    preterite: {"je": "ai emprunté", "tu": "as emprunté", "il/elle": "a emprunté", "nous": "avons emprunté", "vous": "avez emprunté", "ils/elles": "ont emprunté"},
+    future: {"je": "emprunterai", "tu": "emprunteras", "il/elle": "empruntera", "nous": "emprunterons", "vous": "emprunterez", "ils/elles": "emprunteront"}
+  },
+  {
+    id: 91, infinitive: "enseigner", translation: "преподавать",
+    transcription: "ансэнье́",
+    example: {"greek": "Elle enseigne le français aux étrangers.", "ru": "Она преподаёт французский иностранцам."},
+    present: {"je": "enseigne", "tu": "enseignes", "il/elle": "enseigne", "nous": "enseignons", "vous": "enseignez", "ils/elles": "enseignent"},
+    preterite: {"je": "ai enseigné", "tu": "as enseigné", "il/elle": "a enseigné", "nous": "avons enseigné", "vous": "avez enseigné", "ils/elles": "ont enseigné"},
+    future: {"je": "enseignerai", "tu": "enseigneras", "il/elle": "enseignera", "nous": "enseignerons", "vous": "enseignerez", "ils/elles": "enseigneront"}
+  },
+  {
+    id: 92, infinitive: "étudier", translation: "учиться / изучать",
+    transcription: "этюдье́",
+    example: {"greek": "J'étudie le français depuis six mois.", "ru": "Я изучаю французский шесть месяцев."},
+    present: {"je": "étudie", "tu": "étudies", "il/elle": "étudie", "nous": "étudions", "vous": "étudiez", "ils/elles": "étudient"},
+    preterite: {"je": "ai étudié", "tu": "as étudié", "il/elle": "a étudié", "nous": "avons étudié", "vous": "avez étudié", "ils/elles": "ont étudié"},
+    future: {"je": "étudierai", "tu": "étudieras", "il/elle": "étudiera", "nous": "étudierons", "vous": "étudierez", "ils/elles": "étudieront"}
+  },
+  {
+    id: 93, infinitive: "éviter", translation: "избегать",
+    transcription: "эвитэ́",
+    example: {"greek": "Évitez le RER aux heures de pointe.", "ru": "Избегайте RER в час пик."},
+    present: {"je": "évite", "tu": "évites", "il/elle": "évite", "nous": "évitons", "vous": "évitez", "ils/elles": "évitent"},
+    preterite: {"je": "ai évité", "tu": "as évité", "il/elle": "a évité", "nous": "avons évité", "vous": "avez évité", "ils/elles": "ont évité"},
+    future: {"je": "éviterai", "tu": "éviteras", "il/elle": "évitera", "nous": "éviterons", "vous": "éviterez", "ils/elles": "éviteront"}
+  },
+  {
+    id: 94, infinitive: "exister", translation: "существовать",
+    transcription: "эгзистэ́",
+    example: {"greek": "Ce tarif n'existe plus.", "ru": "Этого тарифа больше нет."},
+    present: {"je": "existe", "tu": "existes", "il/elle": "existe", "nous": "existons", "vous": "existez", "ils/elles": "existent"},
+    preterite: {"je": "ai existé", "tu": "as existé", "il/elle": "a existé", "nous": "avons existé", "vous": "avez existé", "ils/elles": "ont existé"},
+    future: {"je": "existerai", "tu": "existeras", "il/elle": "existera", "nous": "existerons", "vous": "existerez", "ils/elles": "existeront"}
+  },
+  {
+    id: 95, infinitive: "garder", translation: "хранить / присматривать",
+    transcription: "гардэ́",
+    example: {"greek": "Gardez le ticket de caisse.", "ru": "Сохраните чек."},
+    present: {"je": "garde", "tu": "gardes", "il/elle": "garde", "nous": "gardons", "vous": "gardez", "ils/elles": "gardent"},
+    preterite: {"je": "ai gardé", "tu": "as gardé", "il/elle": "a gardé", "nous": "avons gardé", "vous": "avez gardé", "ils/elles": "ont gardé"},
+    future: {"je": "garderai", "tu": "garderas", "il/elle": "gardera", "nous": "garderons", "vous": "garderez", "ils/elles": "garderont"}
+  },
+  {
+    id: 96, infinitive: "gagner", translation: "зарабатывать / выигрывать",
+    transcription: "ганьэ́",
+    example: {"greek": "Je gagne moins qu'avant, mais je vis mieux.", "ru": "Я зарабатываю меньше, но живу лучше."},
+    present: {"je": "gagne", "tu": "gagnes", "il/elle": "gagne", "nous": "gagnons", "vous": "gagnez", "ils/elles": "gagnent"},
+    preterite: {"je": "ai gagné", "tu": "as gagné", "il/elle": "a gagné", "nous": "avons gagné", "vous": "avez gagné", "ils/elles": "ont gagné"},
+    future: {"je": "gagnerai", "tu": "gagneras", "il/elle": "gagnera", "nous": "gagnerons", "vous": "gagnerez", "ils/elles": "gagneront"}
+  },
+  {
+    id: 97, infinitive: "garer", translation: "парковать",
+    transcription: "гарэ́",
+    example: {"greek": "Où est-ce que je peux garer la voiture ?", "ru": "Где я могу припарковать машину?"},
+    present: {"je": "gare", "tu": "gares", "il/elle": "gare", "nous": "garons", "vous": "garez", "ils/elles": "garent"},
+    preterite: {"je": "ai garé", "tu": "as garé", "il/elle": "a garé", "nous": "avons garé", "vous": "avez garé", "ils/elles": "ont garé"},
+    future: {"je": "garerai", "tu": "gareras", "il/elle": "garera", "nous": "garerons", "vous": "garerez", "ils/elles": "gareront"}
+  },
+  {
+    id: 98, infinitive: "goûter", translation: "пробовать на вкус",
+    transcription: "гутэ́",
+    example: {"greek": "Je peux goûter ce fromage ?", "ru": "Можно попробовать этот сыр?"},
+    present: {"je": "goûte", "tu": "goûtes", "il/elle": "goûte", "nous": "goûtons", "vous": "goûtez", "ils/elles": "goûtent"},
+    preterite: {"je": "ai goûté", "tu": "as goûté", "il/elle": "a goûté", "nous": "avons goûté", "vous": "avez goûté", "ils/elles": "ont goûté"},
+    future: {"je": "goûterai", "tu": "goûteras", "il/elle": "goûtera", "nous": "goûterons", "vous": "goûterez", "ils/elles": "goûteront"}
+  },
+  {
+    id: 99, infinitive: "habiller", translation: "одевать",
+    transcription: "абийе́",
+    example: {"greek": "J'habille les enfants avant le petit-déjeuner.", "ru": "Я одеваю детей до завтрака."},
+    present: {"je": "habille", "tu": "habilles", "il/elle": "habille", "nous": "habillons", "vous": "habillez", "ils/elles": "habillent"},
+    preterite: {"je": "ai habillé", "tu": "as habillé", "il/elle": "a habillé", "nous": "avons habillé", "vous": "avez habillé", "ils/elles": "ont habillé"},
+    future: {"je": "habillerai", "tu": "habilleras", "il/elle": "habillera", "nous": "habillerons", "vous": "habillerez", "ils/elles": "habilleront"}
+  },
+  {
+    id: 100, infinitive: "hésiter", translation: "колебаться",
+    transcription: "эзитэ́",
+    example: {"greek": "N'hésitez pas à me contacter.", "ru": "Не стесняйтесь со мной связаться."},
+    present: {"je": "hésite", "tu": "hésites", "il/elle": "hésite", "nous": "hésitons", "vous": "hésitez", "ils/elles": "hésitent"},
+    preterite: {"je": "ai hésité", "tu": "as hésité", "il/elle": "a hésité", "nous": "avons hésité", "vous": "avez hésité", "ils/elles": "ont hésité"},
+    future: {"je": "hésiterai", "tu": "hésiteras", "il/elle": "hésitera", "nous": "hésiterons", "vous": "hésiterez", "ils/elles": "hésiteront"}
+  },
+  {
+    id: 101, infinitive: "indiquer", translation: "указывать",
+    transcription: "эндикэ́",
+    example: {"greek": "Pourriez-vous m'indiquer la sortie ?", "ru": "Не подскажете, где выход?"},
+    present: {"je": "indique", "tu": "indiques", "il/elle": "indique", "nous": "indiquons", "vous": "indiquez", "ils/elles": "indiquent"},
+    preterite: {"je": "ai indiqué", "tu": "as indiqué", "il/elle": "a indiqué", "nous": "avons indiqué", "vous": "avez indiqué", "ils/elles": "ont indiqué"},
+    future: {"je": "indiquerai", "tu": "indiqueras", "il/elle": "indiquera", "nous": "indiquerons", "vous": "indiquerez", "ils/elles": "indiqueront"}
+  },
+  {
+    id: 102, infinitive: "inscrire", translation: "записывать / регистрировать",
+    transcription: "энскри́р",
+    example: {"greek": "Je voudrais inscrire mon fils à la cantine.", "ru": "Я хотел бы записать сына в столовую."},
+    present: {"je": "inscris", "tu": "inscris", "il/elle": "inscrit", "nous": "inscrivons", "vous": "inscrivez", "ils/elles": "inscrivent"},
+    preterite: {"je": "ai inscrit", "tu": "as inscrit", "il/elle": "a inscrit", "nous": "avons inscrit", "vous": "avez inscrit", "ils/elles": "ont inscrit"},
+    future: {"je": "inscrirai", "tu": "inscriras", "il/elle": "inscrira", "nous": "inscrirons", "vous": "inscrirez", "ils/elles": "inscriront"}
+  },
+  {
+    id: 103, infinitive: "inviter", translation: "приглашать",
+    transcription: "энвитэ́",
+    example: {"greek": "Nos voisins nous ont invités à dîner.", "ru": "Соседи пригласили нас на ужин."},
+    present: {"je": "invite", "tu": "invites", "il/elle": "invite", "nous": "invitons", "vous": "invitez", "ils/elles": "invitent"},
+    preterite: {"je": "ai invité", "tu": "as invité", "il/elle": "a invité", "nous": "avons invité", "vous": "avez invité", "ils/elles": "ont invité"},
+    future: {"je": "inviterai", "tu": "inviteras", "il/elle": "invitera", "nous": "inviterons", "vous": "inviterez", "ils/elles": "inviteront"}
+  },
+  {
+    id: 104, infinitive: "jouer", translation: "играть",
+    transcription: "жуэ́",
+    example: {"greek": "Les enfants jouent au foot dans le parc.", "ru": "Дети играют в футбол в парке."},
+    present: {"je": "joue", "tu": "joues", "il/elle": "joue", "nous": "jouons", "vous": "jouez", "ils/elles": "jouent"},
+    preterite: {"je": "ai joué", "tu": "as joué", "il/elle": "a joué", "nous": "avons joué", "vous": "avez joué", "ils/elles": "ont joué"},
+    future: {"je": "jouerai", "tu": "joueras", "il/elle": "jouera", "nous": "jouerons", "vous": "jouerez", "ils/elles": "joueront"}
+  },
+  {
+    id: 105, infinitive: "laisser", translation: "оставлять / позволять",
+    transcription: "лэсэ́",
+    example: {"greek": "Laissez un message après le bip.", "ru": "Оставьте сообщение после сигнала."},
+    present: {"je": "laisse", "tu": "laisses", "il/elle": "laisse", "nous": "laissons", "vous": "laissez", "ils/elles": "laissent"},
+    preterite: {"je": "ai laissé", "tu": "as laissé", "il/elle": "a laissé", "nous": "avons laissé", "vous": "avez laissé", "ils/elles": "ont laissé"},
+    future: {"je": "laisserai", "tu": "laisseras", "il/elle": "laissera", "nous": "laisserons", "vous": "laisserez", "ils/elles": "laisseront"}
+  },
+  {
+    id: 106, infinitive: "laver", translation: "мыть / стирать",
+    transcription: "лавэ́",
+    example: {"greek": "Je lave le linge le dimanche.", "ru": "Я стираю бельё по воскресеньям."},
+    present: {"je": "lave", "tu": "laves", "il/elle": "lave", "nous": "lavons", "vous": "lavez", "ils/elles": "lavent"},
+    preterite: {"je": "ai lavé", "tu": "as lavé", "il/elle": "a lavé", "nous": "avons lavé", "vous": "avez lavé", "ils/elles": "ont lavé"},
+    future: {"je": "laverai", "tu": "laveras", "il/elle": "lavera", "nous": "laverons", "vous": "laverez", "ils/elles": "laveront"}
+  },
+  {
+    id: 107, infinitive: "lever", translation: "поднимать",
+    transcription: "лёвэ́",
+    example: {"greek": "Levez la main si vous avez une question.", "ru": "Поднимите руку, если есть вопрос."},
+    present: {"je": "lève", "tu": "lèves", "il/elle": "lève", "nous": "levons", "vous": "levez", "ils/elles": "lèvent"},
+    preterite: {"je": "ai levé", "tu": "as levé", "il/elle": "a levé", "nous": "avons levé", "vous": "avez levé", "ils/elles": "ont levé"},
+    future: {"je": "lèverai", "tu": "lèveras", "il/elle": "lèvera", "nous": "lèverons", "vous": "lèverez", "ils/elles": "lèveront"}
+  },
+  {
+    id: 108, infinitive: "marcher", translation: "ходить / работать (о технике)",
+    transcription: "маршэ́",
+    example: {"greek": "L'ascenseur ne marche pas depuis lundi.", "ru": "Лифт не работает с понедельника."},
+    present: {"je": "marche", "tu": "marches", "il/elle": "marche", "nous": "marchons", "vous": "marchez", "ils/elles": "marchent"},
+    preterite: {"je": "ai marché", "tu": "as marché", "il/elle": "a marché", "nous": "avons marché", "vous": "avez marché", "ils/elles": "ont marché"},
+    future: {"je": "marcherai", "tu": "marcheras", "il/elle": "marchera", "nous": "marcherons", "vous": "marcherez", "ils/elles": "marcheront"}
+  },
+  {
+    id: 109, infinitive: "montrer", translation: "показывать",
+    transcription: "монтрэ́",
+    example: {"greek": "Montrez-moi votre carte d'identité.", "ru": "Покажите мне ваше удостоверение личности."},
+    present: {"je": "montre", "tu": "montres", "il/elle": "montre", "nous": "montrons", "vous": "montrez", "ils/elles": "montrent"},
+    preterite: {"je": "ai montré", "tu": "as montré", "il/elle": "a montré", "nous": "avons montré", "vous": "avez montré", "ils/elles": "ont montré"},
+    future: {"je": "montrerai", "tu": "montreras", "il/elle": "montrera", "nous": "montrerons", "vous": "montrerez", "ils/elles": "montreront"}
+  },
+  {
+    id: 110, infinitive: "nettoyer", translation: "убирать / чистить",
+    transcription: "нэтуайе́",
+    example: {"greek": "Je nettoie l'appartement le samedi.", "ru": "Я убираю квартиру по субботам."},
+    present: {"je": "nettoie", "tu": "nettoies", "il/elle": "nettoie", "nous": "nettoyons", "vous": "nettoyez", "ils/elles": "nettoient"},
+    preterite: {"je": "ai nettoyé", "tu": "as nettoyé", "il/elle": "a nettoyé", "nous": "avons nettoyé", "vous": "avez nettoyé", "ils/elles": "ont nettoyé"},
+    future: {"je": "nettoierai", "tu": "nettoieras", "il/elle": "nettoiera", "nous": "nettoierons", "vous": "nettoierez", "ils/elles": "nettoieront"}
+  },
+  {
+    id: 111, infinitive: "noter", translation: "записывать / отмечать",
+    transcription: "нотэ́",
+    example: {"greek": "Notez bien la date du rendez-vous.", "ru": "Запишите дату приёма."},
+    present: {"je": "note", "tu": "notes", "il/elle": "note", "nous": "notons", "vous": "notez", "ils/elles": "notent"},
+    preterite: {"je": "ai noté", "tu": "as noté", "il/elle": "a noté", "nous": "avons noté", "vous": "avez noté", "ils/elles": "ont noté"},
+    future: {"je": "noterai", "tu": "noteras", "il/elle": "notera", "nous": "noterons", "vous": "noterez", "ils/elles": "noteront"}
+  },
+  {
+    id: 112, infinitive: "occuper", translation: "занимать",
+    transcription: "окюпэ́",
+    example: {"greek": "Cette place est occupée ?", "ru": "Это место занято?"},
+    present: {"je": "occupe", "tu": "occupes", "il/elle": "occupe", "nous": "occupons", "vous": "occupez", "ils/elles": "occupent"},
+    preterite: {"je": "ai occupé", "tu": "as occupé", "il/elle": "a occupé", "nous": "avons occupé", "vous": "avez occupé", "ils/elles": "ont occupé"},
+    future: {"je": "occuperai", "tu": "occuperas", "il/elle": "occupera", "nous": "occuperons", "vous": "occuperez", "ils/elles": "occuperont"}
+  },
+  {
+    id: 113, infinitive: "organiser", translation: "организовывать",
+    transcription: "организэ́",
+    example: {"greek": "On organise une fête pour les voisins.", "ru": "Мы организуем праздник для соседей."},
+    present: {"je": "organise", "tu": "organises", "il/elle": "organise", "nous": "organisons", "vous": "organisez", "ils/elles": "organisent"},
+    preterite: {"je": "ai organisé", "tu": "as organisé", "il/elle": "a organisé", "nous": "avons organisé", "vous": "avez organisé", "ils/elles": "ont organisé"},
+    future: {"je": "organiserai", "tu": "organiseras", "il/elle": "organisera", "nous": "organiserons", "vous": "organiserez", "ils/elles": "organiseront"}
+  },
+  {
+    id: 114, infinitive: "participer", translation: "участвовать",
+    transcription: "партисипэ́",
+    example: {"greek": "Je participe à un cours de français le soir.", "ru": "Я хожу на вечерние курсы французского."},
+    present: {"je": "participe", "tu": "participes", "il/elle": "participe", "nous": "participons", "vous": "participez", "ils/elles": "participent"},
+    preterite: {"je": "ai participé", "tu": "as participé", "il/elle": "a participé", "nous": "avons participé", "vous": "avez participé", "ils/elles": "ont participé"},
+    future: {"je": "participerai", "tu": "participeras", "il/elle": "participera", "nous": "participerons", "vous": "participerez", "ils/elles": "participeront"}
+  },
+  {
+    id: 115, infinitive: "passer", translation: "проходить / проводить время",
+    transcription: "пасэ́",
+    example: {"greek": "Je passe à la banque cet après-midi.", "ru": "Я зайду в банк во второй половине дня."},
+    present: {"je": "passe", "tu": "passes", "il/elle": "passe", "nous": "passons", "vous": "passez", "ils/elles": "passent"},
+    preterite: {"je": "suis passé(e)", "tu": "es passé(e)", "il/elle": "est passé(e)", "nous": "sommes passé(e)s", "vous": "êtes passé(e)(s)", "ils/elles": "sont passé(e)s"},
+    future: {"je": "passerai", "tu": "passeras", "il/elle": "passera", "nous": "passerons", "vous": "passerez", "ils/elles": "passeront"}
+  },
+  {
+    id: 116, infinitive: "porter", translation: "носить",
+    transcription: "портэ́",
+    example: {"greek": "Il porte un manteau noir.", "ru": "Он носит чёрное пальто."},
+    present: {"je": "porte", "tu": "portes", "il/elle": "porte", "nous": "portons", "vous": "portez", "ils/elles": "portent"},
+    preterite: {"je": "ai porté", "tu": "as porté", "il/elle": "a porté", "nous": "avons porté", "vous": "avez porté", "ils/elles": "ont porté"},
+    future: {"je": "porterai", "tu": "porteras", "il/elle": "portera", "nous": "porterons", "vous": "porterez", "ils/elles": "porteront"}
+  },
+  {
+    id: 117, infinitive: "poser", translation: "класть / задавать (вопрос)",
+    transcription: "позэ́",
+    example: {"greek": "Je peux vous poser une question ?", "ru": "Можно задать вам вопрос?"},
+    present: {"je": "pose", "tu": "poses", "il/elle": "pose", "nous": "posons", "vous": "posez", "ils/elles": "posent"},
+    preterite: {"je": "ai posé", "tu": "as posé", "il/elle": "a posé", "nous": "avons posé", "vous": "avez posé", "ils/elles": "ont posé"},
+    future: {"je": "poserai", "tu": "poseras", "il/elle": "posera", "nous": "poserons", "vous": "poserez", "ils/elles": "poseront"}
+  },
+  {
+    id: 118, infinitive: "pousser", translation: "толкать",
+    transcription: "пусэ́",
+    example: {"greek": "Poussez la porte, elle n'est pas fermée.", "ru": "Толкните дверь, она не заперта."},
+    present: {"je": "pousse", "tu": "pousses", "il/elle": "pousse", "nous": "poussons", "vous": "poussez", "ils/elles": "poussent"},
+    preterite: {"je": "ai poussé", "tu": "as poussé", "il/elle": "a poussé", "nous": "avons poussé", "vous": "avez poussé", "ils/elles": "ont poussé"},
+    future: {"je": "pousserai", "tu": "pousseras", "il/elle": "poussera", "nous": "pousserons", "vous": "pousserez", "ils/elles": "pousseront"}
+  },
+  {
+    id: 119, infinitive: "préparer", translation: "готовить",
+    transcription: "препарэ́",
+    example: {"greek": "Je prépare le dossier pour la préfecture.", "ru": "Я готовлю досье для префектуры."},
+    present: {"je": "prépare", "tu": "prépares", "il/elle": "prépare", "nous": "préparons", "vous": "préparez", "ils/elles": "préparent"},
+    preterite: {"je": "ai préparé", "tu": "as préparé", "il/elle": "a préparé", "nous": "avons préparé", "vous": "avez préparé", "ils/elles": "ont préparé"},
+    future: {"je": "préparerai", "tu": "prépareras", "il/elle": "préparera", "nous": "préparerons", "vous": "préparerez", "ils/elles": "prépareront"}
+  },
+  {
+    id: 120, infinitive: "présenter", translation: "представлять / предъявлять",
+    transcription: "презантэ́",
+    example: {"greek": "Présentez-vous au guichet numéro trois.", "ru": "Подойдите к окну номер три."},
+    present: {"je": "présente", "tu": "présentes", "il/elle": "présente", "nous": "présentons", "vous": "présentez", "ils/elles": "présentent"},
+    preterite: {"je": "ai présenté", "tu": "as présenté", "il/elle": "a présenté", "nous": "avons présenté", "vous": "avez présenté", "ils/elles": "ont présenté"},
+    future: {"je": "présenterai", "tu": "présenteras", "il/elle": "présentera", "nous": "présenterons", "vous": "présenterez", "ils/elles": "présenteront"}
+  },
+  {
+    id: 121, infinitive: "prêter", translation: "одалживать",
+    transcription: "прэтэ́",
+    example: {"greek": "Tu peux me prêter ton stylo ?", "ru": "Можешь одолжить мне ручку?"},
+    present: {"je": "prête", "tu": "prêtes", "il/elle": "prête", "nous": "prêtons", "vous": "prêtez", "ils/elles": "prêtent"},
+    preterite: {"je": "ai prêté", "tu": "as prêté", "il/elle": "a prêté", "nous": "avons prêté", "vous": "avez prêté", "ils/elles": "ont prêté"},
+    future: {"je": "prêterai", "tu": "prêteras", "il/elle": "prêtera", "nous": "prêterons", "vous": "prêterez", "ils/elles": "prêteront"}
+  },
+  {
+    id: 122, infinitive: "quitter", translation: "покидать",
+    transcription: "китэ́",
+    example: {"greek": "Je quitte le bureau à dix-huit heures.", "ru": "Я ухожу из офиса в шесть вечера."},
+    present: {"je": "quitte", "tu": "quittes", "il/elle": "quitte", "nous": "quittons", "vous": "quittez", "ils/elles": "quittent"},
+    preterite: {"je": "ai quitté", "tu": "as quitté", "il/elle": "a quitté", "nous": "avons quitté", "vous": "avez quitté", "ils/elles": "ont quitté"},
+    future: {"je": "quitterai", "tu": "quitteras", "il/elle": "quittera", "nous": "quitterons", "vous": "quitterez", "ils/elles": "quitteront"}
+  },
+  {
+    id: 123, infinitive: "raconter", translation: "рассказывать",
+    transcription: "раконтэ́",
+    example: {"greek": "Racontez-moi ce qui s'est passé.", "ru": "Расскажите мне, что произошло."},
+    present: {"je": "raconte", "tu": "racontes", "il/elle": "raconte", "nous": "racontons", "vous": "racontez", "ils/elles": "racontent"},
+    preterite: {"je": "ai raconté", "tu": "as raconté", "il/elle": "a raconté", "nous": "avons raconté", "vous": "avez raconté", "ils/elles": "ont raconté"},
+    future: {"je": "raconterai", "tu": "raconteras", "il/elle": "racontera", "nous": "raconterons", "vous": "raconterez", "ils/elles": "raconteront"}
+  },
+  {
+    id: 124, infinitive: "ranger", translation: "убирать / раскладывать",
+    transcription: "ранжэ́",
+    example: {"greek": "Range tes affaires avant de sortir.", "ru": "Убери свои вещи перед выходом."},
+    present: {"je": "range", "tu": "ranges", "il/elle": "range", "nous": "rangeons", "vous": "rangez", "ils/elles": "rangent"},
+    preterite: {"je": "ai rangé", "tu": "as rangé", "il/elle": "a rangé", "nous": "avons rangé", "vous": "avez rangé", "ils/elles": "ont rangé"},
+    future: {"je": "rangerai", "tu": "rangeras", "il/elle": "rangera", "nous": "rangerons", "vous": "rangerez", "ils/elles": "rangeront"}
+  },
+  {
+    id: 125, infinitive: "réfléchir", translation: "размышлять",
+    transcription: "рефлеши́р",
+    example: {"greek": "Je vais réfléchir et je vous rappelle.", "ru": "Я подумаю и перезвоню вам."},
+    present: {"je": "réfléchis", "tu": "réfléchis", "il/elle": "réfléchit", "nous": "réfléchissons", "vous": "réfléchissez", "ils/elles": "réfléchissent"},
+    preterite: {"je": "ai réfléchi", "tu": "as réfléchi", "il/elle": "a réfléchi", "nous": "avons réfléchi", "vous": "avez réfléchi", "ils/elles": "ont réfléchi"},
+    future: {"je": "réfléchirai", "tu": "réfléchiras", "il/elle": "réfléchira", "nous": "réfléchirons", "vous": "réfléchirez", "ils/elles": "réfléchiront"}
+  },
+  {
+    id: 126, infinitive: "refuser", translation: "отказывать",
+    transcription: "рефюзэ́",
+    example: {"greek": "La banque a refusé ma demande.", "ru": "Банк отказал в моей заявке."},
+    present: {"je": "refuse", "tu": "refuses", "il/elle": "refuse", "nous": "refusons", "vous": "refusez", "ils/elles": "refusent"},
+    preterite: {"je": "ai refusé", "tu": "as refusé", "il/elle": "a refusé", "nous": "avons refusé", "vous": "avez refusé", "ils/elles": "ont refusé"},
+    future: {"je": "refuserai", "tu": "refuseras", "il/elle": "refusera", "nous": "refuserons", "vous": "refuserez", "ils/elles": "refuseront"}
+  },
+  {
+    id: 127, infinitive: "regretter", translation: "сожалеть",
+    transcription: "рёгрэтэ́",
+    example: {"greek": "Je regrette, c'est complet.", "ru": "Сожалею, всё занято."},
+    present: {"je": "regrette", "tu": "regrettes", "il/elle": "regrette", "nous": "regrettons", "vous": "regrettez", "ils/elles": "regrettent"},
+    preterite: {"je": "ai regretté", "tu": "as regretté", "il/elle": "a regretté", "nous": "avons regretté", "vous": "avez regretté", "ils/elles": "ont regretté"},
+    future: {"je": "regretterai", "tu": "regretteras", "il/elle": "regrettera", "nous": "regretterons", "vous": "regretterez", "ils/elles": "regretteront"}
+  },
+  {
+    id: 128, infinitive: "remercier", translation: "благодарить",
+    transcription: "рёмерсье́",
+    example: {"greek": "Je vous remercie pour votre aide.", "ru": "Благодарю вас за помощь."},
+    present: {"je": "remercie", "tu": "remercies", "il/elle": "remercie", "nous": "remercions", "vous": "remerciez", "ils/elles": "remercient"},
+    preterite: {"je": "ai remercié", "tu": "as remercié", "il/elle": "a remercié", "nous": "avons remercié", "vous": "avez remercié", "ils/elles": "ont remercié"},
+    future: {"je": "remercierai", "tu": "remercieras", "il/elle": "remerciera", "nous": "remercierons", "vous": "remercierez", "ils/elles": "remercieront"}
+  },
+  {
+    id: 129, infinitive: "rencontrer", translation: "встречать",
+    transcription: "ранконтрэ́",
+    example: {"greek": "J'ai rencontré mes voisins hier.", "ru": "Вчера я познакомился с соседями."},
+    present: {"je": "rencontre", "tu": "rencontres", "il/elle": "rencontre", "nous": "rencontrons", "vous": "rencontrez", "ils/elles": "rencontrent"},
+    preterite: {"je": "ai rencontré", "tu": "as rencontré", "il/elle": "a rencontré", "nous": "avons rencontré", "vous": "avez rencontré", "ils/elles": "ont rencontré"},
+    future: {"je": "rencontrerai", "tu": "rencontreras", "il/elle": "rencontrera", "nous": "rencontrerons", "vous": "rencontrerez", "ils/elles": "rencontreront"}
+  },
+  {
+    id: 130, infinitive: "rentrer", translation: "возвращаться домой",
+    transcription: "рантрэ́",
+    example: {"greek": "Je rentre vers dix-neuf heures.", "ru": "Я возвращаюсь домой около семи."},
+    present: {"je": "rentre", "tu": "rentres", "il/elle": "rentre", "nous": "rentrons", "vous": "rentrez", "ils/elles": "rentrent"},
+    preterite: {"je": "suis rentré(e)", "tu": "es rentré(e)", "il/elle": "est rentré(e)", "nous": "sommes rentré(e)s", "vous": "êtes rentré(e)(s)", "ils/elles": "sont rentré(e)s"},
+    future: {"je": "rentrerai", "tu": "rentreras", "il/elle": "rentrera", "nous": "rentrerons", "vous": "rentrerez", "ils/elles": "rentreront"}
+  },
+  {
+    id: 131, infinitive: "réparer", translation: "чинить",
+    transcription: "репарэ́",
+    example: {"greek": "Le propriétaire doit réparer la chaudière.", "ru": "Владелец должен починить котёл."},
+    present: {"je": "répare", "tu": "répares", "il/elle": "répare", "nous": "réparons", "vous": "réparez", "ils/elles": "réparent"},
+    preterite: {"je": "ai réparé", "tu": "as réparé", "il/elle": "a réparé", "nous": "avons réparé", "vous": "avez réparé", "ils/elles": "ont réparé"},
+    future: {"je": "réparerai", "tu": "répareras", "il/elle": "réparera", "nous": "réparerons", "vous": "réparerez", "ils/elles": "répareront"}
+  },
+  {
+    id: 132, infinitive: "réserver", translation: "бронировать",
+    transcription: "резервэ́",
+    example: {"greek": "J'ai réservé une table pour deux.", "ru": "Я забронировал столик на двоих."},
+    present: {"je": "réserve", "tu": "réserves", "il/elle": "réserve", "nous": "réservons", "vous": "réservez", "ils/elles": "réservent"},
+    preterite: {"je": "ai réservé", "tu": "as réservé", "il/elle": "a réservé", "nous": "avons réservé", "vous": "avez réservé", "ils/elles": "ont réservé"},
+    future: {"je": "réserverai", "tu": "réserveras", "il/elle": "réservera", "nous": "réserverons", "vous": "réserverez", "ils/elles": "réserveront"}
+  },
+  {
+    id: 133, infinitive: "retourner", translation: "возвращаться",
+    transcription: "рётурнэ́",
+    example: {"greek": "Je dois retourner à la préfecture lundi.", "ru": "В понедельник мне нужно вернуться в префектуру."},
+    present: {"je": "retourne", "tu": "retournes", "il/elle": "retourne", "nous": "retournons", "vous": "retournez", "ils/elles": "retournent"},
+    preterite: {"je": "suis retourné(e)", "tu": "es retourné(e)", "il/elle": "est retourné(e)", "nous": "sommes retourné(e)s", "vous": "êtes retourné(e)(s)", "ils/elles": "sont retourné(e)s"},
+    future: {"je": "retournerai", "tu": "retourneras", "il/elle": "retournera", "nous": "retournerons", "vous": "retournerez", "ils/elles": "retourneront"}
+  },
+  {
+    id: 134, infinitive: "réussir", translation: "добиваться успеха",
+    transcription: "реюси́р",
+    example: {"greek": "J'ai réussi mon examen de français.", "ru": "Я сдал экзамен по французскому."},
+    present: {"je": "réussis", "tu": "réussis", "il/elle": "réussit", "nous": "réussissons", "vous": "réussissez", "ils/elles": "réussissent"},
+    preterite: {"je": "ai réussi", "tu": "as réussi", "il/elle": "a réussi", "nous": "avons réussi", "vous": "avez réussi", "ils/elles": "ont réussi"},
+    future: {"je": "réussirai", "tu": "réussiras", "il/elle": "réussira", "nous": "réussirons", "vous": "réussirez", "ils/elles": "réussiront"}
+  },
+  {
+    id: 135, infinitive: "sembler", translation: "казаться",
+    transcription: "самблэ́",
+    example: {"greek": "Ça me semble trop cher.", "ru": "Мне это кажется слишком дорогим."},
+    present: {"je": "semble", "tu": "sembles", "il/elle": "semble", "nous": "semblons", "vous": "semblez", "ils/elles": "semblent"},
+    preterite: {"je": "ai semblé", "tu": "as semblé", "il/elle": "a semblé", "nous": "avons semblé", "vous": "avez semblé", "ils/elles": "ont semblé"},
+    future: {"je": "semblerai", "tu": "sembleras", "il/elle": "semblera", "nous": "semblerons", "vous": "semblerez", "ils/elles": "sembleront"}
+  },
+  {
+    id: 136, infinitive: "souhaiter", translation: "желать",
+    transcription: "суэтэ́",
+    example: {"greek": "Je souhaite résilier mon abonnement.", "ru": "Я хочу расторгнуть абонемент."},
+    present: {"je": "souhaite", "tu": "souhaites", "il/elle": "souhaite", "nous": "souhaitons", "vous": "souhaitez", "ils/elles": "souhaitent"},
+    preterite: {"je": "ai souhaité", "tu": "as souhaité", "il/elle": "a souhaité", "nous": "avons souhaité", "vous": "avez souhaité", "ils/elles": "ont souhaité"},
+    future: {"je": "souhaiterai", "tu": "souhaiteras", "il/elle": "souhaitera", "nous": "souhaiterons", "vous": "souhaiterez", "ils/elles": "souhaiteront"}
+  },
+  {
+    id: 137, infinitive: "terminer", translation: "заканчивать",
+    transcription: "терминэ́",
+    example: {"greek": "Je termine le travail à seize heures.", "ru": "Я заканчиваю работу в четыре."},
+    present: {"je": "termine", "tu": "termines", "il/elle": "termine", "nous": "terminons", "vous": "terminez", "ils/elles": "terminent"},
+    preterite: {"je": "ai terminé", "tu": "as terminé", "il/elle": "a terminé", "nous": "avons terminé", "vous": "avez terminé", "ils/elles": "ont terminé"},
+    future: {"je": "terminerai", "tu": "termineras", "il/elle": "terminera", "nous": "terminerons", "vous": "terminerez", "ils/elles": "termineront"}
+  },
+  {
+    id: 138, infinitive: "tomber", translation: "падать",
+    transcription: "томбэ́",
+    example: {"greek": "Il est tombé dans l'escalier.", "ru": "Он упал на лестнице."},
+    present: {"je": "tombe", "tu": "tombes", "il/elle": "tombe", "nous": "tombons", "vous": "tombez", "ils/elles": "tombent"},
+    preterite: {"je": "suis tombé(e)", "tu": "es tombé(e)", "il/elle": "est tombé(e)", "nous": "sommes tombé(e)s", "vous": "êtes tombé(e)(s)", "ils/elles": "sont tombé(e)s"},
+    future: {"je": "tomberai", "tu": "tomberas", "il/elle": "tombera", "nous": "tomberons", "vous": "tomberez", "ils/elles": "tomberont"}
+  },
+  {
+    id: 139, infinitive: "toucher", translation: "трогать / получать деньги",
+    transcription: "тушэ́",
+    example: {"greek": "Je touche mon salaire le cinq du mois.", "ru": "Я получаю зарплату пятого числа."},
+    present: {"je": "touche", "tu": "touches", "il/elle": "touche", "nous": "touchons", "vous": "touchez", "ils/elles": "touchent"},
+    preterite: {"je": "ai touché", "tu": "as touché", "il/elle": "a touché", "nous": "avons touché", "vous": "avez touché", "ils/elles": "ont touché"},
+    future: {"je": "toucherai", "tu": "toucheras", "il/elle": "touchera", "nous": "toucherons", "vous": "toucherez", "ils/elles": "toucheront"}
+  },
+  {
+    id: 140, infinitive: "tourner", translation: "поворачивать",
+    transcription: "турнэ́",
+    example: {"greek": "Tournez à droite après la boulangerie.", "ru": "Поверните направо после булочной."},
+    present: {"je": "tourne", "tu": "tournes", "il/elle": "tourne", "nous": "tournons", "vous": "tournez", "ils/elles": "tournent"},
+    preterite: {"je": "ai tourné", "tu": "as tourné", "il/elle": "a tourné", "nous": "avons tourné", "vous": "avez tourné", "ils/elles": "ont tourné"},
+    future: {"je": "tournerai", "tu": "tourneras", "il/elle": "tournera", "nous": "tournerons", "vous": "tournerez", "ils/elles": "tourneront"}
+  },
+  {
+    id: 141, infinitive: "traverser", translation: "пересекать",
+    transcription: "траверсэ́",
+    example: {"greek": "Traversez au passage piéton.", "ru": "Переходите по пешеходному переходу."},
+    present: {"je": "traverse", "tu": "traverses", "il/elle": "traverse", "nous": "traversons", "vous": "traversez", "ils/elles": "traversent"},
+    preterite: {"je": "ai traversé", "tu": "as traversé", "il/elle": "a traversé", "nous": "avons traversé", "vous": "avez traversé", "ils/elles": "ont traversé"},
+    future: {"je": "traverserai", "tu": "traverseras", "il/elle": "traversera", "nous": "traverserons", "vous": "traverserez", "ils/elles": "traverseront"}
+  },
+  {
+    id: 142, infinitive: "utiliser", translation: "использовать",
+    transcription: "ютилизэ́",
+    example: {"greek": "J'utilise l'application tous les jours.", "ru": "Я пользуюсь приложением каждый день."},
+    present: {"je": "utilise", "tu": "utilises", "il/elle": "utilise", "nous": "utilisons", "vous": "utilisez", "ils/elles": "utilisent"},
+    preterite: {"je": "ai utilisé", "tu": "as utilisé", "il/elle": "a utilisé", "nous": "avons utilisé", "vous": "avez utilisé", "ils/elles": "ont utilisé"},
+    future: {"je": "utiliserai", "tu": "utiliseras", "il/elle": "utilisera", "nous": "utiliserons", "vous": "utiliserez", "ils/elles": "utiliseront"}
+  },
+  {
+    id: 143, infinitive: "visiter", translation: "осматривать / посещать",
+    transcription: "визитэ́",
+    example: {"greek": "Nous visitons l'appartement samedi.", "ru": "В субботу мы смотрим квартиру."},
+    present: {"je": "visite", "tu": "visites", "il/elle": "visite", "nous": "visitons", "vous": "visitez", "ils/elles": "visitent"},
+    preterite: {"je": "ai visité", "tu": "as visité", "il/elle": "a visité", "nous": "avons visité", "vous": "avez visité", "ils/elles": "ont visité"},
+    future: {"je": "visiterai", "tu": "visiteras", "il/elle": "visitera", "nous": "visiterons", "vous": "visiterez", "ils/elles": "visiteront"}
+  },
+  {
+    id: 144, infinitive: "voyager", translation: "путешествовать",
+    transcription: "вуайажэ́",
+    example: {"greek": "Je voyage souvent pour le travail.", "ru": "Я часто езжу в командировки."},
+    present: {"je": "voyage", "tu": "voyages", "il/elle": "voyage", "nous": "voyageons", "vous": "voyagez", "ils/elles": "voyagent"},
+    preterite: {"je": "ai voyagé", "tu": "as voyagé", "il/elle": "a voyagé", "nous": "avons voyagé", "vous": "avez voyagé", "ils/elles": "ont voyagé"},
+    future: {"je": "voyagerai", "tu": "voyageras", "il/elle": "voyagera", "nous": "voyagerons", "vous": "voyagerez", "ils/elles": "voyageront"}
+  },
+  {
+    id: 145, infinitive: "répéter", translation: "повторять",
+    transcription: "репетэ́",
+    example: {"greek": "Vous pouvez répéter plus lentement ?", "ru": "Можете повторить помедленнее?"},
+    present: {"je": "répète", "tu": "répètes", "il/elle": "répète", "nous": "répétons", "vous": "répétez", "ils/elles": "répètent"},
+    preterite: {"je": "ai répété", "tu": "as répété", "il/elle": "a répété", "nous": "avons répété", "vous": "avez répété", "ils/elles": "ont répété"},
+    future: {"je": "répéterai", "tu": "répéteras", "il/elle": "répétera", "nous": "répéterons", "vous": "répéterez", "ils/elles": "répéteront"}
+  },
+  {
+    id: 146, infinitive: "préférer", translation: "предпочитать",
+    transcription: "преферэ́",
+    example: {"greek": "Je préfère payer par carte.", "ru": "Я предпочитаю платить картой."},
+    present: {"je": "préfère", "tu": "préfères", "il/elle": "préfère", "nous": "préférons", "vous": "préférez", "ils/elles": "préfèrent"},
+    preterite: {"je": "ai préféré", "tu": "as préféré", "il/elle": "a préféré", "nous": "avons préféré", "vous": "avez préféré", "ils/elles": "ont préféré"},
+    future: {"je": "préférerai", "tu": "préféreras", "il/elle": "préférera", "nous": "préférerons", "vous": "préférerez", "ils/elles": "préféreront"}
+  },
+  {
+    id: 147, infinitive: "espérer", translation: "надеяться",
+    transcription: "эсперэ́",
+    example: {"greek": "J'espère recevoir une réponse cette semaine.", "ru": "Надеюсь получить ответ на этой неделе."},
+    present: {"je": "espère", "tu": "espères", "il/elle": "espère", "nous": "espérons", "vous": "espérez", "ils/elles": "espèrent"},
+    preterite: {"je": "ai espéré", "tu": "as espéré", "il/elle": "a espéré", "nous": "avons espéré", "vous": "avez espéré", "ils/elles": "ont espéré"},
+    future: {"je": "espérerai", "tu": "espéreras", "il/elle": "espérera", "nous": "espérerons", "vous": "espérerez", "ils/elles": "espéreront"}
+  },
+  {
+    id: 148, infinitive: "promettre", translation: "обещать",
+    transcription: "промэ́тр",
+    example: {"greek": "Il a promis de rappeler demain.", "ru": "Он обещал перезвонить завтра."},
+    present: {"je": "promets", "tu": "promets", "il/elle": "promet", "nous": "promettons", "vous": "promettez", "ils/elles": "promettent"},
+    preterite: {"je": "ai promis", "tu": "as promis", "il/elle": "a promis", "nous": "avons promis", "vous": "avez promis", "ils/elles": "ont promis"},
+    future: {"je": "promettrai", "tu": "promettras", "il/elle": "promettra", "nous": "promettrons", "vous": "promettrez", "ils/elles": "promettront"}
+  },
+  {
+    id: 149, infinitive: "reconnaître", translation: "узнавать / признавать",
+    transcription: "рёконэ́тр",
+    example: {"greek": "Je ne reconnais pas cette opération sur mon compte.", "ru": "Я не узнаю эту операцию на своём счёте."},
+    present: {"je": "reconnais", "tu": "reconnais", "il/elle": "reconnaît", "nous": "reconnaissons", "vous": "reconnaissez", "ils/elles": "reconnaissent"},
+    preterite: {"je": "ai reconnu", "tu": "as reconnu", "il/elle": "a reconnu", "nous": "avons reconnu", "vous": "avez reconnu", "ils/elles": "ont reconnu"},
+    future: {"je": "reconnaîtrai", "tu": "reconnaîtras", "il/elle": "reconnaîtra", "nous": "reconnaîtrons", "vous": "reconnaîtrez", "ils/elles": "reconnaîtront"}
+  },
+  {
+    id: 150, infinitive: "décrire", translation: "описывать",
+    transcription: "декри́р",
+    example: {"greek": "Décrivez la douleur, s'il vous plaît.", "ru": "Опишите боль, пожалуйста."},
+    present: {"je": "décris", "tu": "décris", "il/elle": "décrit", "nous": "décrivons", "vous": "décrivez", "ils/elles": "décrivent"},
+    preterite: {"je": "ai décrit", "tu": "as décrit", "il/elle": "a décrit", "nous": "avons décrit", "vous": "avez décrit", "ils/elles": "ont décrit"},
+    future: {"je": "décrirai", "tu": "décriras", "il/elle": "décrira", "nous": "décrirons", "vous": "décrirez", "ils/elles": "décriront"}
+  },
+  {
+    id: 151, infinitive: "traduire", translation: "переводить",
+    transcription: "традюи́р",
+    example: {"greek": "Il faut traduire l'acte de naissance.", "ru": "Свидетельство о рождении нужно перевести."},
+    present: {"je": "traduis", "tu": "traduis", "il/elle": "traduit", "nous": "traduisons", "vous": "traduisez", "ils/elles": "traduisent"},
+    preterite: {"je": "ai traduit", "tu": "as traduit", "il/elle": "a traduit", "nous": "avons traduit", "vous": "avez traduit", "ils/elles": "ont traduit"},
+    future: {"je": "traduirai", "tu": "traduiras", "il/elle": "traduira", "nous": "traduirons", "vous": "traduirez", "ils/elles": "traduiront"}
+  },
+  {
+    id: 152, infinitive: "prévenir", translation: "предупреждать",
+    transcription: "превни́р",
+    example: {"greek": "Prévenez le propriétaire avant les travaux.", "ru": "Предупредите владельца до начала ремонта."},
+    present: {"je": "préviens", "tu": "préviens", "il/elle": "prévient", "nous": "prévenons", "vous": "prévenez", "ils/elles": "préviennent"},
+    preterite: {"je": "ai prévenu", "tu": "as prévenu", "il/elle": "a prévenu", "nous": "avons prévenu", "vous": "avez prévenu", "ils/elles": "ont prévenu"},
+    future: {"je": "préviendrai", "tu": "préviendras", "il/elle": "préviendra", "nous": "préviendrons", "vous": "préviendrez", "ils/elles": "préviendront"}
+  },
+  {
+    id: 153, infinitive: "plaindre", translation: "жалеть",
+    transcription: "плэ́ндр",
+    example: {"greek": "Je ne me plains pas, ça va.", "ru": "Я не жалуюсь, всё нормально."},
+    present: {"je": "plains", "tu": "plains", "il/elle": "plaint", "nous": "plaignons", "vous": "plaignez", "ils/elles": "plaignent"},
+    preterite: {"je": "ai plaint", "tu": "as plaint", "il/elle": "a plaint", "nous": "avons plaint", "vous": "avez plaint", "ils/elles": "ont plaint"},
+    future: {"je": "plaindrai", "tu": "plaindras", "il/elle": "plaindra", "nous": "plaindrons", "vous": "plaindrez", "ils/elles": "plaindront"}
+  },
+  {
+    id: 154, infinitive: "rire", translation: "смеяться",
+    transcription: "рир",
+    example: {"greek": "On a beaucoup ri hier soir.", "ru": "Вчера вечером мы много смеялись."},
+    present: {"je": "ris", "tu": "ris", "il/elle": "rit", "nous": "rions", "vous": "riez", "ils/elles": "rient"},
+    preterite: {"je": "ai ri", "tu": "as ri", "il/elle": "a ri", "nous": "avons ri", "vous": "avez ri", "ils/elles": "ont ri"},
+    future: {"je": "rirai", "tu": "riras", "il/elle": "rira", "nous": "rirons", "vous": "rirez", "ils/elles": "riront"}
+  },
+  {
+    id: 155, infinitive: "sourire", translation: "улыбаться",
+    transcription: "сури́р",
+    example: {"greek": "Elle sourit toujours au client.", "ru": "Она всегда улыбается клиенту."},
+    present: {"je": "souris", "tu": "souris", "il/elle": "sourit", "nous": "sourions", "vous": "souriez", "ils/elles": "sourient"},
+    preterite: {"je": "ai souri", "tu": "as souri", "il/elle": "a souri", "nous": "avons souri", "vous": "avez souri", "ils/elles": "ont souri"},
+    future: {"je": "sourirai", "tu": "souriras", "il/elle": "sourira", "nous": "sourirons", "vous": "sourirez", "ils/elles": "souriront"}
+  },
+  {
+    id: 156, infinitive: "mentir", translation: "лгать",
+    transcription: "манти́р",
+    example: {"greek": "Ne mentez pas sur votre dossier.", "ru": "Не лгите в своём досье."},
+    present: {"je": "mens", "tu": "mens", "il/elle": "ment", "nous": "mentons", "vous": "mentez", "ils/elles": "mentent"},
+    preterite: {"je": "ai menti", "tu": "as menti", "il/elle": "a menti", "nous": "avons menti", "vous": "avez menti", "ils/elles": "ont menti"},
+    future: {"je": "mentirai", "tu": "mentiras", "il/elle": "mentira", "nous": "mentirons", "vous": "mentirez", "ils/elles": "mentiront"}
+  },
+  {
+    id: 157, infinitive: "plaire", translation: "нравиться",
+    transcription: "плэр",
+    example: {"greek": "Cet appartement me plaît beaucoup.", "ru": "Эта квартира мне очень нравится."},
+    present: {"je": "plais", "tu": "plais", "il/elle": "plaît", "nous": "plaisons", "vous": "plaisez", "ils/elles": "plaisent"},
+    preterite: {"je": "ai plu", "tu": "as plu", "il/elle": "a plu", "nous": "avons plu", "vous": "avez plu", "ils/elles": "ont plu"},
+    future: {"je": "plairai", "tu": "plairas", "il/elle": "plaira", "nous": "plairons", "vous": "plairez", "ils/elles": "plairont"}
+  },
+  {
+    id: 158, infinitive: "paraître", translation: "казаться",
+    transcription: "парэ́тр",
+    example: {"greek": "Le prix paraît correct.", "ru": "Цена кажется приемлемой."},
+    present: {"je": "parais", "tu": "parais", "il/elle": "paraît", "nous": "paraissons", "vous": "paraissez", "ils/elles": "paraissent"},
+    preterite: {"je": "ai paru", "tu": "as paru", "il/elle": "a paru", "nous": "avons paru", "vous": "avez paru", "ils/elles": "ont paru"},
+    future: {"je": "paraîtrai", "tu": "paraîtras", "il/elle": "paraîtra", "nous": "paraîtrons", "vous": "paraîtrez", "ils/elles": "paraîtront"}
+  },
+  {
+    id: 159, infinitive: "suffire", translation: "хватать / быть достаточным",
+    transcription: "сюфи́р",
+    example: {"greek": "Une pièce d'identité suffit.", "ru": "Достаточно удостоверения личности."},
+    present: {"je": "suffis", "tu": "suffis", "il/elle": "suffit", "nous": "suffisons", "vous": "suffisez", "ils/elles": "suffisent"},
+    preterite: {"je": "ai suffi", "tu": "as suffi", "il/elle": "a suffi", "nous": "avons suffi", "vous": "avez suffi", "ils/elles": "ont suffi"},
+    future: {"je": "suffirai", "tu": "suffiras", "il/elle": "suffira", "nous": "suffirons", "vous": "suffirez", "ils/elles": "suffiront"}
+  },
+  {
+    id: 161, infinitive: "corriger", translation: "исправлять",
+    transcription: "коррижэ́",
+    example: {"greek": "Corrigez-moi si je me trompe.", "ru": "Поправьте меня, если я ошибаюсь."},
+    present: {"je": "corrige", "tu": "corriges", "il/elle": "corrige", "nous": "corrigeons", "vous": "corrigez", "ils/elles": "corrigent"},
+    preterite: {"je": "ai corrigé", "tu": "as corrigé", "il/elle": "a corrigé", "nous": "avons corrigé", "vous": "avez corrigé", "ils/elles": "ont corrigé"},
+    future: {"je": "corrigerai", "tu": "corrigeras", "il/elle": "corrigera", "nous": "corrigerons", "vous": "corrigerez", "ils/elles": "corrigeront"}
+  },
+  {
+    id: 162, infinitive: "obtenir", translation: "получать / добиваться",
+    transcription: "обтёни́р",
+    example: {"greek": "J'ai obtenu mon titre de séjour.", "ru": "Я получил вид на жительство."},
+    present: {"je": "obtiens", "tu": "obtiens", "il/elle": "obtient", "nous": "obtenons", "vous": "obtenez", "ils/elles": "obtiennent"},
+    preterite: {"je": "ai obtenu", "tu": "as obtenu", "il/elle": "a obtenu", "nous": "avons obtenu", "vous": "avez obtenu", "ils/elles": "ont obtenu"},
+    future: {"je": "obtiendrai", "tu": "obtiendras", "il/elle": "obtiendra", "nous": "obtiendrons", "vous": "obtiendrez", "ils/elles": "obtiendront"}
+  },
+  {
+    id: 163, infinitive: "embaucher", translation: "нанимать на работу",
+    transcription: "амбошэ́",
+    example: {"greek": "Ils embauchent en CDI.", "ru": "Они нанимают по бессрочному договору."},
+    present: {"je": "embauche", "tu": "embauches", "il/elle": "embauche", "nous": "embauchons", "vous": "embauchez", "ils/elles": "embauchent"},
+    preterite: {"je": "ai embauché", "tu": "as embauché", "il/elle": "a embauché", "nous": "avons embauché", "vous": "avez embauché", "ils/elles": "ont embauché"},
+    future: {"je": "embaucherai", "tu": "embaucheras", "il/elle": "embauchera", "nous": "embaucherons", "vous": "embaucherez", "ils/elles": "embaucheront"}
+  },
+  {
+    id: 164, infinitive: "licencier", translation: "увольнять",
+    transcription: "лисансье́",
+    example: {"greek": "Il a été licencié en juin.", "ru": "Его уволили в июне."},
+    present: {"je": "licencie", "tu": "licencies", "il/elle": "licencie", "nous": "licencions", "vous": "licenciez", "ils/elles": "licencient"},
+    preterite: {"je": "ai licencié", "tu": "as licencié", "il/elle": "a licencié", "nous": "avons licencié", "vous": "avez licencié", "ils/elles": "ont licencié"},
+    future: {"je": "licencierai", "tu": "licencieras", "il/elle": "licenciera", "nous": "licencierons", "vous": "licencierez", "ils/elles": "licencieront"}
+  },
+  {
+    id: 165, infinitive: "démissionner", translation: "увольняться по своей воле",
+    transcription: "демисьонэ́",
+    example: {"greek": "J'ai démissionné le mois dernier.", "ru": "В прошлом месяце я уволился."},
+    present: {"je": "démissionne", "tu": "démissionnes", "il/elle": "démissionne", "nous": "démissionnons", "vous": "démissionnez", "ils/elles": "démissionnent"},
+    preterite: {"je": "ai démissionné", "tu": "as démissionné", "il/elle": "a démissionné", "nous": "avons démissionné", "vous": "avez démissionné", "ils/elles": "ont démissionné"},
+    future: {"je": "démissionnerai", "tu": "démissionneras", "il/elle": "démissionnera", "nous": "démissionnerons", "vous": "démissionnerez", "ils/elles": "démissionneront"}
+  },
+  {
+    id: 166, infinitive: "postuler", translation: "подавать заявку на работу",
+    transcription: "постюлэ́",
+    example: {"greek": "J'ai postulé à trois offres.", "ru": "Я откликнулся на три вакансии."},
+    present: {"je": "postule", "tu": "postules", "il/elle": "postule", "nous": "postulons", "vous": "postulez", "ils/elles": "postulent"},
+    preterite: {"je": "ai postulé", "tu": "as postulé", "il/elle": "a postulé", "nous": "avons postulé", "vous": "avez postulé", "ils/elles": "ont postulé"},
+    future: {"je": "postulerai", "tu": "postuleras", "il/elle": "postulera", "nous": "postulerons", "vous": "postulerez", "ils/elles": "postuleront"}
+  },
+  {
+    id: 167, infinitive: "gérer", translation: "управлять",
+    transcription: "жерэ́",
+    example: {"greek": "Je gère une équipe de cinq personnes.", "ru": "Я руковожу командой из пяти человек."},
+    present: {"je": "gère", "tu": "gères", "il/elle": "gère", "nous": "gérons", "vous": "gérez", "ils/elles": "gèrent"},
+    preterite: {"je": "ai géré", "tu": "as géré", "il/elle": "a géré", "nous": "avons géré", "vous": "avez géré", "ils/elles": "ont géré"},
+    future: {"je": "gèrerai", "tu": "gèreras", "il/elle": "gèrera", "nous": "gèrerons", "vous": "gèrerez", "ils/elles": "gèreront"}
+  },
+  {
+    id: 168, infinitive: "diriger", translation: "руководить",
+    transcription: "дирижэ́",
+    example: {"greek": "Elle dirige le service depuis deux ans.", "ru": "Она руководит отделом два года."},
+    present: {"je": "dirige", "tu": "diriges", "il/elle": "dirige", "nous": "dirigeons", "vous": "dirigez", "ils/elles": "dirigent"},
+    preterite: {"je": "ai dirigé", "tu": "as dirigé", "il/elle": "a dirigé", "nous": "avons dirigé", "vous": "avez dirigé", "ils/elles": "ont dirigé"},
+    future: {"je": "dirigerai", "tu": "dirigeras", "il/elle": "dirigera", "nous": "dirigerons", "vous": "dirigerez", "ils/elles": "dirigeront"}
+  },
+  {
+    id: 169, infinitive: "vérifier", translation: "проверять",
+    transcription: "верифье́",
+    example: {"greek": "Vérifiez bien la date sur le document.", "ru": "Внимательно проверьте дату в документе."},
+    present: {"je": "vérifie", "tu": "vérifies", "il/elle": "vérifie", "nous": "vérifions", "vous": "vérifiez", "ils/elles": "vérifient"},
+    preterite: {"je": "ai vérifié", "tu": "as vérifié", "il/elle": "a vérifié", "nous": "avons vérifié", "vous": "avez vérifié", "ils/elles": "ont vérifié"},
+    future: {"je": "vérifierai", "tu": "vérifieras", "il/elle": "vérifiera", "nous": "vérifierons", "vous": "vérifierez", "ils/elles": "vérifieront"}
+  },
+  {
+    id: 170, infinitive: "valider", translation: "подтверждать / компостировать",
+    transcription: "валидэ́",
+    example: {"greek": "N'oubliez pas de valider votre visa en ligne.", "ru": "Не забудьте подтвердить визу онлайн."},
+    present: {"je": "valide", "tu": "valides", "il/elle": "valide", "nous": "validons", "vous": "validez", "ils/elles": "valident"},
+    preterite: {"je": "ai validé", "tu": "as validé", "il/elle": "a validé", "nous": "avons validé", "vous": "avez validé", "ils/elles": "ont validé"},
+    future: {"je": "validerai", "tu": "valideras", "il/elle": "validera", "nous": "validerons", "vous": "validerez", "ils/elles": "valideront"}
+  },
+  {
+    id: 171, infinitive: "renouveler", translation: "продлевать",
+    transcription: "рёнувлэ́",
+    example: {"greek": "Je dois renouveler ma carte de séjour.", "ru": "Мне нужно продлить вид на жительство."},
+    present: {"je": "renouvelle", "tu": "renouvelles", "il/elle": "renouvelle", "nous": "renouvelons", "vous": "renouvelez", "ils/elles": "renouvellent"},
+    preterite: {"je": "ai renouvelé", "tu": "as renouvelé", "il/elle": "a renouvelé", "nous": "avons renouvelé", "vous": "avez renouvelé", "ils/elles": "ont renouvelé"},
+    future: {"je": "renouvellerai", "tu": "renouvelleras", "il/elle": "renouvellera", "nous": "renouvellerons", "vous": "renouvellerez", "ils/elles": "renouvelleront"}
+  },
+  {
+    id: 172, infinitive: "résilier", translation: "расторгать",
+    transcription: "резилье́",
+    example: {"greek": "Je souhaite résilier mon contrat.", "ru": "Я хочу расторгнуть договор."},
+    present: {"je": "résilie", "tu": "résilies", "il/elle": "résilie", "nous": "résilions", "vous": "résiliez", "ils/elles": "résilient"},
+    preterite: {"je": "ai résilié", "tu": "as résilié", "il/elle": "a résilié", "nous": "avons résilié", "vous": "avez résilié", "ils/elles": "ont résilié"},
+    future: {"je": "résilierai", "tu": "résilieras", "il/elle": "résiliera", "nous": "résilierons", "vous": "résilierez", "ils/elles": "résilieront"}
+  },
+  {
+    id: 173, infinitive: "annuler", translation: "отменять",
+    transcription: "анюлэ́",
+    example: {"greek": "Le train a été annulé à cause de la grève.", "ru": "Поезд отменили из-за забастовки."},
+    present: {"je": "annule", "tu": "annules", "il/elle": "annule", "nous": "annulons", "vous": "annulez", "ils/elles": "annulent"},
+    preterite: {"je": "ai annulé", "tu": "as annulé", "il/elle": "a annulé", "nous": "avons annulé", "vous": "avez annulé", "ils/elles": "ont annulé"},
+    future: {"je": "annulerai", "tu": "annuleras", "il/elle": "annulera", "nous": "annulerons", "vous": "annulerez", "ils/elles": "annuleront"}
+  },
+  {
+    id: 174, infinitive: "reporter", translation: "переносить (по срокам)",
+    transcription: "рёпортэ́",
+    example: {"greek": "On peut reporter le rendez-vous ?", "ru": "Можно перенести приём?"},
+    present: {"je": "reporte", "tu": "reportes", "il/elle": "reporte", "nous": "reportons", "vous": "reportez", "ils/elles": "reportent"},
+    preterite: {"je": "ai reporté", "tu": "as reporté", "il/elle": "a reporté", "nous": "avons reporté", "vous": "avez reporté", "ils/elles": "ont reporté"},
+    future: {"je": "reporterai", "tu": "reporteras", "il/elle": "reportera", "nous": "reporterons", "vous": "reporterez", "ils/elles": "reporteront"}
+  },
+  {
+    id: 175, infinitive: "convoquer", translation: "вызывать (официально)",
+    transcription: "конвокэ́",
+    example: {"greek": "La préfecture m'a convoqué pour lundi.", "ru": "Префектура вызвала меня на понедельник."},
+    present: {"je": "convoque", "tu": "convoques", "il/elle": "convoque", "nous": "convoquons", "vous": "convoquez", "ils/elles": "convoquent"},
+    preterite: {"je": "ai convoqué", "tu": "as convoqué", "il/elle": "a convoqué", "nous": "avons convoqué", "vous": "avez convoqué", "ils/elles": "ont convoqué"},
+    future: {"je": "convoquerai", "tu": "convoqueras", "il/elle": "convoquera", "nous": "convoquerons", "vous": "convoquerez", "ils/elles": "convoqueront"}
+  },
+  {
+    id: 176, infinitive: "déposer", translation: "подавать / вносить",
+    transcription: "депозэ́",
+    example: {"greek": "J'ai déposé mon dossier en ligne.", "ru": "Я подал досье онлайн."},
+    present: {"je": "dépose", "tu": "déposes", "il/elle": "dépose", "nous": "déposons", "vous": "déposez", "ils/elles": "déposent"},
+    preterite: {"je": "ai déposé", "tu": "as déposé", "il/elle": "a déposé", "nous": "avons déposé", "vous": "avez déposé", "ils/elles": "ont déposé"},
+    future: {"je": "déposerai", "tu": "déposeras", "il/elle": "déposera", "nous": "déposerons", "vous": "déposerez", "ils/elles": "déposeront"}
+  },
+  {
+    id: 177, infinitive: "joindre", translation: "прикладывать / дозвониться",
+    transcription: "жуэ́ндр",
+    example: {"greek": "Veuillez joindre une copie du bail.", "ru": "Пожалуйста, приложите копию договора аренды."},
+    present: {"je": "joins", "tu": "joins", "il/elle": "joint", "nous": "joignons", "vous": "joignez", "ils/elles": "joignent"},
+    preterite: {"je": "ai joint", "tu": "as joint", "il/elle": "a joint", "nous": "avons joint", "vous": "avez joint", "ils/elles": "ont joint"},
+    future: {"je": "joindrai", "tu": "joindras", "il/elle": "joindra", "nous": "joindrons", "vous": "joindrez", "ils/elles": "joindront"}
+  },
+  {
+    id: 178, infinitive: "traiter", translation: "обрабатывать / рассматривать",
+    transcription: "трэтэ́",
+    example: {"greek": "Le dossier est en cours de traitement.", "ru": "Досье находится на рассмотрении."},
+    present: {"je": "traite", "tu": "traites", "il/elle": "traite", "nous": "traitons", "vous": "traitez", "ils/elles": "traitent"},
+    preterite: {"je": "ai traité", "tu": "as traité", "il/elle": "a traité", "nous": "avons traité", "vous": "avez traité", "ils/elles": "ont traité"},
+    future: {"je": "traiterai", "tu": "traiteras", "il/elle": "traitera", "nous": "traiterons", "vous": "traiterez", "ils/elles": "traiteront"}
+  },
+  {
+    id: 179, infinitive: "exiger", translation: "требовать",
+    transcription: "эгзижэ́",
+    example: {"greek": "La banque exige un justificatif de domicile.", "ru": "Банк требует подтверждение адреса."},
+    present: {"je": "exige", "tu": "exiges", "il/elle": "exige", "nous": "exigeons", "vous": "exigez", "ils/elles": "exigent"},
+    preterite: {"je": "ai exigé", "tu": "as exigé", "il/elle": "a exigé", "nous": "avons exigé", "vous": "avez exigé", "ils/elles": "ont exigé"},
+    future: {"je": "exigerai", "tu": "exigeras", "il/elle": "exigera", "nous": "exigerons", "vous": "exigerez", "ils/elles": "exigeront"}
+  },
+  {
+    id: 180, infinitive: "prouver", translation: "доказывать",
+    transcription: "прувэ́",
+    example: {"greek": "Il faut prouver vos revenus.", "ru": "Нужно подтвердить свои доходы."},
+    present: {"je": "prouve", "tu": "prouves", "il/elle": "prouve", "nous": "prouvons", "vous": "prouvez", "ils/elles": "prouvent"},
+    preterite: {"je": "ai prouvé", "tu": "as prouvé", "il/elle": "a prouvé", "nous": "avons prouvé", "vous": "avez prouvé", "ils/elles": "ont prouvé"},
+    future: {"je": "prouverai", "tu": "prouveras", "il/elle": "prouvera", "nous": "prouverons", "vous": "prouverez", "ils/elles": "prouveront"}
+  },
+  {
+    id: 181, infinitive: "imprimer", translation: "печатать",
+    transcription: "импримэ́",
+    example: {"greek": "Imprimez l'attestation et gardez-la.", "ru": "Распечатайте справку и сохраните её."},
+    present: {"je": "imprime", "tu": "imprimes", "il/elle": "imprime", "nous": "imprimons", "vous": "imprimez", "ils/elles": "impriment"},
+    preterite: {"je": "ai imprimé", "tu": "as imprimé", "il/elle": "a imprimé", "nous": "avons imprimé", "vous": "avez imprimé", "ils/elles": "ont imprimé"},
+    future: {"je": "imprimerai", "tu": "imprimeras", "il/elle": "imprimera", "nous": "imprimerons", "vous": "imprimerez", "ils/elles": "imprimeront"}
+  },
+  {
+    id: 182, infinitive: "scanner", translation: "сканировать",
+    transcription: "сканэ́",
+    example: {"greek": "Scannez le document recto verso.", "ru": "Отсканируйте документ с двух сторон."},
+    present: {"je": "scanne", "tu": "scannes", "il/elle": "scanne", "nous": "scannons", "vous": "scannez", "ils/elles": "scannent"},
+    preterite: {"je": "ai scanné", "tu": "as scanné", "il/elle": "a scanné", "nous": "avons scanné", "vous": "avez scanné", "ils/elles": "ont scanné"},
+    future: {"je": "scannerai", "tu": "scanneras", "il/elle": "scannera", "nous": "scannerons", "vous": "scannerez", "ils/elles": "scanneront"}
+  },
+  {
+    id: 183, infinitive: "transférer", translation: "переводить (деньги, файлы)",
+    transcription: "трансферэ́",
+    example: {"greek": "J'ai transféré l'argent hier soir.", "ru": "Я перевёл деньги вчера вечером."},
+    present: {"je": "transfère", "tu": "transfères", "il/elle": "transfère", "nous": "transférons", "vous": "transférez", "ils/elles": "transfèrent"},
+    preterite: {"je": "ai transféré", "tu": "as transféré", "il/elle": "a transféré", "nous": "avons transféré", "vous": "avez transféré", "ils/elles": "ont transféré"},
+    future: {"je": "transfèrerai", "tu": "transfèreras", "il/elle": "transfèrera", "nous": "transfèrerons", "vous": "transfèrerez", "ils/elles": "transfèreront"}
+  },
+  {
+    id: 184, infinitive: "retirer", translation: "снимать (деньги) / забирать",
+    transcription: "рётирэ́",
+    example: {"greek": "Je vais retirer cent euros.", "ru": "Я сниму сто евро."},
+    present: {"je": "retire", "tu": "retires", "il/elle": "retire", "nous": "retirons", "vous": "retirez", "ils/elles": "retirent"},
+    preterite: {"je": "ai retiré", "tu": "as retiré", "il/elle": "a retiré", "nous": "avons retiré", "vous": "avez retiré", "ils/elles": "ont retiré"},
+    future: {"je": "retirerai", "tu": "retireras", "il/elle": "retirera", "nous": "retirerons", "vous": "retirerez", "ils/elles": "retireront"}
+  },
+  {
+    id: 185, infinitive: "virer", translation: "перечислять",
+    transcription: "вирэ́",
+    example: {"greek": "Le salaire est viré le 30 du mois.", "ru": "Зарплату перечисляют тридцатого числа."},
+    present: {"je": "vire", "tu": "vires", "il/elle": "vire", "nous": "virons", "vous": "virez", "ils/elles": "virent"},
+    preterite: {"je": "ai viré", "tu": "as viré", "il/elle": "a viré", "nous": "avons viré", "vous": "avez viré", "ils/elles": "ont viré"},
+    future: {"je": "virerai", "tu": "vireras", "il/elle": "virera", "nous": "virerons", "vous": "virerez", "ils/elles": "vireront"}
+  },
+  {
+    id: 186, infinitive: "rembourser", translation: "возмещать / возвращать долг",
+    transcription: "рамбурсэ́",
+    example: {"greek": "La sécu rembourse 70% de la consultation.", "ru": "Страховка возмещает 70% стоимости приёма."},
+    present: {"je": "rembourse", "tu": "rembourses", "il/elle": "rembourse", "nous": "remboursons", "vous": "remboursez", "ils/elles": "remboursent"},
+    preterite: {"je": "ai remboursé", "tu": "as remboursé", "il/elle": "a remboursé", "nous": "avons remboursé", "vous": "avez remboursé", "ils/elles": "ont remboursé"},
+    future: {"je": "rembourserai", "tu": "rembourseras", "il/elle": "remboursera", "nous": "rembourserons", "vous": "rembourserez", "ils/elles": "rembourseront"}
+  },
+  {
+    id: 187, infinitive: "allumer", translation: "включать / зажигать",
+    transcription: "алюмэ́",
+    example: {"greek": "Allume la lumière, s'il te plaît.", "ru": "Включи свет, пожалуйста."},
+    present: {"je": "allume", "tu": "allumes", "il/elle": "allume", "nous": "allumons", "vous": "allumez", "ils/elles": "allument"},
+    preterite: {"je": "ai allumé", "tu": "as allumé", "il/elle": "a allumé", "nous": "avons allumé", "vous": "avez allumé", "ils/elles": "ont allumé"},
+    future: {"je": "allumerai", "tu": "allumeras", "il/elle": "allumera", "nous": "allumerons", "vous": "allumerez", "ils/elles": "allumeront"}
+  },
+  {
+    id: 188, infinitive: "éteindre", translation: "выключать / тушить",
+    transcription: "этэ́ндр",
+    example: {"greek": "Éteignez la lumière en partant.", "ru": "Выключайте свет, когда уходите."},
+    present: {"je": "éteins", "tu": "éteins", "il/elle": "éteint", "nous": "éteignons", "vous": "éteignez", "ils/elles": "éteignent"},
+    preterite: {"je": "ai éteint", "tu": "as éteint", "il/elle": "a éteint", "nous": "avons éteint", "vous": "avez éteint", "ils/elles": "ont éteint"},
+    future: {"je": "éteindrai", "tu": "éteindras", "il/elle": "éteindra", "nous": "éteindrons", "vous": "éteindrez", "ils/elles": "éteindront"}
+  },
+  {
+    id: 189, infinitive: "brancher", translation: "подключать",
+    transcription: "браншэ́",
+    example: {"greek": "La machine n'est pas branchée.", "ru": "Машина не подключена."},
+    present: {"je": "branche", "tu": "branches", "il/elle": "branche", "nous": "branchons", "vous": "branchez", "ils/elles": "branchent"},
+    preterite: {"je": "ai branché", "tu": "as branché", "il/elle": "a branché", "nous": "avons branché", "vous": "avez branché", "ils/elles": "ont branché"},
+    future: {"je": "brancherai", "tu": "brancheras", "il/elle": "branchera", "nous": "brancherons", "vous": "brancherez", "ils/elles": "brancheront"}
+  },
+  {
+    id: 190, infinitive: "couvrir", translation: "покрывать",
+    transcription: "куври́р",
+    example: {"greek": "L'assurance couvre les dégâts des eaux.", "ru": "Страховка покрывает залив."},
+    present: {"je": "couvre", "tu": "couvres", "il/elle": "couvre", "nous": "couvrons", "vous": "couvrez", "ils/elles": "couvrent"},
+    preterite: {"je": "ai couvert", "tu": "as couvert", "il/elle": "a couvert", "nous": "avons couvert", "vous": "avez couvert", "ils/elles": "ont couvert"},
+    future: {"je": "couvrirai", "tu": "couvriras", "il/elle": "couvrira", "nous": "couvrirons", "vous": "couvrirez", "ils/elles": "couvriront"}
+  },
+  {
+    id: 191, infinitive: "découvrir", translation: "обнаруживать",
+    transcription: "декуври́р",
+    example: {"greek": "J'ai découvert une fuite ce matin.", "ru": "Сегодня утром я обнаружил протечку."},
+    present: {"je": "découvre", "tu": "découvres", "il/elle": "découvre", "nous": "découvrons", "vous": "découvrez", "ils/elles": "découvrent"},
+    preterite: {"je": "ai découvert", "tu": "as découvert", "il/elle": "a découvert", "nous": "avons découvert", "vous": "avez découvert", "ils/elles": "ont découvert"},
+    future: {"je": "découvrirai", "tu": "découvriras", "il/elle": "découvrira", "nous": "découvrirons", "vous": "découvrirez", "ils/elles": "découvriront"}
+  },
+  {
+    id: 192, infinitive: "construire", translation: "строить",
+    transcription: "констрюи́р",
+    example: {"greek": "Ils construisent un immeuble en face.", "ru": "Напротив строят дом."},
+    present: {"je": "construis", "tu": "construis", "il/elle": "construit", "nous": "construisons", "vous": "construisez", "ils/elles": "construisent"},
+    preterite: {"je": "ai construit", "tu": "as construit", "il/elle": "a construit", "nous": "avons construit", "vous": "avez construit", "ils/elles": "ont construit"},
+    future: {"je": "construirai", "tu": "construiras", "il/elle": "construira", "nous": "construirons", "vous": "construirez", "ils/elles": "construiront"}
+  },
+  {
+    id: 193, infinitive: "peindre", translation: "красить",
+    transcription: "пэ́ндр",
+    example: {"greek": "On a peint la cuisine en blanc.", "ru": "Мы покрасили кухню в белый."},
+    present: {"je": "peins", "tu": "peins", "il/elle": "peint", "nous": "peignons", "vous": "peignez", "ils/elles": "peignent"},
+    preterite: {"je": "ai peint", "tu": "as peint", "il/elle": "a peint", "nous": "avons peint", "vous": "avez peint", "ils/elles": "ont peint"},
+    future: {"je": "peindrai", "tu": "peindras", "il/elle": "peindra", "nous": "peindrons", "vous": "peindrez", "ils/elles": "peindront"}
+  },
+  {
+    id: 194, infinitive: "bricoler", translation: "мастерить",
+    transcription: "бриколэ́",
+    example: {"greek": "Il bricole le week-end.", "ru": "По выходным он мастерит."},
+    present: {"je": "bricole", "tu": "bricoles", "il/elle": "bricole", "nous": "bricolons", "vous": "bricolez", "ils/elles": "bricolent"},
+    preterite: {"je": "ai bricolé", "tu": "as bricolé", "il/elle": "a bricolé", "nous": "avons bricolé", "vous": "avez bricolé", "ils/elles": "ont bricolé"},
+    future: {"je": "bricolerai", "tu": "bricoleras", "il/elle": "bricolera", "nous": "bricolerons", "vous": "bricolerez", "ils/elles": "bricoleront"}
+  },
+  {
+    id: 195, infinitive: "jeter", translation: "выбрасывать",
+    transcription: "жётэ́",
+    example: {"greek": "Ne jetez pas le verre avec les ordures.", "ru": "Не выбрасывайте стекло с обычным мусором."},
+    present: {"je": "jette", "tu": "jettes", "il/elle": "jette", "nous": "jetons", "vous": "jetez", "ils/elles": "jettent"},
+    preterite: {"je": "ai jeté", "tu": "as jeté", "il/elle": "a jeté", "nous": "avons jeté", "vous": "avez jeté", "ils/elles": "ont jeté"},
+    future: {"je": "jetterai", "tu": "jetteras", "il/elle": "jettera", "nous": "jetterons", "vous": "jetterez", "ils/elles": "jetteront"}
+  },
+  {
+    id: 196, infinitive: "trier", translation: "сортировать",
+    transcription: "трие́",
+    example: {"greek": "Ici, on trie les déchets.", "ru": "Здесь сортируют мусор."},
+    present: {"je": "trie", "tu": "tries", "il/elle": "trie", "nous": "trions", "vous": "triez", "ils/elles": "trient"},
+    preterite: {"je": "ai trié", "tu": "as trié", "il/elle": "a trié", "nous": "avons trié", "vous": "avez trié", "ils/elles": "ont trié"},
+    future: {"je": "trierai", "tu": "trieras", "il/elle": "triera", "nous": "trierons", "vous": "trierez", "ils/elles": "trieront"}
+  },
+  {
+    id: 197, infinitive: "balayer", translation: "подметать",
+    transcription: "балэйе́",
+    example: {"greek": "Le gardien balaie la cour le lundi.", "ru": "Консьерж подметает двор по понедельникам."},
+    present: {"je": "balaye", "tu": "balayes", "il/elle": "balaye", "nous": "balayons", "vous": "balayez", "ils/elles": "balayent"},
+    preterite: {"je": "ai balayé", "tu": "as balayé", "il/elle": "a balayé", "nous": "avons balayé", "vous": "avez balayé", "ils/elles": "ont balayé"},
+    future: {"je": "balayerai", "tu": "balayeras", "il/elle": "balayera", "nous": "balayerons", "vous": "balayerez", "ils/elles": "balayeront"}
+  },
+  {
+    id: 198, infinitive: "repasser", translation: "гладить / зайти снова",
+    transcription: "рёпасэ́",
+    example: {"greek": "Je repasse mes chemises le dimanche.", "ru": "Я глажу рубашки по воскресеньям."},
+    present: {"je": "repasse", "tu": "repasses", "il/elle": "repasse", "nous": "repassons", "vous": "repassez", "ils/elles": "repassent"},
+    preterite: {"je": "ai repassé", "tu": "as repassé", "il/elle": "a repassé", "nous": "avons repassé", "vous": "avez repassé", "ils/elles": "ont repassé"},
+    future: {"je": "repasserai", "tu": "repasseras", "il/elle": "repassera", "nous": "repasserons", "vous": "repasserez", "ils/elles": "repasseront"}
+  },
+  {
+    id: 199, infinitive: "sécher", translation: "сушить",
+    transcription: "сэшэ́",
+    example: {"greek": "Le linge sèche sur le balcon.", "ru": "Бельё сохнет на балконе."},
+    present: {"je": "sèche", "tu": "sèches", "il/elle": "sèche", "nous": "séchons", "vous": "séchez", "ils/elles": "sèchent"},
+    preterite: {"je": "ai séché", "tu": "as séché", "il/elle": "a séché", "nous": "avons séché", "vous": "avez séché", "ils/elles": "ont séché"},
+    future: {"je": "sècherai", "tu": "sècheras", "il/elle": "sèchera", "nous": "sècherons", "vous": "sècherez", "ils/elles": "sècheront"}
+  },
+  {
+    id: 200, infinitive: "arroser", translation: "поливать",
+    transcription: "арозэ́",
+    example: {"greek": "Tu peux arroser les plantes ?", "ru": "Можешь полить растения?"},
+    present: {"je": "arrose", "tu": "arroses", "il/elle": "arrose", "nous": "arrosons", "vous": "arrosez", "ils/elles": "arrosent"},
+    preterite: {"je": "ai arrosé", "tu": "as arrosé", "il/elle": "a arrosé", "nous": "avons arrosé", "vous": "avez arrosé", "ils/elles": "ont arrosé"},
+    future: {"je": "arroserai", "tu": "arroseras", "il/elle": "arrosera", "nous": "arroserons", "vous": "arroserez", "ils/elles": "arroseront"}
+  },
+  {
+    id: 201, infinitive: "déranger", translation: "беспокоить",
+    transcription: "деранжэ́",
+    example: {"greek": "Excusez-moi de vous déranger.", "ru": "Извините за беспокойство."},
+    present: {"je": "dérange", "tu": "déranges", "il/elle": "dérange", "nous": "dérangeons", "vous": "dérangez", "ils/elles": "dérangent"},
+    preterite: {"je": "ai dérangé", "tu": "as dérangé", "il/elle": "a dérangé", "nous": "avons dérangé", "vous": "avez dérangé", "ils/elles": "ont dérangé"},
+    future: {"je": "dérangerai", "tu": "dérangeras", "il/elle": "dérangera", "nous": "dérangerons", "vous": "dérangerez", "ils/elles": "dérangeront"}
+  },
+  {
+    id: 202, infinitive: "sonner", translation: "звонить (в дверь)",
+    transcription: "сонэ́",
+    example: {"greek": "Quelqu'un a sonné à la porte.", "ru": "Кто-то позвонил в дверь."},
+    present: {"je": "sonne", "tu": "sonnes", "il/elle": "sonne", "nous": "sonnons", "vous": "sonnez", "ils/elles": "sonnent"},
+    preterite: {"je": "ai sonné", "tu": "as sonné", "il/elle": "a sonné", "nous": "avons sonné", "vous": "avez sonné", "ils/elles": "ont sonné"},
+    future: {"je": "sonnerai", "tu": "sonneras", "il/elle": "sonnera", "nous": "sonnerons", "vous": "sonnerez", "ils/elles": "sonneront"}
+  },
+  {
+    id: 203, infinitive: "frapper", translation: "стучать / бить",
+    transcription: "фрапэ́",
+    example: {"greek": "Frappez avant d'entrer.", "ru": "Стучите перед тем, как войти."},
+    present: {"je": "frappe", "tu": "frappes", "il/elle": "frappe", "nous": "frappons", "vous": "frappez", "ils/elles": "frappent"},
+    preterite: {"je": "ai frappé", "tu": "as frappé", "il/elle": "a frappé", "nous": "avons frappé", "vous": "avez frappé", "ils/elles": "ont frappé"},
+    future: {"je": "frapperai", "tu": "frapperas", "il/elle": "frappera", "nous": "frapperons", "vous": "frapperez", "ils/elles": "frapperont"}
+  },
+  {
+    id: 204, infinitive: "partager", translation: "делить / делиться",
+    transcription: "партажэ́",
+    example: {"greek": "On partage l'addition ?", "ru": "Разделим счёт?"},
+    present: {"je": "partage", "tu": "partages", "il/elle": "partage", "nous": "partageons", "vous": "partagez", "ils/elles": "partagent"},
+    preterite: {"je": "ai partagé", "tu": "as partagé", "il/elle": "a partagé", "nous": "avons partagé", "vous": "avez partagé", "ils/elles": "ont partagé"},
+    future: {"je": "partagerai", "tu": "partageras", "il/elle": "partagera", "nous": "partagerons", "vous": "partagerez", "ils/elles": "partageront"}
+  },
+  {
+    id: 205, infinitive: "accueillir", translation: "принимать / встречать",
+    transcription: "акёйи́р",
+    example: {"greek": "L'école accueille les nouveaux élèves lundi.", "ru": "Школа принимает новых учеников в понедельник."},
+    present: {"je": "accueille", "tu": "accueilles", "il/elle": "accueille", "nous": "accueillons", "vous": "accueillez", "ils/elles": "accueillent"},
+    preterite: {"je": "ai accueilli", "tu": "as accueilli", "il/elle": "a accueilli", "nous": "avons accueilli", "vous": "avez accueilli", "ils/elles": "ont accueilli"},
+    future: {"je": "accueillirai", "tu": "accueilliras", "il/elle": "accueillira", "nous": "accueillirons", "vous": "accueillirez", "ils/elles": "accueilliront"}
+  },
+  {
+    id: 206, infinitive: "amener", translation: "приводить",
+    transcription: "амёнэ́",
+    example: {"greek": "J'amène mon fils chez le médecin.", "ru": "Я веду сына к врачу."},
+    present: {"je": "amène", "tu": "amènes", "il/elle": "amène", "nous": "amenons", "vous": "amenez", "ils/elles": "amènent"},
+    preterite: {"je": "ai amené", "tu": "as amené", "il/elle": "a amené", "nous": "avons amené", "vous": "avez amené", "ils/elles": "ont amené"},
+    future: {"je": "amènerai", "tu": "amèneras", "il/elle": "amènera", "nous": "amènerons", "vous": "amènerez", "ils/elles": "amèneront"}
+  },
+  {
+    id: 207, infinitive: "promener", translation: "выгуливать",
+    transcription: "промёнэ́",
+    example: {"greek": "Je promène le chien tous les soirs.", "ru": "Я выгуливаю собаку каждый вечер."},
+    present: {"je": "promène", "tu": "promènes", "il/elle": "promène", "nous": "promenons", "vous": "promenez", "ils/elles": "promènent"},
+    preterite: {"je": "ai promené", "tu": "as promené", "il/elle": "a promené", "nous": "avons promené", "vous": "avez promené", "ils/elles": "ont promené"},
+    future: {"je": "promènerai", "tu": "promèneras", "il/elle": "promènera", "nous": "promènerons", "vous": "promènerez", "ils/elles": "promèneront"}
+  },
+  {
+    id: 208, infinitive: "ressembler", translation: "быть похожим",
+    transcription: "рёсамблэ́",
+    example: {"greek": "Il ressemble beaucoup à son père.", "ru": "Он очень похож на отца."},
+    present: {"je": "ressemble", "tu": "ressembles", "il/elle": "ressemble", "nous": "ressemblons", "vous": "ressemblez", "ils/elles": "ressemblent"},
+    preterite: {"je": "ai ressemblé", "tu": "as ressemblé", "il/elle": "a ressemblé", "nous": "avons ressemblé", "vous": "avez ressemblé", "ils/elles": "ont ressemblé"},
+    future: {"je": "ressemblerai", "tu": "ressembleras", "il/elle": "ressemblera", "nous": "ressemblerons", "vous": "ressemblerez", "ils/elles": "ressembleront"}
+  },
+  {
+    id: 209, infinitive: "appartenir", translation: "принадлежать",
+    transcription: "апартёни́р",
+    example: {"greek": "Cette place appartient au voisin.", "ru": "Это место принадлежит соседу."},
+    present: {"je": "appartiens", "tu": "appartiens", "il/elle": "appartient", "nous": "appartenons", "vous": "appartenez", "ils/elles": "appartiennent"},
+    preterite: {"je": "ai appartenu", "tu": "as appartenu", "il/elle": "a appartenu", "nous": "avons appartenu", "vous": "avez appartenu", "ils/elles": "ont appartenu"},
+    future: {"je": "appartiendrai", "tu": "appartiendras", "il/elle": "appartiendra", "nous": "appartiendrons", "vous": "appartiendrez", "ils/elles": "appartiendront"}
+  },
+  {
+    id: 210, infinitive: "remettre", translation: "передавать / откладывать",
+    transcription: "рёмэ́тр",
+    example: {"greek": "Remettez-moi le document au guichet.", "ru": "Передайте мне документ в окне."},
+    present: {"je": "remets", "tu": "remets", "il/elle": "remet", "nous": "remettons", "vous": "remettez", "ils/elles": "remettent"},
+    preterite: {"je": "ai remis", "tu": "as remis", "il/elle": "a remis", "nous": "avons remis", "vous": "avez remis", "ils/elles": "ont remis"},
+    future: {"je": "remettrai", "tu": "remettras", "il/elle": "remettra", "nous": "remettrons", "vous": "remettrez", "ils/elles": "remettront"}
+  },
+  {
+    id: 211, infinitive: "reprendre", translation: "забирать обратно / возобновлять",
+    transcription: "рёпра́ндр",
+    example: {"greek": "Le travail reprend en septembre.", "ru": "Работа возобновляется в сентябре."},
+    present: {"je": "reprends", "tu": "reprends", "il/elle": "reprend", "nous": "reprenons", "vous": "reprenez", "ils/elles": "reprennent"},
+    preterite: {"je": "ai repris", "tu": "as repris", "il/elle": "a repris", "nous": "avons repris", "vous": "avez repris", "ils/elles": "ont repris"},
+    future: {"je": "reprendrai", "tu": "reprendras", "il/elle": "reprendra", "nous": "reprendrons", "vous": "reprendrez", "ils/elles": "reprendront"}
+  },
+  {
+    id: 212, infinitive: "surprendre", translation: "удивлять / заставать врасплох",
+    transcription: "сюрпра́ндр",
+    example: {"greek": "Ça m'a beaucoup surpris.", "ru": "Это меня сильно удивило."},
+    present: {"je": "surprends", "tu": "surprends", "il/elle": "surprend", "nous": "surprenons", "vous": "surprenez", "ils/elles": "surprennent"},
+    preterite: {"je": "ai surpris", "tu": "as surpris", "il/elle": "a surpris", "nous": "avons surpris", "vous": "avez surpris", "ils/elles": "ont surpris"},
+    future: {"je": "surprendrai", "tu": "surprendras", "il/elle": "surprendra", "nous": "surprendrons", "vous": "surprendrez", "ils/elles": "surprendront"}
+  },
+  {
+    id: 213, infinitive: "maintenir", translation: "поддерживать / сохранять",
+    transcription: "мэнтёни́р",
+    example: {"greek": "Il faut maintenir la température à dix-neuf degrés.", "ru": "Нужно поддерживать температуру девятнадцать градусов."},
+    present: {"je": "maintiens", "tu": "maintiens", "il/elle": "maintient", "nous": "maintenons", "vous": "maintenez", "ils/elles": "maintiennent"},
+    preterite: {"je": "ai maintenu", "tu": "as maintenu", "il/elle": "a maintenu", "nous": "avons maintenu", "vous": "avez maintenu", "ils/elles": "ont maintenu"},
+    future: {"je": "maintiendrai", "tu": "maintiendras", "il/elle": "maintiendra", "nous": "maintiendrons", "vous": "maintiendrez", "ils/elles": "maintiendront"}
+  },
+  {
+    id: 214, infinitive: "placer", translation: "размещать",
+    transcription: "пласэ́",
+    example: {"greek": "Le serveur nous a placés près de la fenêtre.", "ru": "Официант посадил нас у окна."},
+    present: {"je": "place", "tu": "places", "il/elle": "place", "nous": "plaçons", "vous": "placez", "ils/elles": "placent"},
+    preterite: {"je": "ai placé", "tu": "as placé", "il/elle": "a placé", "nous": "avons placé", "vous": "avez placé", "ils/elles": "ont placé"},
+    future: {"je": "placerai", "tu": "placeras", "il/elle": "placera", "nous": "placerons", "vous": "placerez", "ils/elles": "placeront"}
+  },
+  {
+    id: 215, infinitive: "obliger", translation: "обязывать",
+    transcription: "оближэ́",
+    example: {"greek": "La loi oblige à assurer le logement.", "ru": "Закон обязывает страховать жильё."},
+    present: {"je": "oblige", "tu": "obliges", "il/elle": "oblige", "nous": "obligeons", "vous": "obligez", "ils/elles": "obligent"},
+    preterite: {"je": "ai obligé", "tu": "as obligé", "il/elle": "a obligé", "nous": "avons obligé", "vous": "avez obligé", "ils/elles": "ont obligé"},
+    future: {"je": "obligerai", "tu": "obligeras", "il/elle": "obligera", "nous": "obligerons", "vous": "obligerez", "ils/elles": "obligeront"}
+  },
+  {
+    id: 216, infinitive: "peser", translation: "весить / взвешивать",
+    transcription: "пёзэ́",
+    example: {"greek": "Le colis pèse deux kilos.", "ru": "Посылка весит два килограмма."},
+    present: {"je": "pèse", "tu": "pèses", "il/elle": "pèse", "nous": "pesons", "vous": "pesez", "ils/elles": "pèsent"},
+    preterite: {"je": "ai pesé", "tu": "as pesé", "il/elle": "a pesé", "nous": "avons pesé", "vous": "avez pesé", "ils/elles": "ont pesé"},
+    future: {"je": "pèserai", "tu": "pèseras", "il/elle": "pèsera", "nous": "pèserons", "vous": "pèserez", "ils/elles": "pèseront"}
+  },
+  {
+    id: 217, infinitive: "cuisiner", translation: "готовить (еду)",
+    transcription: "кюизинэ́",
+    example: {"greek": "Je cuisine français une fois par semaine.", "ru": "Раз в неделю я готовлю французское."},
+    present: {"je": "cuisine", "tu": "cuisines", "il/elle": "cuisine", "nous": "cuisinons", "vous": "cuisinez", "ils/elles": "cuisinent"},
+    preterite: {"je": "ai cuisiné", "tu": "as cuisiné", "il/elle": "a cuisiné", "nous": "avons cuisiné", "vous": "avez cuisiné", "ils/elles": "ont cuisiné"},
+    future: {"je": "cuisinerai", "tu": "cuisineras", "il/elle": "cuisinera", "nous": "cuisinerons", "vous": "cuisinerez", "ils/elles": "cuisineront"}
+  },
+  {
+    id: 218, infinitive: "cuire", translation: "варить / печь",
+    transcription: "кюир",
+    example: {"greek": "Faites cuire les pâtes dix minutes.", "ru": "Варите макароны десять минут."},
+    present: {"je": "cuis", "tu": "cuis", "il/elle": "cuit", "nous": "cuisons", "vous": "cuisez", "ils/elles": "cuisent"},
+    preterite: {"je": "ai cuit", "tu": "as cuit", "il/elle": "a cuit", "nous": "avons cuit", "vous": "avez cuit", "ils/elles": "ont cuit"},
+    future: {"je": "cuirai", "tu": "cuiras", "il/elle": "cuira", "nous": "cuirons", "vous": "cuirez", "ils/elles": "cuiront"}
+  },
+  {
+    id: 219, infinitive: "mélanger", translation: "смешивать",
+    transcription: "меланжэ́",
+    example: {"greek": "Mélangez bien avant de servir.", "ru": "Хорошо перемешайте перед подачей."},
+    present: {"je": "mélange", "tu": "mélanges", "il/elle": "mélange", "nous": "mélangeons", "vous": "mélangez", "ils/elles": "mélangent"},
+    preterite: {"je": "ai mélangé", "tu": "as mélangé", "il/elle": "a mélangé", "nous": "avons mélangé", "vous": "avez mélangé", "ils/elles": "ont mélangé"},
+    future: {"je": "mélangerai", "tu": "mélangeras", "il/elle": "mélangera", "nous": "mélangerons", "vous": "mélangerez", "ils/elles": "mélangeront"}
+  },
+  {
+    id: 220, infinitive: "verser", translation: "наливать",
+    transcription: "версэ́",
+    example: {"greek": "Versez l'eau dans la casserole.", "ru": "Налейте воду в кастрюлю."},
+    present: {"je": "verse", "tu": "verses", "il/elle": "verse", "nous": "versons", "vous": "versez", "ils/elles": "versent"},
+    preterite: {"je": "ai versé", "tu": "as versé", "il/elle": "a versé", "nous": "avons versé", "vous": "avez versé", "ils/elles": "ont versé"},
+    future: {"je": "verserai", "tu": "verseras", "il/elle": "versera", "nous": "verserons", "vous": "verserez", "ils/elles": "verseront"}
+  },
+  {
+    id: 221, infinitive: "ajouter", translation: "добавлять",
+    transcription: "ажутэ́",
+    example: {"greek": "Ajoutez une pincée de sel.", "ru": "Добавьте щепотку соли."},
+    present: {"je": "ajoute", "tu": "ajoutes", "il/elle": "ajoute", "nous": "ajoutons", "vous": "ajoutez", "ils/elles": "ajoutent"},
+    preterite: {"je": "ai ajouté", "tu": "as ajouté", "il/elle": "a ajouté", "nous": "avons ajouté", "vous": "avez ajouté", "ils/elles": "ont ajouté"},
+    future: {"je": "ajouterai", "tu": "ajouteras", "il/elle": "ajoutera", "nous": "ajouterons", "vous": "ajouterez", "ils/elles": "ajouteront"}
+  },
+  {
+    id: 222, infinitive: "éplucher", translation: "чистить (овощи)",
+    transcription: "эплюшэ́",
+    example: {"greek": "J'épluche les pommes de terre.", "ru": "Я чищу картошку."},
+    present: {"je": "épluche", "tu": "épluches", "il/elle": "épluche", "nous": "épluchons", "vous": "épluchez", "ils/elles": "épluchent"},
+    preterite: {"je": "ai épluché", "tu": "as épluché", "il/elle": "a épluché", "nous": "avons épluché", "vous": "avez épluché", "ils/elles": "ont épluché"},
+    future: {"je": "éplucherai", "tu": "éplucheras", "il/elle": "épluchera", "nous": "éplucherons", "vous": "éplucherez", "ils/elles": "éplucheront"}
+  },
+  {
+    id: 223, infinitive: "réchauffer", translation: "разогревать",
+    transcription: "решофэ́",
+    example: {"greek": "Réchauffez le plat deux minutes.", "ru": "Разогрейте блюдо две минуты."},
+    present: {"je": "réchauffe", "tu": "réchauffes", "il/elle": "réchauffe", "nous": "réchauffons", "vous": "réchauffez", "ils/elles": "réchauffent"},
+    preterite: {"je": "ai réchauffé", "tu": "as réchauffé", "il/elle": "a réchauffé", "nous": "avons réchauffé", "vous": "avez réchauffé", "ils/elles": "ont réchauffé"},
+    future: {"je": "réchaufferai", "tu": "réchaufferas", "il/elle": "réchauffera", "nous": "réchaufferons", "vous": "réchaufferez", "ils/elles": "réchaufferont"}
+  },
+  {
+    id: 224, infinitive: "congeler", translation: "замораживать",
+    transcription: "конжёлэ́",
+    example: {"greek": "On congèle le pain pour la semaine.", "ru": "Мы замораживаем хлеб на неделю."},
+    present: {"je": "congèle", "tu": "congèles", "il/elle": "congèle", "nous": "congelons", "vous": "congelez", "ils/elles": "congèlent"},
+    preterite: {"je": "ai congelé", "tu": "as congelé", "il/elle": "a congelé", "nous": "avons congelé", "vous": "avez congelé", "ils/elles": "ont congelé"},
+    future: {"je": "congèlerai", "tu": "congèleras", "il/elle": "congèlera", "nous": "congèlerons", "vous": "congèlerez", "ils/elles": "congèleront"}
+  },
+  {
+    id: 225, infinitive: "commander", translation: "заказывать",
+    transcription: "командэ́",
+    example: {"greek": "J'ai commandé le plat du jour.", "ru": "Я заказал блюдо дня."},
+    present: {"je": "commande", "tu": "commandes", "il/elle": "commande", "nous": "commandons", "vous": "commandez", "ils/elles": "commandent"},
+    preterite: {"je": "ai commandé", "tu": "as commandé", "il/elle": "a commandé", "nous": "avons commandé", "vous": "avez commandé", "ils/elles": "ont commandé"},
+    future: {"je": "commanderai", "tu": "commanderas", "il/elle": "commandera", "nous": "commanderons", "vous": "commanderez", "ils/elles": "commanderont"}
+  },
+  {
+    id: 226, infinitive: "avaler", translation: "глотать",
+    transcription: "авалэ́",
+    example: {"greek": "J'ai du mal à avaler.", "ru": "Мне трудно глотать."},
+    present: {"je": "avale", "tu": "avales", "il/elle": "avale", "nous": "avalons", "vous": "avalez", "ils/elles": "avalent"},
+    preterite: {"je": "ai avalé", "tu": "as avalé", "il/elle": "a avalé", "nous": "avons avalé", "vous": "avez avalé", "ils/elles": "ont avalé"},
+    future: {"je": "avalerai", "tu": "avaleras", "il/elle": "avalera", "nous": "avalerons", "vous": "avalerez", "ils/elles": "avaleront"}
+  },
+  {
+    id: 227, infinitive: "grignoter", translation: "перекусывать",
+    transcription: "гриньотэ́",
+    example: {"greek": "J'évite de grignoter entre les repas.", "ru": "Я стараюсь не перекусывать между приёмами пищи."},
+    present: {"je": "grignote", "tu": "grignotes", "il/elle": "grignote", "nous": "grignotons", "vous": "grignotez", "ils/elles": "grignotent"},
+    preterite: {"je": "ai grignoté", "tu": "as grignoté", "il/elle": "a grignoté", "nous": "avons grignoté", "vous": "avez grignoté", "ils/elles": "ont grignoté"},
+    future: {"je": "grignoterai", "tu": "grignoteras", "il/elle": "grignotera", "nous": "grignoterons", "vous": "grignoterez", "ils/elles": "grignoteront"}
+  },
+  {
+    id: 228, infinitive: "déguster", translation: "дегустировать",
+    transcription: "дегюстэ́",
+    example: {"greek": "On a dégusté trois fromages.", "ru": "Мы продегустировали три сыра."},
+    present: {"je": "déguste", "tu": "dégustes", "il/elle": "déguste", "nous": "dégustons", "vous": "dégustez", "ils/elles": "dégustent"},
+    preterite: {"je": "ai dégusté", "tu": "as dégusté", "il/elle": "a dégusté", "nous": "avons dégusté", "vous": "avez dégusté", "ils/elles": "ont dégusté"},
+    future: {"je": "dégusterai", "tu": "dégusteras", "il/elle": "dégustera", "nous": "dégusterons", "vous": "dégusterez", "ils/elles": "dégusteront"}
+  },
+  {
+    id: 229, infinitive: "soigner", translation: "лечить",
+    transcription: "суаньэ́",
+    example: {"greek": "Le médecin me soigne depuis un an.", "ru": "Этот врач лечит меня уже год."},
+    present: {"je": "soigne", "tu": "soignes", "il/elle": "soigne", "nous": "soignons", "vous": "soignez", "ils/elles": "soignent"},
+    preterite: {"je": "ai soigné", "tu": "as soigné", "il/elle": "a soigné", "nous": "avons soigné", "vous": "avez soigné", "ils/elles": "ont soigné"},
+    future: {"je": "soignerai", "tu": "soigneras", "il/elle": "soignera", "nous": "soignerons", "vous": "soignerez", "ils/elles": "soigneront"}
+  },
+  {
+    id: 230, infinitive: "guérir", translation: "выздоравливать",
+    transcription: "гери́р",
+    example: {"greek": "Il a guéri en une semaine.", "ru": "Он поправился за неделю."},
+    present: {"je": "guéris", "tu": "guéris", "il/elle": "guérit", "nous": "guérissons", "vous": "guérissez", "ils/elles": "guérissent"},
+    preterite: {"je": "ai guéri", "tu": "as guéri", "il/elle": "a guéri", "nous": "avons guéri", "vous": "avez guéri", "ils/elles": "ont guéri"},
+    future: {"je": "guérirai", "tu": "guériras", "il/elle": "guérira", "nous": "guérirons", "vous": "guérirez", "ils/elles": "guériront"}
+  },
+  {
+    id: 231, infinitive: "tousser", translation: "кашлять",
+    transcription: "тусэ́",
+    example: {"greek": "Je tousse depuis trois jours.", "ru": "Я кашляю три дня."},
+    present: {"je": "tousse", "tu": "tousses", "il/elle": "tousse", "nous": "toussons", "vous": "toussez", "ils/elles": "toussent"},
+    preterite: {"je": "ai toussé", "tu": "as toussé", "il/elle": "a toussé", "nous": "avons toussé", "vous": "avez toussé", "ils/elles": "ont toussé"},
+    future: {"je": "tousserai", "tu": "tousseras", "il/elle": "toussera", "nous": "tousserons", "vous": "tousserez", "ils/elles": "tousseront"}
+  },
+  {
+    id: 232, infinitive: "éternuer", translation: "чихать",
+    transcription: "этернюэ́",
+    example: {"greek": "J'éternue à cause du pollen.", "ru": "Я чихаю из-за пыльцы."},
+    present: {"je": "éternue", "tu": "éternues", "il/elle": "éternue", "nous": "éternuons", "vous": "éternuez", "ils/elles": "éternuent"},
+    preterite: {"je": "ai éternué", "tu": "as éternué", "il/elle": "a éternué", "nous": "avons éternué", "vous": "avez éternué", "ils/elles": "ont éternué"},
+    future: {"je": "éternuerai", "tu": "éternueras", "il/elle": "éternuera", "nous": "éternuerons", "vous": "éternuerez", "ils/elles": "éternueront"}
+  },
+  {
+    id: 233, infinitive: "saigner", translation: "кровоточить",
+    transcription: "сэньэ́",
+    example: {"greek": "Mon nez saigne.", "ru": "У меня идёт кровь из носа."},
+    present: {"je": "saigne", "tu": "saignes", "il/elle": "saigne", "nous": "saignons", "vous": "saignez", "ils/elles": "saignent"},
+    preterite: {"je": "ai saigné", "tu": "as saigné", "il/elle": "a saigné", "nous": "avons saigné", "vous": "avez saigné", "ils/elles": "ont saigné"},
+    future: {"je": "saignerai", "tu": "saigneras", "il/elle": "saignera", "nous": "saignerons", "vous": "saignerez", "ils/elles": "saigneront"}
+  },
+  {
+    id: 234, infinitive: "respirer", translation: "дышать",
+    transcription: "респирэ́",
+    example: {"greek": "Respirez profondément.", "ru": "Дышите глубоко."},
+    present: {"je": "respire", "tu": "respires", "il/elle": "respire", "nous": "respirons", "vous": "respirez", "ils/elles": "respirent"},
+    preterite: {"je": "ai respiré", "tu": "as respiré", "il/elle": "a respiré", "nous": "avons respiré", "vous": "avez respiré", "ils/elles": "ont respiré"},
+    future: {"je": "respirerai", "tu": "respireras", "il/elle": "respirera", "nous": "respirerons", "vous": "respirerez", "ils/elles": "respireront"}
+  },
+  {
+    id: 235, infinitive: "examiner", translation: "осматривать",
+    transcription: "эгзаминэ́",
+    example: {"greek": "Le médecin va vous examiner.", "ru": "Врач вас осмотрит."},
+    present: {"je": "examine", "tu": "examines", "il/elle": "examine", "nous": "examinons", "vous": "examinez", "ils/elles": "examinent"},
+    preterite: {"je": "ai examiné", "tu": "as examiné", "il/elle": "a examiné", "nous": "avons examiné", "vous": "avez examiné", "ils/elles": "ont examiné"},
+    future: {"je": "examinerai", "tu": "examineras", "il/elle": "examinera", "nous": "examinerons", "vous": "examinerez", "ils/elles": "examineront"}
+  },
+  {
+    id: 236, infinitive: "prescrire", translation: "выписывать (рецепт)",
+    transcription: "прескри́р",
+    example: {"greek": "Il m'a prescrit des antibiotiques.", "ru": "Он выписал мне антибиотики."},
+    present: {"je": "prescris", "tu": "prescris", "il/elle": "prescrit", "nous": "prescrivons", "vous": "prescrivez", "ils/elles": "prescrivent"},
+    preterite: {"je": "ai prescrit", "tu": "as prescrit", "il/elle": "a prescrit", "nous": "avons prescrit", "vous": "avez prescrit", "ils/elles": "ont prescrit"},
+    future: {"je": "prescrirai", "tu": "prescriras", "il/elle": "prescrira", "nous": "prescrirons", "vous": "prescrirez", "ils/elles": "prescriront"}
+  },
+  {
+    id: 237, infinitive: "opérer", translation: "оперировать",
+    transcription: "оперэ́",
+    example: {"greek": "On l'a opéré du genou.", "ru": "Ему сделали операцию на колене."},
+    present: {"je": "opère", "tu": "opères", "il/elle": "opère", "nous": "opérons", "vous": "opérez", "ils/elles": "opèrent"},
+    preterite: {"je": "ai opéré", "tu": "as opéré", "il/elle": "a opéré", "nous": "avons opéré", "vous": "avez opéré", "ils/elles": "ont opéré"},
+    future: {"je": "opèrerai", "tu": "opèreras", "il/elle": "opèrera", "nous": "opèrerons", "vous": "opèrerez", "ils/elles": "opèreront"}
+  },
+  {
+    id: 238, infinitive: "vacciner", translation: "прививать",
+    transcription: "ваксинэ́",
+    example: {"greek": "Les enfants sont vaccinés à l'école.", "ru": "Детей прививают в школе."},
+    present: {"je": "vaccine", "tu": "vaccines", "il/elle": "vaccine", "nous": "vaccinons", "vous": "vaccinez", "ils/elles": "vaccinent"},
+    preterite: {"je": "ai vacciné", "tu": "as vacciné", "il/elle": "a vacciné", "nous": "avons vacciné", "vous": "avez vacciné", "ils/elles": "ont vacciné"},
+    future: {"je": "vaccinerai", "tu": "vaccineras", "il/elle": "vaccinera", "nous": "vaccinerons", "vous": "vaccinerez", "ils/elles": "vaccineront"}
+  },
+  {
+    id: 239, infinitive: "consulter", translation: "обращаться к врачу / сверяться",
+    transcription: "консюльтэ́",
+    example: {"greek": "Consultez un médecin si ça continue.", "ru": "Обратитесь к врачу, если это продолжится."},
+    present: {"je": "consulte", "tu": "consultes", "il/elle": "consulte", "nous": "consultons", "vous": "consultez", "ils/elles": "consultent"},
+    preterite: {"je": "ai consulté", "tu": "as consulté", "il/elle": "a consulté", "nous": "avons consulté", "vous": "avez consulté", "ils/elles": "ont consulté"},
+    future: {"je": "consulterai", "tu": "consulteras", "il/elle": "consultera", "nous": "consulterons", "vous": "consulterez", "ils/elles": "consulteront"}
+  },
+  {
+    id: 240, infinitive: "protéger", translation: "защищать",
+    transcription: "протежэ́",
+    example: {"greek": "L'assurance vous protège en cas de sinistre.", "ru": "Страховка защищает вас при страховом случае."},
+    present: {"je": "protège", "tu": "protèges", "il/elle": "protège", "nous": "protégeons", "vous": "protégez", "ils/elles": "protègent"},
+    preterite: {"je": "ai protégé", "tu": "as protégé", "il/elle": "a protégé", "nous": "avons protégé", "vous": "avez protégé", "ils/elles": "ont protégé"},
+    future: {"je": "protègerai", "tu": "protègeras", "il/elle": "protègera", "nous": "protègerons", "vous": "protègerez", "ils/elles": "protègeront"}
+  },
+  {
+    id: 241, infinitive: "rouler", translation: "ехать (о машине)",
+    transcription: "рулэ́",
+    example: {"greek": "On roule à cinquante en ville.", "ru": "В городе едут пятьдесят."},
+    present: {"je": "roule", "tu": "roules", "il/elle": "roule", "nous": "roulons", "vous": "roulez", "ils/elles": "roulent"},
+    preterite: {"je": "ai roulé", "tu": "as roulé", "il/elle": "a roulé", "nous": "avons roulé", "vous": "avez roulé", "ils/elles": "ont roulé"},
+    future: {"je": "roulerai", "tu": "rouleras", "il/elle": "roulera", "nous": "roulerons", "vous": "roulerez", "ils/elles": "rouleront"}
+  },
+  {
+    id: 242, infinitive: "freiner", translation: "тормозить",
+    transcription: "фрэнэ́",
+    example: {"greek": "Freinez doucement sur le verglas.", "ru": "Тормозите плавно на гололёде."},
+    present: {"je": "freine", "tu": "freines", "il/elle": "freine", "nous": "freinons", "vous": "freinez", "ils/elles": "freinent"},
+    preterite: {"je": "ai freiné", "tu": "as freiné", "il/elle": "a freiné", "nous": "avons freiné", "vous": "avez freiné", "ils/elles": "ont freiné"},
+    future: {"je": "freinerai", "tu": "freineras", "il/elle": "freinera", "nous": "freinerons", "vous": "freinerez", "ils/elles": "freineront"}
+  },
+  {
+    id: 243, infinitive: "stationner", translation: "парковаться",
+    transcription: "стасьонэ́",
+    example: {"greek": "Il est interdit de stationner ici.", "ru": "Здесь запрещено парковаться."},
+    present: {"je": "stationne", "tu": "stationnes", "il/elle": "stationne", "nous": "stationnons", "vous": "stationnez", "ils/elles": "stationnent"},
+    preterite: {"je": "ai stationné", "tu": "as stationné", "il/elle": "a stationné", "nous": "avons stationné", "vous": "avez stationné", "ils/elles": "ont stationné"},
+    future: {"je": "stationnerai", "tu": "stationneras", "il/elle": "stationnera", "nous": "stationnerons", "vous": "stationnerez", "ils/elles": "stationneront"}
+  },
+  {
+    id: 244, infinitive: "circuler", translation: "передвигаться / ходить (о транспорте)",
+    transcription: "сиркюлэ́",
+    example: {"greek": "Les trains ne circulent pas aujourd'hui.", "ru": "Сегодня поезда не ходят."},
+    present: {"je": "circule", "tu": "circules", "il/elle": "circule", "nous": "circulons", "vous": "circulez", "ils/elles": "circulent"},
+    preterite: {"je": "ai circulé", "tu": "as circulé", "il/elle": "a circulé", "nous": "avons circulé", "vous": "avez circulé", "ils/elles": "ont circulé"},
+    future: {"je": "circulerai", "tu": "circuleras", "il/elle": "circulera", "nous": "circulerons", "vous": "circulerez", "ils/elles": "circuleront"}
+  },
+  {
+    id: 245, infinitive: "composter", translation: "компостировать",
+    transcription: "компостэ́",
+    example: {"greek": "Il faut composter le billet avant de monter.", "ru": "Билет нужно прокомпостировать до посадки."},
+    present: {"je": "composte", "tu": "compostes", "il/elle": "composte", "nous": "compostons", "vous": "compostez", "ils/elles": "compostent"},
+    preterite: {"je": "ai composté", "tu": "as composté", "il/elle": "a composté", "nous": "avons composté", "vous": "avez composté", "ils/elles": "ont composté"},
+    future: {"je": "composterai", "tu": "composteras", "il/elle": "compostera", "nous": "composterons", "vous": "composterez", "ils/elles": "composteront"}
+  },
+  {
+    id: 246, infinitive: "embarquer", translation: "садиться (в транспорт)",
+    transcription: "амбаркэ́",
+    example: {"greek": "On embarque dans dix minutes.", "ru": "Посадка через десять минут."},
+    present: {"je": "embarque", "tu": "embarques", "il/elle": "embarque", "nous": "embarquons", "vous": "embarquez", "ils/elles": "embarquent"},
+    preterite: {"je": "ai embarqué", "tu": "as embarqué", "il/elle": "a embarqué", "nous": "avons embarqué", "vous": "avez embarqué", "ils/elles": "ont embarqué"},
+    future: {"je": "embarquerai", "tu": "embarqueras", "il/elle": "embarquera", "nous": "embarquerons", "vous": "embarquerez", "ils/elles": "embarqueront"}
+  },
+  {
+    id: 247, infinitive: "atterrir", translation: "приземляться",
+    transcription: "атери́р",
+    example: {"greek": "L'avion atterrit à seize heures.", "ru": "Самолёт приземляется в четыре."},
+    present: {"je": "atterris", "tu": "atterris", "il/elle": "atterrit", "nous": "atterrissons", "vous": "atterrissez", "ils/elles": "atterrissent"},
+    preterite: {"je": "ai atterri", "tu": "as atterri", "il/elle": "a atterri", "nous": "avons atterri", "vous": "avez atterri", "ils/elles": "ont atterri"},
+    future: {"je": "atterrirai", "tu": "atterriras", "il/elle": "atterrira", "nous": "atterrirons", "vous": "atterrirez", "ils/elles": "atterriront"}
+  },
+  {
+    id: 248, infinitive: "rater", translation: "пропустить / не успеть",
+    transcription: "ратэ́",
+    example: {"greek": "J'ai raté mon train.", "ru": "Я опоздал на поезд."},
+    present: {"je": "rate", "tu": "rates", "il/elle": "rate", "nous": "ratons", "vous": "ratez", "ils/elles": "ratent"},
+    preterite: {"je": "ai raté", "tu": "as raté", "il/elle": "a raté", "nous": "avons raté", "vous": "avez raté", "ils/elles": "ont raté"},
+    future: {"je": "raterai", "tu": "rateras", "il/elle": "ratera", "nous": "raterons", "vous": "raterez", "ils/elles": "rateront"}
+  },
+  {
+    id: 249, infinitive: "manquer", translation: "не хватать / пропускать",
+    transcription: "манкэ́",
+    example: {"greek": "Il me manque un justificatif.", "ru": "Мне не хватает одной справки."},
+    present: {"je": "manque", "tu": "manques", "il/elle": "manque", "nous": "manquons", "vous": "manquez", "ils/elles": "manquent"},
+    preterite: {"je": "ai manqué", "tu": "as manqué", "il/elle": "a manqué", "nous": "avons manqué", "vous": "avez manqué", "ils/elles": "ont manqué"},
+    future: {"je": "manquerai", "tu": "manqueras", "il/elle": "manquera", "nous": "manquerons", "vous": "manquerez", "ils/elles": "manqueront"}
+  },
+  {
+    id: 250, infinitive: "attraper", translation: "ловить / успеть",
+    transcription: "атрапэ́",
+    example: {"greek": "J'ai attrapé le dernier métro.", "ru": "Я успел на последнее метро."},
+    present: {"je": "attrape", "tu": "attrapes", "il/elle": "attrape", "nous": "attrapons", "vous": "attrapez", "ils/elles": "attrapent"},
+    preterite: {"je": "ai attrapé", "tu": "as attrapé", "il/elle": "a attrapé", "nous": "avons attrapé", "vous": "avez attrapé", "ils/elles": "ont attrapé"},
+    future: {"je": "attraperai", "tu": "attraperas", "il/elle": "attrapera", "nous": "attraperons", "vous": "attraperez", "ils/elles": "attraperont"}
+  },
+  {
+    id: 251, infinitive: "télécharger", translation: "скачивать",
+    transcription: "телешаржэ́",
+    example: {"greek": "Téléchargez l'attestation en PDF.", "ru": "Скачайте справку в PDF."},
+    present: {"je": "télécharge", "tu": "télécharges", "il/elle": "télécharge", "nous": "téléchargeons", "vous": "téléchargez", "ils/elles": "téléchargent"},
+    preterite: {"je": "ai téléchargé", "tu": "as téléchargé", "il/elle": "a téléchargé", "nous": "avons téléchargé", "vous": "avez téléchargé", "ils/elles": "ont téléchargé"},
+    future: {"je": "téléchargerai", "tu": "téléchargeras", "il/elle": "téléchargera", "nous": "téléchargerons", "vous": "téléchargerez", "ils/elles": "téléchargeront"}
+  },
+  {
+    id: 252, infinitive: "cliquer", translation: "нажимать (мышью)",
+    transcription: "кликэ́",
+    example: {"greek": "Cliquez sur « valider ».", "ru": "Нажмите «подтвердить»."},
+    present: {"je": "clique", "tu": "cliques", "il/elle": "clique", "nous": "cliquons", "vous": "cliquez", "ils/elles": "cliquent"},
+    preterite: {"je": "ai cliqué", "tu": "as cliqué", "il/elle": "a cliqué", "nous": "avons cliqué", "vous": "avez cliqué", "ils/elles": "ont cliqué"},
+    future: {"je": "cliquerai", "tu": "cliqueras", "il/elle": "cliquera", "nous": "cliquerons", "vous": "cliquerez", "ils/elles": "cliqueront"}
+  },
+  {
+    id: 253, infinitive: "taper", translation: "набирать (текст, код)",
+    transcription: "тапэ́",
+    example: {"greek": "Tapez votre code à quatre chiffres.", "ru": "Введите свой четырёхзначный код."},
+    present: {"je": "tape", "tu": "tapes", "il/elle": "tape", "nous": "tapons", "vous": "tapez", "ils/elles": "tapent"},
+    preterite: {"je": "ai tapé", "tu": "as tapé", "il/elle": "a tapé", "nous": "avons tapé", "vous": "avez tapé", "ils/elles": "ont tapé"},
+    future: {"je": "taperai", "tu": "taperas", "il/elle": "tapera", "nous": "taperons", "vous": "taperez", "ils/elles": "taperont"}
+  },
+  {
+    id: 254, infinitive: "enregistrer", translation: "сохранять / записывать",
+    transcription: "анрёжистрэ́",
+    example: {"greek": "Enregistrez le document avant de fermer.", "ru": "Сохраните документ перед закрытием."},
+    present: {"je": "enregistre", "tu": "enregistres", "il/elle": "enregistre", "nous": "enregistrons", "vous": "enregistrez", "ils/elles": "enregistrent"},
+    preterite: {"je": "ai enregistré", "tu": "as enregistré", "il/elle": "a enregistré", "nous": "avons enregistré", "vous": "avez enregistré", "ils/elles": "ont enregistré"},
+    future: {"je": "enregistrerai", "tu": "enregistreras", "il/elle": "enregistrera", "nous": "enregistrerons", "vous": "enregistrerez", "ils/elles": "enregistreront"}
+  },
+  {
+    id: 255, infinitive: "supprimer", translation: "удалять",
+    transcription: "сюпримэ́",
+    example: {"greek": "J'ai supprimé le message par erreur.", "ru": "Я удалил сообщение по ошибке."},
+    present: {"je": "supprime", "tu": "supprimes", "il/elle": "supprime", "nous": "supprimons", "vous": "supprimez", "ils/elles": "suppriment"},
+    preterite: {"je": "ai supprimé", "tu": "as supprimé", "il/elle": "a supprimé", "nous": "avons supprimé", "vous": "avez supprimé", "ils/elles": "ont supprimé"},
+    future: {"je": "supprimerai", "tu": "supprimeras", "il/elle": "supprimera", "nous": "supprimerons", "vous": "supprimerez", "ils/elles": "supprimeront"}
+  },
+  {
+    id: 256, infinitive: "installer", translation: "устанавливать",
+    transcription: "энсталэ́",
+    example: {"greek": "Installez l'application sur votre téléphone.", "ru": "Установите приложение на телефон."},
+    present: {"je": "installe", "tu": "installes", "il/elle": "installe", "nous": "installons", "vous": "installez", "ils/elles": "installent"},
+    preterite: {"je": "ai installé", "tu": "as installé", "il/elle": "a installé", "nous": "avons installé", "vous": "avez installé", "ils/elles": "ont installé"},
+    future: {"je": "installerai", "tu": "installeras", "il/elle": "installera", "nous": "installerons", "vous": "installerez", "ils/elles": "installeront"}
+  },
+  {
+    id: 257, infinitive: "connecter", translation: "подключать",
+    transcription: "конектэ́",
+    example: {"greek": "Je n'arrive pas à me connecter au site.", "ru": "У меня не получается зайти на сайт."},
+    present: {"je": "connecte", "tu": "connectes", "il/elle": "connecte", "nous": "connectons", "vous": "connectez", "ils/elles": "connectent"},
+    preterite: {"je": "ai connecté", "tu": "as connecté", "il/elle": "a connecté", "nous": "avons connecté", "vous": "avez connecté", "ils/elles": "ont connecté"},
+    future: {"je": "connecterai", "tu": "connecteras", "il/elle": "connectera", "nous": "connecterons", "vous": "connecterez", "ils/elles": "connecteront"}
+  },
+  {
+    id: 258, infinitive: "recharger", translation: "пополнять / заряжать",
+    transcription: "рёшаржэ́",
+    example: {"greek": "Je dois recharger mon Navigo.", "ru": "Мне нужно пополнить Navigo."},
+    present: {"je": "recharge", "tu": "recharges", "il/elle": "recharge", "nous": "rechargeons", "vous": "rechargez", "ils/elles": "rechargent"},
+    preterite: {"je": "ai rechargé", "tu": "as rechargé", "il/elle": "a rechargé", "nous": "avons rechargé", "vous": "avez rechargé", "ils/elles": "ont rechargé"},
+    future: {"je": "rechargerai", "tu": "rechargeras", "il/elle": "rechargera", "nous": "rechargerons", "vous": "rechargerez", "ils/elles": "rechargeront"}
+  },
+  {
+    id: 259, infinitive: "adorer", translation: "обожать",
+    transcription: "адорэ́",
+    example: {"greek": "J'adore les marchés du dimanche.", "ru": "Обожаю воскресные рынки."},
+    present: {"je": "adore", "tu": "adores", "il/elle": "adore", "nous": "adorons", "vous": "adorez", "ils/elles": "adorent"},
+    preterite: {"je": "ai adoré", "tu": "as adoré", "il/elle": "a adoré", "nous": "avons adoré", "vous": "avez adoré", "ils/elles": "ont adoré"},
+    future: {"je": "adorerai", "tu": "adoreras", "il/elle": "adorera", "nous": "adorerons", "vous": "adorerez", "ils/elles": "adoreront"}
+  },
+  {
+    id: 260, infinitive: "détester", translation: "ненавидеть",
+    transcription: "детэстэ́",
+    example: {"greek": "Je déteste faire la queue.", "ru": "Ненавижу стоять в очереди."},
+    present: {"je": "déteste", "tu": "détestes", "il/elle": "déteste", "nous": "détestons", "vous": "détestez", "ils/elles": "détestent"},
+    preterite: {"je": "ai détesté", "tu": "as détesté", "il/elle": "a détesté", "nous": "avons détesté", "vous": "avez détesté", "ils/elles": "ont détesté"},
+    future: {"je": "détesterai", "tu": "détesteras", "il/elle": "détestera", "nous": "détesterons", "vous": "détesterez", "ils/elles": "détesteront"}
+  },
+  {
+    id: 261, infinitive: "apprécier", translation: "ценить",
+    transcription: "апресье́",
+    example: {"greek": "J'apprécie beaucoup votre aide.", "ru": "Я очень ценю вашу помощь."},
+    present: {"je": "apprécie", "tu": "apprécies", "il/elle": "apprécie", "nous": "apprécions", "vous": "appréciez", "ils/elles": "apprécient"},
+    preterite: {"je": "ai apprécié", "tu": "as apprécié", "il/elle": "a apprécié", "nous": "avons apprécié", "vous": "avez apprécié", "ils/elles": "ont apprécié"},
+    future: {"je": "apprécierai", "tu": "apprécieras", "il/elle": "appréciera", "nous": "apprécierons", "vous": "apprécierez", "ils/elles": "apprécieront"}
+  },
+  {
+    id: 262, infinitive: "inquiéter", translation: "беспокоить",
+    transcription: "энкьетэ́",
+    example: {"greek": "Ne vous inquiétez pas, tout est en ordre.", "ru": "Не беспокойтесь, всё в порядке."},
+    present: {"je": "inquiète", "tu": "inquiètes", "il/elle": "inquiète", "nous": "inquiétons", "vous": "inquiétez", "ils/elles": "inquiètent"},
+    preterite: {"je": "ai inquiété", "tu": "as inquiété", "il/elle": "a inquiété", "nous": "avons inquiété", "vous": "avez inquiété", "ils/elles": "ont inquiété"},
+    future: {"je": "inquièterai", "tu": "inquièteras", "il/elle": "inquiètera", "nous": "inquièterons", "vous": "inquièterez", "ils/elles": "inquièteront"}
+  },
+  {
+    id: 263, infinitive: "rassurer", translation: "успокаивать",
+    transcription: "расюрэ́",
+    example: {"greek": "Le médecin m'a rassuré.", "ru": "Врач меня успокоил."},
+    present: {"je": "rassure", "tu": "rassures", "il/elle": "rassure", "nous": "rassurons", "vous": "rassurez", "ils/elles": "rassurent"},
+    preterite: {"je": "ai rassuré", "tu": "as rassuré", "il/elle": "a rassuré", "nous": "avons rassuré", "vous": "avez rassuré", "ils/elles": "ont rassuré"},
+    future: {"je": "rassurerai", "tu": "rassureras", "il/elle": "rassurera", "nous": "rassurerons", "vous": "rassurerez", "ils/elles": "rassureront"}
+  },
+  {
+    id: 264, infinitive: "pleurer", translation: "плакать",
+    transcription: "плёрэ́",
+    example: {"greek": "Le bébé pleure toute la nuit.", "ru": "Малыш плачет всю ночь."},
+    present: {"je": "pleure", "tu": "pleures", "il/elle": "pleure", "nous": "pleurons", "vous": "pleurez", "ils/elles": "pleurent"},
+    preterite: {"je": "ai pleuré", "tu": "as pleuré", "il/elle": "a pleuré", "nous": "avons pleuré", "vous": "avez pleuré", "ils/elles": "ont pleuré"},
+    future: {"je": "pleurerai", "tu": "pleureras", "il/elle": "pleurera", "nous": "pleurerons", "vous": "pleurerez", "ils/elles": "pleureront"}
+  },
+  {
+    id: 265, infinitive: "féliciter", translation: "поздравлять",
+    transcription: "фелиситэ́",
+    example: {"greek": "Je vous félicite pour votre nouveau poste.", "ru": "Поздравляю вас с новой должностью."},
+    present: {"je": "félicite", "tu": "félicites", "il/elle": "félicite", "nous": "félicitons", "vous": "félicitez", "ils/elles": "félicitent"},
+    preterite: {"je": "ai félicité", "tu": "as félicité", "il/elle": "a félicité", "nous": "avons félicité", "vous": "avez félicité", "ils/elles": "ont félicité"},
+    future: {"je": "féliciterai", "tu": "féliciteras", "il/elle": "félicitera", "nous": "féliciterons", "vous": "féliciterez", "ils/elles": "féliciteront"}
+  },
+  {
+    id: 266, infinitive: "encourager", translation: "поддерживать / ободрять",
+    transcription: "анкуражэ́",
+    example: {"greek": "Mes collègues m'encouragent à parler français.", "ru": "Коллеги подбадривают меня говорить по-французски."},
+    present: {"je": "encourage", "tu": "encourages", "il/elle": "encourage", "nous": "encourageons", "vous": "encouragez", "ils/elles": "encouragent"},
+    preterite: {"je": "ai encouragé", "tu": "as encouragé", "il/elle": "a encouragé", "nous": "avons encouragé", "vous": "avez encouragé", "ils/elles": "ont encouragé"},
+    future: {"je": "encouragerai", "tu": "encourageras", "il/elle": "encouragera", "nous": "encouragerons", "vous": "encouragerez", "ils/elles": "encourageront"}
+  },
+  {
+    id: 267, infinitive: "oser", translation: "осмеливаться",
+    transcription: "озэ́",
+    example: {"greek": "Je n'ose pas encore téléphoner en français.", "ru": "Я пока не решаюсь звонить по-французски."},
+    present: {"je": "ose", "tu": "oses", "il/elle": "ose", "nous": "osons", "vous": "osez", "ils/elles": "osent"},
+    preterite: {"je": "ai osé", "tu": "as osé", "il/elle": "a osé", "nous": "avons osé", "vous": "avez osé", "ils/elles": "ont osé"},
+    future: {"je": "oserai", "tu": "oseras", "il/elle": "osera", "nous": "oserons", "vous": "oserez", "ils/elles": "oseront"}
+  },
+  {
+    id: 268, infinitive: "craindre", translation: "бояться / опасаться",
+    transcription: "крэ́ндр",
+    example: {"greek": "Je crains un refus.", "ru": "Я опасаюсь отказа."},
+    present: {"je": "crains", "tu": "crains", "il/elle": "craint", "nous": "craignons", "vous": "craignez", "ils/elles": "craignent"},
+    preterite: {"je": "ai craint", "tu": "as craint", "il/elle": "a craint", "nous": "avons craint", "vous": "avez craint", "ils/elles": "ont craint"},
+    future: {"je": "craindrai", "tu": "craindras", "il/elle": "craindra", "nous": "craindrons", "vous": "craindrez", "ils/elles": "craindront"}
+  },
+  {
+    id: 269, infinitive: "profiter", translation: "пользоваться / наслаждаться",
+    transcription: "профитэ́",
+    example: {"greek": "Profitez du beau temps.", "ru": "Пользуйтесь хорошей погодой."},
+    present: {"je": "profite", "tu": "profites", "il/elle": "profite", "nous": "profitons", "vous": "profitez", "ils/elles": "profitent"},
+    preterite: {"je": "ai profité", "tu": "as profité", "il/elle": "a profité", "nous": "avons profité", "vous": "avez profité", "ils/elles": "ont profité"},
+    future: {"je": "profiterai", "tu": "profiteras", "il/elle": "profitera", "nous": "profiterons", "vous": "profiterez", "ils/elles": "profiteront"}
+  },
+  {
+    id: 270, infinitive: "énerver", translation: "раздражать",
+    transcription: "энервэ́",
+    example: {"greek": "Ça m'énerve d'attendre si longtemps.", "ru": "Меня раздражает так долго ждать."},
+    present: {"je": "énerve", "tu": "énerves", "il/elle": "énerve", "nous": "énervons", "vous": "énervez", "ils/elles": "énervent"},
+    preterite: {"je": "ai énervé", "tu": "as énervé", "il/elle": "a énervé", "nous": "avons énervé", "vous": "avez énervé", "ils/elles": "ont énervé"},
+    future: {"je": "énerverai", "tu": "énerveras", "il/elle": "énervera", "nous": "énerverons", "vous": "énerverez", "ils/elles": "énerveront"}
+  },
+  {
+    id: 271, infinitive: "calmer", translation: "успокаивать",
+    transcription: "кальмэ́",
+    example: {"greek": "Calmez-vous, on va trouver une solution.", "ru": "Успокойтесь, мы найдём решение."},
+    present: {"je": "calme", "tu": "calmes", "il/elle": "calme", "nous": "calmons", "vous": "calmez", "ils/elles": "calment"},
+    preterite: {"je": "ai calmé", "tu": "as calmé", "il/elle": "a calmé", "nous": "avons calmé", "vous": "avez calmé", "ils/elles": "ont calmé"},
+    future: {"je": "calmerai", "tu": "calmeras", "il/elle": "calmera", "nous": "calmerons", "vous": "calmerez", "ils/elles": "calmeront"}
+  },
+  {
+    id: 272, infinitive: "réviser", translation: "повторять (материал)",
+    transcription: "ревизэ́",
+    example: {"greek": "Je révise le vocabulaire chaque soir.", "ru": "Каждый вечер я повторяю слова."},
+    present: {"je": "révise", "tu": "révises", "il/elle": "révise", "nous": "révisons", "vous": "révisez", "ils/elles": "révisent"},
+    preterite: {"je": "ai révisé", "tu": "as révisé", "il/elle": "a révisé", "nous": "avons révisé", "vous": "avez révisé", "ils/elles": "ont révisé"},
+    future: {"je": "réviserai", "tu": "réviseras", "il/elle": "révisera", "nous": "réviserons", "vous": "réviserez", "ils/elles": "réviseront"}
+  },
+  {
+    id: 273, infinitive: "calculer", translation: "считать / вычислять",
+    transcription: "калькюлэ́",
+    example: {"greek": "Calculez le total avec les charges.", "ru": "Посчитайте общую сумму с коммунальными."},
+    present: {"je": "calcule", "tu": "calcules", "il/elle": "calcule", "nous": "calculons", "vous": "calculez", "ils/elles": "calculent"},
+    preterite: {"je": "ai calculé", "tu": "as calculé", "il/elle": "a calculé", "nous": "avons calculé", "vous": "avez calculé", "ils/elles": "ont calculé"},
+    future: {"je": "calculerai", "tu": "calculeras", "il/elle": "calculera", "nous": "calculerons", "vous": "calculerez", "ils/elles": "calculeront"}
+  },
+  {
+    id: 274, infinitive: "échouer", translation: "проваливаться",
+    transcription: "эшуэ́",
+    example: {"greek": "J'ai échoué à l'examen la première fois.", "ru": "В первый раз я провалил экзамен."},
+    present: {"je": "échoue", "tu": "échoues", "il/elle": "échoue", "nous": "échouons", "vous": "échouez", "ils/elles": "échouent"},
+    preterite: {"je": "ai échoué", "tu": "as échoué", "il/elle": "a échoué", "nous": "avons échoué", "vous": "avez échoué", "ils/elles": "ont échoué"},
+    future: {"je": "échouerai", "tu": "échoueras", "il/elle": "échouera", "nous": "échouerons", "vous": "échouerez", "ils/elles": "échoueront"}
+  },
+  {
+    id: 275, infinitive: "redoubler", translation: "оставаться на второй год",
+    transcription: "рёдублэ́",
+    example: {"greek": "Il risque de redoubler cette année.", "ru": "Он рискует остаться на второй год."},
+    present: {"je": "redouble", "tu": "redoubles", "il/elle": "redouble", "nous": "redoublons", "vous": "redoublez", "ils/elles": "redoublent"},
+    preterite: {"je": "ai redoublé", "tu": "as redoublé", "il/elle": "a redoublé", "nous": "avons redoublé", "vous": "avez redoublé", "ils/elles": "ont redoublé"},
+    future: {"je": "redoublerai", "tu": "redoubleras", "il/elle": "redoublera", "nous": "redoublerons", "vous": "redoublerez", "ils/elles": "redoubleront"}
+  },
+  {
+    id: 276, infinitive: "colorier", translation: "раскрашивать",
+    transcription: "колорье́",
+    example: {"greek": "Les enfants colorient à la maternelle.", "ru": "В детском саду дети раскрашивают."},
+    present: {"je": "colorie", "tu": "colories", "il/elle": "colorie", "nous": "colorions", "vous": "coloriez", "ils/elles": "colorient"},
+    preterite: {"je": "ai colorié", "tu": "as colorié", "il/elle": "a colorié", "nous": "avons colorié", "vous": "avez colorié", "ils/elles": "ont colorié"},
+    future: {"je": "colorierai", "tu": "colorieras", "il/elle": "coloriera", "nous": "colorierons", "vous": "colorierez", "ils/elles": "colorieront"}
+  },
+  {
+    id: 277, infinitive: "grandir", translation: "расти",
+    transcription: "гранди́р",
+    example: {"greek": "Les enfants grandissent vite.", "ru": "Дети быстро растут."},
+    present: {"je": "grandis", "tu": "grandis", "il/elle": "grandit", "nous": "grandissons", "vous": "grandissez", "ils/elles": "grandissent"},
+    preterite: {"je": "ai grandi", "tu": "as grandi", "il/elle": "a grandi", "nous": "avons grandi", "vous": "avez grandi", "ils/elles": "ont grandi"},
+    future: {"je": "grandirai", "tu": "grandiras", "il/elle": "grandira", "nous": "grandirons", "vous": "grandirez", "ils/elles": "grandiront"}
+  },
+  {
+    id: 278, infinitive: "vieillir", translation: "стареть",
+    transcription: "вьейи́р",
+    example: {"greek": "Le bâtiment vieillit mal.", "ru": "Здание плохо стареет."},
+    present: {"je": "vieillis", "tu": "vieillis", "il/elle": "vieillit", "nous": "vieillissons", "vous": "vieillissez", "ils/elles": "vieillissent"},
+    preterite: {"je": "ai vieilli", "tu": "as vieilli", "il/elle": "a vieilli", "nous": "avons vieilli", "vous": "avez vieilli", "ils/elles": "ont vieilli"},
+    future: {"je": "vieillirai", "tu": "vieilliras", "il/elle": "vieillira", "nous": "vieillirons", "vous": "vieillirez", "ils/elles": "vieilliront"}
+  },
+  {
+    id: 279, infinitive: "maigrir", translation: "худеть",
+    transcription: "мэгри́р",
+    example: {"greek": "J'ai maigri de trois kilos.", "ru": "Я похудел на три килограмма."},
+    present: {"je": "maigris", "tu": "maigris", "il/elle": "maigrit", "nous": "maigrissons", "vous": "maigrissez", "ils/elles": "maigrissent"},
+    preterite: {"je": "ai maigri", "tu": "as maigri", "il/elle": "a maigri", "nous": "avons maigri", "vous": "avez maigri", "ils/elles": "ont maigri"},
+    future: {"je": "maigrirai", "tu": "maigriras", "il/elle": "maigrira", "nous": "maigrirons", "vous": "maigrirez", "ils/elles": "maigriront"}
+  },
+  {
+    id: 280, infinitive: "grossir", translation: "полнеть",
+    transcription: "гроси́р",
+    example: {"greek": "J'ai grossi cet hiver.", "ru": "Этой зимой я поправился."},
+    present: {"je": "grossis", "tu": "grossis", "il/elle": "grossit", "nous": "grossissons", "vous": "grossissez", "ils/elles": "grossissent"},
+    preterite: {"je": "ai grossi", "tu": "as grossi", "il/elle": "a grossi", "nous": "avons grossi", "vous": "avez grossi", "ils/elles": "ont grossi"},
+    future: {"je": "grossirai", "tu": "grossiras", "il/elle": "grossira", "nous": "grossirons", "vous": "grossirez", "ils/elles": "grossiront"}
+  },
+  {
+    id: 281, infinitive: "rougir", translation: "краснеть",
+    transcription: "ружи́р",
+    example: {"greek": "Elle rougit quand elle parle en public.", "ru": "Она краснеет, когда говорит на публике."},
+    present: {"je": "rougis", "tu": "rougis", "il/elle": "rougit", "nous": "rougissons", "vous": "rougissez", "ils/elles": "rougissent"},
+    preterite: {"je": "ai rougi", "tu": "as rougi", "il/elle": "a rougi", "nous": "avons rougi", "vous": "avez rougi", "ils/elles": "ont rougi"},
+    future: {"je": "rougirai", "tu": "rougiras", "il/elle": "rougira", "nous": "rougirons", "vous": "rougirez", "ils/elles": "rougiront"}
+  },
+  {
+    id: 282, infinitive: "agir", translation: "действовать",
+    transcription: "ажи́р",
+    example: {"greek": "Il faut agir avant la fin du délai.", "ru": "Действовать нужно до истечения срока."},
+    present: {"je": "agis", "tu": "agis", "il/elle": "agit", "nous": "agissons", "vous": "agissez", "ils/elles": "agissent"},
+    preterite: {"je": "ai agi", "tu": "as agi", "il/elle": "a agi", "nous": "avons agi", "vous": "avez agi", "ils/elles": "ont agi"},
+    future: {"je": "agirai", "tu": "agiras", "il/elle": "agira", "nous": "agirons", "vous": "agirez", "ils/elles": "agiront"}
+  },
+  {
+    id: 283, infinitive: "réagir", translation: "реагировать",
+    transcription: "реажи́р",
+    example: {"greek": "La banque n'a pas réagi à mon mail.", "ru": "Банк не отреагировал на моё письмо."},
+    present: {"je": "réagis", "tu": "réagis", "il/elle": "réagit", "nous": "réagissons", "vous": "réagissez", "ils/elles": "réagissent"},
+    preterite: {"je": "ai réagi", "tu": "as réagi", "il/elle": "a réagi", "nous": "avons réagi", "vous": "avez réagi", "ils/elles": "ont réagi"},
+    future: {"je": "réagirai", "tu": "réagiras", "il/elle": "réagira", "nous": "réagirons", "vous": "réagirez", "ils/elles": "réagiront"}
+  },
+  {
+    id: 284, infinitive: "saisir", translation: "хватать / вводить данные",
+    transcription: "сэзи́р",
+    example: {"greek": "Saisissez votre numéro allocataire.", "ru": "Введите ваш номер получателя пособия."},
+    present: {"je": "saisis", "tu": "saisis", "il/elle": "saisit", "nous": "saisissons", "vous": "saisissez", "ils/elles": "saisissent"},
+    preterite: {"je": "ai saisi", "tu": "as saisi", "il/elle": "a saisi", "nous": "avons saisi", "vous": "avez saisi", "ils/elles": "ont saisi"},
+    future: {"je": "saisirai", "tu": "saisiras", "il/elle": "saisira", "nous": "saisirons", "vous": "saisirez", "ils/elles": "saisiront"}
+  },
+  {
+    id: 285, infinitive: "fournir", translation: "предоставлять",
+    transcription: "фурни́р",
+    example: {"greek": "Vous devez fournir trois bulletins de salaire.", "ru": "Вы должны предоставить три зарплатные ведомости."},
+    present: {"je": "fournis", "tu": "fournis", "il/elle": "fournit", "nous": "fournissons", "vous": "fournissez", "ils/elles": "fournissent"},
+    preterite: {"je": "ai fourni", "tu": "as fourni", "il/elle": "a fourni", "nous": "avons fourni", "vous": "avez fourni", "ils/elles": "ont fourni"},
+    future: {"je": "fournirai", "tu": "fourniras", "il/elle": "fournira", "nous": "fournirons", "vous": "fournirez", "ils/elles": "fourniront"}
+  },
+  {
+    id: 286, infinitive: "établir", translation: "устанавливать / составлять",
+    transcription: "этабли́р",
+    example: {"greek": "Le notaire établit l'acte de vente.", "ru": "Нотариус составляет договор купли-продажи."},
+    present: {"je": "établis", "tu": "établis", "il/elle": "établit", "nous": "établissons", "vous": "établissez", "ils/elles": "établissent"},
+    preterite: {"je": "ai établi", "tu": "as établi", "il/elle": "a établi", "nous": "avons établi", "vous": "avez établi", "ils/elles": "ont établi"},
+    future: {"je": "établirai", "tu": "établiras", "il/elle": "établira", "nous": "établirons", "vous": "établirez", "ils/elles": "établiront"}
+  },
+  {
+    id: 287, infinitive: "définir", translation: "определять",
+    transcription: "дефини́р",
+    example: {"greek": "Définissons d'abord le budget.", "ru": "Давайте сначала определим бюджет."},
+    present: {"je": "définis", "tu": "définis", "il/elle": "définit", "nous": "définissons", "vous": "définissez", "ils/elles": "définissent"},
+    preterite: {"je": "ai défini", "tu": "as défini", "il/elle": "a défini", "nous": "avons défini", "vous": "avez défini", "ils/elles": "ont défini"},
+    future: {"je": "définirai", "tu": "définiras", "il/elle": "définira", "nous": "définirons", "vous": "définirez", "ils/elles": "définiront"}
+  },
+  {
+    id: 288, infinitive: "avertir", translation: "предупреждать",
+    transcription: "аверти́р",
+    example: {"greek": "Avertissez le syndic en cas de fuite.", "ru": "Предупредите управляющего при протечке."},
+    present: {"je": "avertis", "tu": "avertis", "il/elle": "avertit", "nous": "avertissons", "vous": "avertissez", "ils/elles": "avertissent"},
+    preterite: {"je": "ai averti", "tu": "as averti", "il/elle": "a averti", "nous": "avons averti", "vous": "avez averti", "ils/elles": "ont averti"},
+    future: {"je": "avertirai", "tu": "avertiras", "il/elle": "avertira", "nous": "avertirons", "vous": "avertirez", "ils/elles": "avertiront"}
+  },
+  {
+    id: 289, infinitive: "obéir", translation: "подчиняться",
+    transcription: "обеи́р",
+    example: {"greek": "Les enfants obéissent bien à la maîtresse.", "ru": "Дети хорошо слушаются учительницу."},
+    present: {"je": "obéis", "tu": "obéis", "il/elle": "obéit", "nous": "obéissons", "vous": "obéissez", "ils/elles": "obéissent"},
+    preterite: {"je": "ai obéi", "tu": "as obéi", "il/elle": "a obéi", "nous": "avons obéi", "vous": "avez obéi", "ils/elles": "ont obéi"},
+    future: {"je": "obéirai", "tu": "obéiras", "il/elle": "obéira", "nous": "obéirons", "vous": "obéirez", "ils/elles": "obéiront"}
+  },
+  {
+    id: 290, infinitive: "garantir", translation: "гарантировать",
+    transcription: "гаранти́р",
+    example: {"greek": "Visale garantit le loyer au propriétaire.", "ru": "Visale гарантирует владельцу оплату аренды."},
+    present: {"je": "garantis", "tu": "garantis", "il/elle": "garantit", "nous": "garantissons", "vous": "garantissez", "ils/elles": "garantissent"},
+    preterite: {"je": "ai garanti", "tu": "as garanti", "il/elle": "a garanti", "nous": "avons garanti", "vous": "avez garanti", "ils/elles": "ont garanti"},
+    future: {"je": "garantirai", "tu": "garantiras", "il/elle": "garantira", "nous": "garantirons", "vous": "garantirez", "ils/elles": "garantiront"}
+  },
+  {
+    id: 291, infinitive: "applaudir", translation: "аплодировать",
+    transcription: "аплоди́р",
+    example: {"greek": "La salle a applaudi longtemps.", "ru": "Зал долго аплодировал."},
+    present: {"je": "applaudis", "tu": "applaudis", "il/elle": "applaudit", "nous": "applaudissons", "vous": "applaudissez", "ils/elles": "applaudissent"},
+    preterite: {"je": "ai applaudi", "tu": "as applaudi", "il/elle": "a applaudi", "nous": "avons applaudi", "vous": "avez applaudi", "ils/elles": "ont applaudi"},
+    future: {"je": "applaudirai", "tu": "applaudiras", "il/elle": "applaudira", "nous": "applaudirons", "vous": "applaudirez", "ils/elles": "applaudiront"}
+  },
+  {
+    id: 292, infinitive: "cultiver", translation: "выращивать",
+    transcription: "кюльтивэ́",
+    example: {"greek": "Ils cultivent des légumes dans le jardin.", "ru": "Они выращивают овощи в саду."},
+    present: {"je": "cultive", "tu": "cultives", "il/elle": "cultive", "nous": "cultivons", "vous": "cultivez", "ils/elles": "cultivent"},
+    preterite: {"je": "ai cultivé", "tu": "as cultivé", "il/elle": "a cultivé", "nous": "avons cultivé", "vous": "avez cultivé", "ils/elles": "ont cultivé"},
+    future: {"je": "cultiverai", "tu": "cultiveras", "il/elle": "cultivera", "nous": "cultiverons", "vous": "cultiverez", "ils/elles": "cultiveront"}
+  },
+  {
+    id: 293, infinitive: "planter", translation: "сажать",
+    transcription: "плантэ́",
+    example: {"greek": "On plante les tomates en mai.", "ru": "Помидоры сажают в мае."},
+    present: {"je": "plante", "tu": "plantes", "il/elle": "plante", "nous": "plantons", "vous": "plantez", "ils/elles": "plantent"},
+    preterite: {"je": "ai planté", "tu": "as planté", "il/elle": "a planté", "nous": "avons planté", "vous": "avez planté", "ils/elles": "ont planté"},
+    future: {"je": "planterai", "tu": "planteras", "il/elle": "plantera", "nous": "planterons", "vous": "planterez", "ils/elles": "planteront"}
+  },
+  {
+    id: 294, infinitive: "ramasser", translation: "собирать / подбирать",
+    transcription: "рамасэ́",
+    example: {"greek": "On ramasse des champignons en automne.", "ru": "Осенью мы собираем грибы."},
+    present: {"je": "ramasse", "tu": "ramasses", "il/elle": "ramasse", "nous": "ramassons", "vous": "ramassez", "ils/elles": "ramassent"},
+    preterite: {"je": "ai ramassé", "tu": "as ramassé", "il/elle": "a ramassé", "nous": "avons ramassé", "vous": "avez ramassé", "ils/elles": "ont ramassé"},
+    future: {"je": "ramasserai", "tu": "ramasseras", "il/elle": "ramassera", "nous": "ramasserons", "vous": "ramasserez", "ils/elles": "ramasseront"}
+  },
+  {
+    id: 295, infinitive: "nager", translation: "плавать",
+    transcription: "нажэ́",
+    example: {"greek": "Je nage deux fois par semaine.", "ru": "Я плаваю два раза в неделю."},
+    present: {"je": "nage", "tu": "nages", "il/elle": "nage", "nous": "nageons", "vous": "nagez", "ils/elles": "nagent"},
+    preterite: {"je": "ai nagé", "tu": "as nagé", "il/elle": "a nagé", "nous": "avons nagé", "vous": "avez nagé", "ils/elles": "ont nagé"},
+    future: {"je": "nagerai", "tu": "nageras", "il/elle": "nagera", "nous": "nagerons", "vous": "nagerez", "ils/elles": "nageront"}
+  },
+  {
+    id: 296, infinitive: "courir", translation: "бегать",
+    transcription: "кури́р",
+    example: {"greek": "Je cours le long de la Seine.", "ru": "Я бегаю вдоль Сены."},
+    present: {"je": "cours", "tu": "cours", "il/elle": "court", "nous": "courons", "vous": "courez", "ils/elles": "courent"},
+    preterite: {"je": "ai couru", "tu": "as couru", "il/elle": "a couru", "nous": "avons couru", "vous": "avez couru", "ils/elles": "ont couru"},
+    future: {"je": "courrai", "tu": "courras", "il/elle": "courra", "nous": "courrons", "vous": "courrez", "ils/elles": "courront"}
+  },
+  {
+    id: 297, infinitive: "marquer", translation: "отмечать / забивать (гол)",
+    transcription: "маркэ́",
+    example: {"greek": "Il a marqué à la dernière minute.", "ru": "Он забил на последней минуте."},
+    present: {"je": "marque", "tu": "marques", "il/elle": "marque", "nous": "marquons", "vous": "marquez", "ils/elles": "marquent"},
+    preterite: {"je": "ai marqué", "tu": "as marqué", "il/elle": "a marqué", "nous": "avons marqué", "vous": "avez marqué", "ils/elles": "ont marqué"},
+    future: {"je": "marquerai", "tu": "marqueras", "il/elle": "marquera", "nous": "marquerons", "vous": "marquerez", "ils/elles": "marqueront"}
+  },
+  {
+    id: 298, infinitive: "perdre", translation: "терять / проигрывать",
+    transcription: "пэрдр",
+    example: {"greek": "J'ai perdu ma carte Vitale.", "ru": "Я потерял карту Vitale."},
+    present: {"je": "perds", "tu": "perds", "il/elle": "perd", "nous": "perdons", "vous": "perdez", "ils/elles": "perdent"},
+    preterite: {"je": "ai perdu", "tu": "as perdu", "il/elle": "a perdu", "nous": "avons perdu", "vous": "avez perdu", "ils/elles": "ont perdu"},
+    future: {"je": "perdrai", "tu": "perdras", "il/elle": "perdra", "nous": "perdrons", "vous": "perdrez", "ils/elles": "perdront"}
+  },
+  {
+    id: 299, infinitive: "appuyer", translation: "нажимать",
+    transcription: "апюйе́",
+    example: {"greek": "Appuyez sur le bouton vert.", "ru": "Нажмите на зелёную кнопку."},
+    present: {"je": "appuie", "tu": "appuies", "il/elle": "appuie", "nous": "appuyons", "vous": "appuyez", "ils/elles": "appuient"},
+    preterite: {"je": "ai appuyé", "tu": "as appuyé", "il/elle": "a appuyé", "nous": "avons appuyé", "vous": "avez appuyé", "ils/elles": "ont appuyé"},
+    future: {"je": "appuierai", "tu": "appuieras", "il/elle": "appuiera", "nous": "appuierons", "vous": "appuierez", "ils/elles": "appuieront"}
+  },
+  {
+    id: 300, infinitive: "lancer", translation: "запускать / бросать",
+    transcription: "лансэ́",
+    example: {"greek": "On lance le projet en septembre.", "ru": "Проект запускаем в сентябре."},
+    present: {"je": "lance", "tu": "lances", "il/elle": "lance", "nous": "lançons", "vous": "lancez", "ils/elles": "lancent"},
+    preterite: {"je": "ai lancé", "tu": "as lancé", "il/elle": "a lancé", "nous": "avons lancé", "vous": "avez lancé", "ils/elles": "ont lancé"},
+    future: {"je": "lancerai", "tu": "lanceras", "il/elle": "lancera", "nous": "lancerons", "vous": "lancerez", "ils/elles": "lanceront"}
+  },
+  {
+    id: 301, infinitive: "voler", translation: "летать / красть",
+    transcription: "волэ́",
+    example: {"greek": "On m'a volé mon téléphone dans le métro.", "ru": "У меня украли телефон в метро."},
+    present: {"je": "vole", "tu": "voles", "il/elle": "vole", "nous": "volons", "vous": "volez", "ils/elles": "volent"},
+    preterite: {"je": "ai volé", "tu": "as volé", "il/elle": "a volé", "nous": "avons volé", "vous": "avez volé", "ils/elles": "ont volé"},
+    future: {"je": "volerai", "tu": "voleras", "il/elle": "volera", "nous": "volerons", "vous": "volerez", "ils/elles": "voleront"}
   }
 ];
 

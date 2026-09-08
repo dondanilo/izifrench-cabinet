@@ -3116,6 +3116,1062 @@ const SCENARIOS = [
       wrongFeedback: 'Ответьте «Séparément, par carte».'
     }
   ]
+},
+{
+  id: 'ecole',
+  title: '🎒 В школе',
+  icon: '🎒',
+  description: 'Записываем ребёнка в школу и говорим с учителем',
+  steps: [
+    {
+      situation: 'Вы пришли в мэрию, чтобы записать ребёнка в школу района.',
+      speaker: 'Agent de mairie — Сотрудник мэрии',
+      greek: 'Bonjour, que puis-je faire pour vous ?',
+      transcription: 'Бонжу́р, кё пюи́-жё фэр пур ву ?',
+      translation: 'Здравствуйте, чем могу помочь?',
+      question: 'Скажите, что хотите записать ребёнка в школу.',
+      options: [
+        { text: "Bonjour, je voudrais inscrire mon enfant à l'école.", transcription: 'Бонжу́р, жё вудрэ́ энскри́р мон анфа́н а леко́ль.', translation: 'Здравствуйте, я хотел бы записать ребёнка в школу.', correct: true },
+        { text: 'Bonjour, je cherche une école privée.', transcription: 'Бонжу́р, жё шерш юн эко́ль привэ́.', translation: 'Здравствуйте, я ищу частную школу.', correct: false },
+        { text: 'Bonjour, mon enfant est malade.', transcription: 'Бонжу́р, мон анфа́н э маля́д.', translation: 'Здравствуйте, мой ребёнок болеет.', correct: false },
+        { text: 'Bonjour, où est la cantine ?', transcription: 'Бонжу́р, у э ля канти́н ?', translation: 'Здравствуйте, где столовая?', correct: false }
+      ],
+      correctFeedback: 'Запись в государственную школу всегда начинается в мэрии — там вас приписывают к школе района.',
+      wrongFeedback: 'Нужно «Je voudrais inscrire mon enfant à l\'école» — с этой фразы начинается вся процедура.'
+    },
+    {
+      situation: 'Сотрудник спрашивает документы.',
+      speaker: 'Agent de mairie — Сотрудник мэрии',
+      greek: "Il me faut un justificatif de domicile et le carnet de santé.",
+      transcription: 'Иль мё фо эн жюстификати́ф дё домиси́ль э лё карнэ́ дё сантэ́.',
+      translation: 'Мне нужно подтверждение адреса и медицинская книжка ребёнка.',
+      question: 'Скажите, что всё принесли, и уточните, нужно ли свидетельство о рождении.',
+      options: [
+        { text: "J'ai tout, faut-il aussi l'acte de naissance ?", transcription: 'Жэ ту, фо-ти́ль оси́ лякт дё нэса́нс ?', translation: 'У меня всё есть, нужно ли также свидетельство о рождении?', correct: true },
+        { text: "Je n'ai rien apporté.", transcription: 'Жё нэ рье́н апортэ́.', translation: 'Я ничего не принёс.', correct: false },
+        { text: "Le carnet de santé, c'est quoi ?", transcription: 'Лё карнэ́ дё сантэ́, сэ куа́ ?', translation: 'Медицинская книжка — это что?', correct: false },
+        { text: 'Je reviendrai plus tard.', transcription: 'Жё рёвьендрэ́ плю тар.', translation: 'Я вернусь позже.', correct: false }
+      ],
+      correctFeedback: 'Уточняющий вопрос экономит поездку: списки документов у мэрий немного различаются.',
+      wrongFeedback: 'Лучше подтвердить, что документы с вами, и сразу спросить про acte de naissance.'
+    },
+    {
+      situation: 'Мэрия выдала справку. Вы пришли к директору школы.',
+      speaker: 'Directrice — Директор школы',
+      greek: 'Votre enfant est en quelle classe ?',
+      transcription: 'Вотр анфа́н э ан кэль клас ?',
+      translation: 'В каком классе ваш ребёнок?',
+      question: 'Скажите, что ему шесть лет и он идёт в первый класс.',
+      options: [
+        { text: 'Il a six ans, il entre en CP.', transcription: 'Иль а сиз-ан, иль антр ан сэ-пэ́.', translation: 'Ему шесть лет, он идёт в CP.', correct: true },
+        { text: 'Il est en première année.', transcription: 'Иль э ан прёмье́р анэ́.', translation: 'Он на первом году.', correct: false },
+        { text: 'Je ne sais pas exactement.', transcription: 'Жё нё сэ па эгзактёма́н.', translation: 'Я точно не знаю.', correct: false },
+        { text: 'Il va au lycée.', transcription: 'Иль ва о лисэ́.', translation: 'Он идёт в старшую школу.', correct: false }
+      ],
+      correctFeedback: 'Французские классы называются CP, CE1, CE2, CM1, CM2 — «первого класса» как слова не существует.',
+      wrongFeedback: 'Первый класс начальной школы — это CP, и называть надо именно так.'
+    },
+    {
+      situation: 'Директор спрашивает про французский язык ребёнка.',
+      speaker: 'Directrice — Директор школы',
+      greek: 'Est-ce qu\'il parle français ?',
+      transcription: 'Эскиль парль франсэ́ ?',
+      translation: 'Он говорит по-французски?',
+      question: 'Скажите, что пока нет, и спросите про классы языковой поддержки.',
+      options: [
+        { text: "Pas encore. Est-ce qu'il y a un dispositif UPE2A ?", transcription: 'Па анко́р. Эскиль-я эн диспозити́ф ю-пэ-ё-дё-а ?', translation: 'Пока нет. Есть ли классы языковой поддержки?', correct: true },
+        { text: 'Oui, parfaitement.', transcription: 'Уи́, парфэтма́н.', translation: 'Да, прекрасно.', correct: false },
+        { text: 'Il parle seulement russe, tant pis.', transcription: 'Иль парль сёльма́н рюс, тан пи.', translation: 'Он говорит только по-русски, ну и ладно.', correct: false },
+        { text: 'On verra bien.', transcription: 'Он верра́ бье́н.', translation: 'Там видно будет.', correct: false }
+      ],
+      correctFeedback: 'UPE2A — государственные классы поддержки для недавно приехавших детей. О них нужно спросить самому.',
+      wrongFeedback: 'Честно скажите «pas encore» и спросите про UPE2A — школа обязана предложить поддержку.'
+    },
+    {
+      situation: 'Через месяц. Учительница остановила вас после уроков.',
+      speaker: 'Maîtresse — Учительница',
+      greek: 'Il s\'adapte bien, mais il est timide en classe.',
+      transcription: 'Иль садапт бье́н, мэ иль э тими́д ан клас.',
+      translation: 'Он хорошо адаптируется, но стесняется на уроках.',
+      question: 'Спросите, над чем можно поработать дома.',
+      options: [
+        { text: "Qu'est-ce qu'on peut travailler à la maison ?", transcription: 'Кэскон пё травайе́ а ля мэзо́н ?', translation: 'Над чем можно поработать дома?', correct: true },
+        { text: "Ce n'est pas mon problème.", transcription: 'Сё нэ па мон проблэ́м.', translation: 'Это не моя проблема.', correct: false },
+        { text: 'Il est comme ça, c\'est tout.', transcription: 'Иль э ком са, сэ ту.', translation: 'Он такой, и всё.', correct: false },
+        { text: 'Vous pouvez le changer de classe ?', transcription: 'Ву пуве́ лё шанжэ́ дё клас ?', translation: 'Можете перевести его в другой класс?', correct: false }
+      ],
+      correctFeedback: 'Французские учителя ценят вовлечённых родителей — этот вопрос почти всегда открывает полезный разговор.',
+      wrongFeedback: 'Спросите «Qu\'est-ce qu\'on peut travailler à la maison ?» — так вы получите конкретные рекомендации.'
+    }
+  ]
+},
+{
+  id: 'pharmacie',
+  title: '💊 В аптеке',
+  icon: '💊',
+  description: 'Покупаем лекарство и советуемся с фармацевтом',
+  steps: [
+    {
+      situation: 'Вы простудились и зашли в аптеку без рецепта.',
+      speaker: 'Pharmacien — Фармацевт',
+      greek: 'Bonjour, je peux vous aider ?',
+      transcription: 'Бонжу́р, жё пё вуз-эдэ́ ?',
+      translation: 'Здравствуйте, могу вам помочь?',
+      question: 'Спросите, есть ли что-нибудь от кашля.',
+      options: [
+        { text: 'Bonjour, vous avez quelque chose contre la toux ?', transcription: 'Бонжу́р, вуз-аве́ кэлькё шоз контр ля ту ?', translation: 'Здравствуйте, есть что-нибудь от кашля?', correct: true },
+        { text: 'Bonjour, donnez-moi des antibiotiques.', transcription: 'Бонжу́р, донэ́-муа́ дез-антибьоти́к.', translation: 'Здравствуйте, дайте мне антибиотики.', correct: false },
+        { text: 'Bonjour, je tousse beaucoup, au revoir.', transcription: 'Бонжу́р, жё тус боку́, о рёвуа́р.', translation: 'Здравствуйте, я много кашляю, до свидания.', correct: false },
+        { text: 'Bonjour, où sont les médicaments ?', transcription: 'Бонжу́р, у сон ле медикама́н ?', translation: 'Здравствуйте, где лекарства?', correct: false }
+      ],
+      correctFeedback: 'Конструкция «quelque chose contre + болезнь» — стандартная просьба в аптеке.',
+      wrongFeedback: 'Антибиотики без рецепта не продают. Спросите «quelque chose contre la toux».'
+    },
+    {
+      situation: 'Фармацевт уточняет симптомы.',
+      speaker: 'Pharmacien — Фармацевт',
+      greek: 'C\'est une toux sèche ou grasse ? Vous avez de la fièvre ?',
+      transcription: 'Сэт-юн ту сэш у грас ? Вуз-аве́ дё ля фьевр ?',
+      translation: 'Кашель сухой или влажный? У вас есть температура?',
+      question: 'Скажите, что кашель сухой и температуры нет.',
+      options: [
+        { text: 'Une toux sèche, et je n\'ai pas de fièvre.', transcription: 'Юн ту сэш, э жё нэ па дё фьевр.', translation: 'Сухой кашель, температуры нет.', correct: true },
+        { text: 'Je ne comprends rien.', transcription: 'Жё нё компра́н рье́н.', translation: 'Я ничего не понимаю.', correct: false },
+        { text: 'Peut-être, je ne sais pas.', transcription: 'Пётэ́тр, жё нё сэ па.', translation: 'Может быть, я не знаю.', correct: false },
+        { text: 'Oui, très grave.', transcription: 'Уи́, трэ грав.', translation: 'Да, очень серьёзно.', correct: false }
+      ],
+      correctFeedback: 'Обратите внимание на отрицание: после «pas» неопределённый артикль превращается в de — pas de fièvre.',
+      wrongFeedback: 'Ответьте конкретно: «une toux sèche» и «je n\'ai pas de fièvre».'
+    },
+    {
+      situation: 'Фармацевт предлагает сироп.',
+      speaker: 'Pharmacien — Фармацевт',
+      greek: 'Je vous propose ce sirop. Vous êtes allergique à quelque chose ?',
+      transcription: 'Жё ву пропо́з сё сиро́. Вуз-эт алержи́к а кэлькё шоз ?',
+      translation: 'Предлагаю вам этот сироп. У вас на что-то аллергия?',
+      question: 'Скажите, что у вас аллергия на пенициллин.',
+      options: [
+        { text: 'Oui, je suis allergique à la pénicilline.', transcription: 'Уи́, жё сюи́ алержи́к а ля пенисили́н.', translation: 'Да, у меня аллергия на пенициллин.', correct: true },
+        { text: 'Je crois que non, peut-être.', transcription: 'Жё круа́ кё нон, пётэ́тр.', translation: 'Кажется, нет, может быть.', correct: false },
+        { text: 'Ça n\'a pas d\'importance.', transcription: 'Са на па дэмпорта́нс.', translation: 'Это неважно.', correct: false },
+        { text: 'Je prends tout.', transcription: 'Жё пран ту.', translation: 'Я принимаю всё.', correct: false }
+      ],
+      correctFeedback: 'Об аллергии говорят до покупки, а не после. Конструкция — être allergique à.',
+      wrongFeedback: 'На такой вопрос отвечают прямо: «je suis allergique à…» и название.'
+    },
+    {
+      situation: 'Фармацевт отдаёт коробочку.',
+      speaker: 'Pharmacien — Фармацевт',
+      greek: 'Voilà. C\'est huit euros cinquante.',
+      transcription: 'Вуаля́. Сэт-юи́т ёро́ сэнка́нт.',
+      translation: 'Вот. Восемь евро пятьдесят.',
+      question: 'Спросите, сколько раз в день это принимать.',
+      options: [
+        { text: 'Je le prends combien de fois par jour ?', transcription: 'Жё лё пран комбье́н дё фуа́ пар жур ?', translation: 'Сколько раз в день это принимать?', correct: true },
+        { text: 'C\'est trop cher.', transcription: 'Сэ тро шэр.', translation: 'Это слишком дорого.', correct: false },
+        { text: 'Merci, au revoir.', transcription: 'Мерси́, о рёвуа́р.', translation: 'Спасибо, до свидания.', correct: false },
+        { text: 'Vous avez moins cher ?', transcription: 'Вуз-аве́ муэ́н шэр ?', translation: 'У вас есть подешевле?', correct: false }
+      ],
+      correctFeedback: 'Дозировка называется posologie. Спросить у фармацевта проще, чем разбирать вкладыш.',
+      wrongFeedback: 'Уточните дозировку: «combien de fois par jour ?» — это важнее цены.'
+    },
+    {
+      situation: 'Фармацевт объяснил дозировку.',
+      speaker: 'Pharmacien — Фармацевт',
+      greek: 'Trois fois par jour, après les repas. Si ça continue, consultez un médecin.',
+      transcription: 'Труа́ фуа́ пар жур, апрэ́ ле рёпа́. Си са контини́, консюльтэ́ эн медсэ́н.',
+      translation: 'Три раза в день после еды. Если не пройдёт, обратитесь к врачу.',
+      question: 'Поблагодарите и попрощайтесь.',
+      options: [
+        { text: 'Merci beaucoup, bonne journée !', transcription: 'Мерси́ боку́, бон журнэ́ !', translation: 'Большое спасибо, хорошего дня!', correct: true },
+        { text: 'D\'accord.', transcription: 'Дако́р.', translation: 'Хорошо.', correct: false },
+        { text: 'Je n\'irai pas chez le médecin.', transcription: 'Жё нирэ́ па ше лё медсэ́н.', translation: 'К врачу я не пойду.', correct: false },
+        { text: 'Ça marchera ?', transcription: 'Са маршёра́ ?', translation: 'Это подействует?', correct: false }
+      ],
+      correctFeedback: 'Уйти из французской аптеки молча нельзя: «merci, bonne journée» — обязательная часть визита.',
+      wrongFeedback: 'Завершайте разговор словами «merci beaucoup, bonne journée» — это норма вежливости.'
+    }
+  ]
+},
+{
+  id: 'supermarche',
+  title: '🛒 В супермаркете',
+  icon: '🛒',
+  description: 'Ищем товар, взвешиваем и проходим кассу',
+  steps: [
+    {
+      situation: 'Вы не можете найти отдел заморозки.',
+      speaker: 'Employé — Сотрудник магазина',
+      greek: 'Bonjour, vous cherchez quelque chose ?',
+      transcription: 'Бонжу́р, ву шершэ́ кэлькё шоз ?',
+      translation: 'Здравствуйте, вы что-то ищете?',
+      question: 'Скажите, что ищете отдел заморозки.',
+      options: [
+        { text: 'Bonjour, je cherche le rayon des surgelés.', transcription: 'Бонжу́р, жё шерш лё рэйо́н де сюржёле́.', translation: 'Здравствуйте, я ищу отдел заморозки.', correct: true },
+        { text: 'Bonjour, je veux du froid.', transcription: 'Бонжу́р, жё вё дю фруа́.', translation: 'Здравствуйте, я хочу холода.', correct: false },
+        { text: 'Bonjour, où est la sortie ?', transcription: 'Бонжу́р, у э ля сорти́ ?', translation: 'Здравствуйте, где выход?', correct: false },
+        { text: 'Non merci, je regarde.', transcription: 'Нон мерси́, жё рёга́рд.', translation: 'Нет, спасибо, я просто смотрю.', correct: false }
+      ],
+      correctFeedback: 'Rayon — отдел в магазине. Surgelés — замороженные продукты.',
+      wrongFeedback: 'Нужно «je cherche le rayon des surgelés» — так называется отдел заморозки.'
+    },
+    {
+      situation: 'Вы набрали яблок и подошли к весам.',
+      speaker: 'Cliente — Покупательница рядом',
+      greek: 'Il faut peser vous-même, la balance est là-bas.',
+      transcription: 'Иль фо пёзэ́ ву-мэ́м, ля бала́нс э ля-ба́.',
+      translation: 'Взвешивать нужно самому, весы вон там.',
+      question: 'Поблагодарите и уточните, нужно ли наклеивать этикетку.',
+      options: [
+        { text: 'Merci ! Il faut coller l\'étiquette sur le sac ?', transcription: 'Мерси́ ! Иль фо колэ́ летикэ́т сюр лё сак ?', translation: 'Спасибо! Нужно наклеить этикетку на пакет?', correct: true },
+        { text: 'Non, la caissière le fera.', transcription: 'Нон, ля кэсье́р лё фёра́.', translation: 'Нет, кассирша это сделает.', correct: false },
+        { text: 'Je n\'ai pas le temps.', transcription: 'Жё нэ па лё тан.', translation: 'У меня нет времени.', correct: false },
+        { text: 'C\'est compliqué ici.', transcription: 'Сэ комплике́ иси́.', translation: 'Тут всё сложно.', correct: false }
+      ],
+      correctFeedback: 'Во многих французских супермаркетах овощи и фрукты взвешивает сам покупатель — на кассе весов нет.',
+      wrongFeedback: 'Поблагодарите и уточните про этикетку: без неё на кассе товар не пробьют.'
+    },
+    {
+      situation: 'Вы на кассе. Кассир пробивает товары.',
+      speaker: 'Caissier — Кассир',
+      greek: 'Bonjour. Vous avez la carte de fidélité ?',
+      transcription: 'Бонжу́р. Вуз-аве́ ля карт дё фиделитэ́ ?',
+      translation: 'Здравствуйте. У вас есть карта лояльности?',
+      question: 'Скажите, что карты нет.',
+      options: [
+        { text: 'Bonjour, non, je n\'en ai pas.', transcription: 'Бонжу́р, нон, жё нан э па.', translation: 'Здравствуйте, нет, у меня её нет.', correct: true },
+        { text: 'Bonjour, oui, peut-être.', transcription: 'Бонжу́р, уи́, пётэ́тр.', translation: 'Здравствуйте, да, возможно.', correct: false },
+        { text: 'Je ne veux pas de carte.', transcription: 'Жё нё вё па дё карт.', translation: 'Я не хочу карту.', correct: false },
+        { text: 'Quelle carte ?', transcription: 'Кэль карт ?', translation: 'Какая карта?', correct: false }
+      ],
+      correctFeedback: 'Местоимение «en» заменяет «de la carte»: je n\'en ai pas — «у меня её нет».',
+      wrongFeedback: 'Естественный ответ — «non, je n\'en ai pas», с местоимением en.'
+    },
+    {
+      situation: 'Кассир называет сумму.',
+      speaker: 'Caissier — Кассир',
+      greek: 'Ça fait vingt-trois euros quarante. Vous payez comment ?',
+      transcription: 'Са фэ вэнт-труа́ ёро́ кара́нт. Ву пэйе́ кома́н ?',
+      translation: 'С вас двадцать три евро сорок. Как будете платить?',
+      question: 'Скажите, что картой, и попросите пакет.',
+      options: [
+        { text: 'Par carte. Un sac, s\'il vous plaît.', transcription: 'Пар карт. Эн сак, силь ву плэ.', translation: 'Картой. Пакет, пожалуйста.', correct: true },
+        { text: 'Avec de l\'argent.', transcription: 'Авек дё ларжа́н.', translation: 'Деньгами.', correct: false },
+        { text: 'Je paie plus tard.', transcription: 'Жё пэ плю тар.', translation: 'Я заплачу позже.', correct: false },
+        { text: 'C\'est cher, non ?', transcription: 'Сэ шэр, нон ?', translation: 'Дорого, не так ли?', correct: false }
+      ],
+      correctFeedback: 'Пакеты во Франции платные, и просить их надо словами — по умолчанию не дадут.',
+      wrongFeedback: 'Ответьте «par carte» и сразу попросите пакет: «un sac, s\'il vous plaît».'
+    },
+    {
+      situation: 'Оплата прошла, кассир протягивает чек.',
+      speaker: 'Caissier — Кассир',
+      greek: 'Voilà votre ticket. Bonne journée !',
+      transcription: 'Вуаля́ вотр тикэ́. Бон журнэ́ !',
+      translation: 'Вот ваш чек. Хорошего дня!',
+      question: 'Ответьте вежливо и попрощайтесь.',
+      options: [
+        { text: 'Merci, bonne journée à vous aussi !', transcription: 'Мерси́, бон журнэ́ а ву оси́ !', translation: 'Спасибо, и вам хорошего дня!', correct: true },
+        { text: 'Ok.', transcription: 'Оке́.', translation: 'Окей.', correct: false },
+        { text: 'Je n\'ai pas besoin du ticket.', transcription: 'Жё нэ па бёзуэ́н дю тикэ́.', translation: 'Мне не нужен чек.', correct: false },
+        { text: 'Au revoir madame.', transcription: 'О рёвуа́р мадам.', translation: 'До свидания, мадам.', correct: false }
+      ],
+      correctFeedback: 'Чек стоит сохранить — без него ни обмена, ни возврата. И ответное пожелание дня здесь обязательно.',
+      wrongFeedback: 'Отвечайте на пожелание: «bonne journée à vous aussi». Молчание читается как невежливость.'
+    }
+  ]
+},
+{
+  id: 'poste',
+  title: '📮 На почте',
+  icon: '📮',
+  description: 'Отправляем посылку и заказное письмо',
+  steps: [
+    {
+      situation: 'Вам нужно отправить заказное письмо владельцу жилья.',
+      speaker: 'Guichetier — Сотрудник почты',
+      greek: 'Bonjour, c\'est pour quoi ?',
+      transcription: 'Бонжу́р, сэ пур куа́ ?',
+      translation: 'Здравствуйте, что у вас?',
+      question: 'Скажите, что хотите отправить заказное письмо с уведомлением.',
+      options: [
+        { text: 'Bonjour, je voudrais envoyer une lettre recommandée avec accusé de réception.', transcription: 'Бонжу́р, жё вудрэ́ анвуайе́ юн летр рёкомандэ́ авек акюзэ́ дё ресепсьо́н.', translation: 'Здравствуйте, я хотел бы отправить заказное письмо с уведомлением.', correct: true },
+        { text: 'Bonjour, une lettre normale.', transcription: 'Бонжу́р, юн летр норма́ль.', translation: 'Здравствуйте, обычное письмо.', correct: false },
+        { text: 'Bonjour, je voudrais un timbre.', transcription: 'Бонжу́р, жё вудрэ́ эн тэмбр.', translation: 'Здравствуйте, мне нужна марка.', correct: false },
+        { text: 'Bonjour, où est la boîte aux lettres ?', transcription: 'Бонжу́р, у э ля буа́т о летр ?', translation: 'Здравствуйте, где почтовый ящик?', correct: false }
+      ],
+      correctFeedback: 'Préavis, жалобы и расторжение договоров во Франции отправляют только «recommandé avec accusé de réception».',
+      wrongFeedback: 'Обычное письмо не подойдёт: нужно «lettre recommandée avec accusé de réception».'
+    },
+    {
+      situation: 'Сотрудник даёт бланк.',
+      speaker: 'Guichetier — Сотрудник почты',
+      greek: 'Remplissez ce formulaire, en majuscules s\'il vous plaît.',
+      transcription: 'Ремплисэ́ сё формюле́р, ан мажюскю́ль силь ву плэ.',
+      translation: 'Заполните этот бланк, заглавными буквами, пожалуйста.',
+      question: 'Уточните, куда вписать свой адрес.',
+      options: [
+        { text: 'Je mets mon adresse où, exactement ?', transcription: 'Жё мэ мон адрэ́с у, эгзактёма́н ?', translation: 'Куда именно вписать мой адрес?', correct: true },
+        { text: 'Je ne sais pas écrire ça.', transcription: 'Жё нё сэ па экри́р са.', translation: 'Я не умею такое писать.', correct: false },
+        { text: 'C\'est trop compliqué.', transcription: 'Сэ тро комплике́.', translation: 'Это слишком сложно.', correct: false },
+        { text: 'Vous pouvez le remplir ?', transcription: 'Ву пуве́ лё рампли́р ?', translation: 'Вы можете его заполнить?', correct: false }
+      ],
+      correctFeedback: 'Короткий уточняющий вопрос лучше, чем заполнить бланк неверно и переделывать.',
+      wrongFeedback: 'Спросите конкретно: «Je mets mon adresse où ?» — вам покажут нужное поле.'
+    },
+    {
+      situation: 'Письмо оформлено. У вас ещё посылка.',
+      speaker: 'Guichetier — Сотрудник почты',
+      greek: 'Autre chose ?',
+      transcription: 'Отр шоз ?',
+      translation: 'Что-нибудь ещё?',
+      question: 'Скажите, что хотите отправить посылку в Россию.',
+      options: [
+        { text: 'Oui, je voudrais envoyer un colis en Russie.', transcription: 'Уи́, жё вудрэ́ анвуайе́ эн коли́ ан рюси́.', translation: 'Да, я хотел бы отправить посылку в Россию.', correct: true },
+        { text: 'Oui, un paquet pour Russie.', transcription: 'Уи́, эн пакэ́ пур рюси́.', translation: 'Да, пакет для России.', correct: false },
+        { text: 'Non, c\'est tout, merci.', transcription: 'Нон, сэ ту, мерси́.', translation: 'Нет, это всё, спасибо.', correct: false },
+        { text: 'Je voudrais un colis.', transcription: 'Жё вудрэ́ эн коли́.', translation: 'Я хотел бы посылку.', correct: false }
+      ],
+      correctFeedback: 'Colis — посылка. Со странами женского рода используется предлог en: en Russie, en France.',
+      wrongFeedback: 'Правильно «envoyer un colis en Russie»: colis — посылка, en — предлог со странами женского рода.'
+    },
+    {
+      situation: 'Сотрудник взвешивает коробку.',
+      speaker: 'Guichetier — Сотрудник почты',
+      greek: 'Deux kilos. En économique, ça met trois semaines.',
+      transcription: 'Дё кило́. Ан экономи́к, са мэ труа́ сёмэ́н.',
+      translation: 'Два килограмма. Экономичной доставкой идёт три недели.',
+      question: 'Спросите, сколько стоит быстрая доставка.',
+      options: [
+        { text: 'Et en rapide, ça coûte combien ?', transcription: 'Э ан рапи́д, са кут комбье́н ?', translation: 'А быстрой доставкой сколько стоит?', correct: true },
+        { text: 'Trois semaines, c\'est long.', transcription: 'Труа́ сёмэ́н, сэ лон.', translation: 'Три недели — это долго.', correct: false },
+        { text: 'D\'accord, merci.', transcription: 'Дако́р, мерси́.', translation: 'Хорошо, спасибо.', correct: false },
+        { text: 'Ça arrivera quand ?', transcription: 'Са аривра́ кан ?', translation: 'Когда это дойдёт?', correct: false }
+      ],
+      correctFeedback: 'Конструкция «ça coûte combien ?» универсальна для любой цены.',
+      wrongFeedback: 'Спросите цену другой доставки: «et en rapide, ça coûte combien ?».'
+    },
+    {
+      situation: 'Вы выбрали доставку и оплатили.',
+      speaker: 'Guichetier — Сотрудник почты',
+      greek: 'Voici le numéro de suivi. Gardez-le bien.',
+      transcription: 'Вуаси́ лё нюмеро́ дё сюиви́. Гардэ́-лё бье́н.',
+      translation: 'Вот номер отслеживания. Сохраните его.',
+      question: 'Уточните, где можно отследить посылку.',
+      options: [
+        { text: 'Je peux suivre le colis sur votre site ?', transcription: 'Жё пё сюивр лё коли́ сюр вотр сит ?', translation: 'Я могу отследить посылку на вашем сайте?', correct: true },
+        { text: 'Je vais le perdre.', transcription: 'Жё вэ лё пердр.', translation: 'Я его потеряю.', correct: false },
+        { text: 'Ce n\'est pas nécessaire.', transcription: 'Сё нэ па несесэ́р.', translation: 'Это не нужно.', correct: false },
+        { text: 'Merci, au revoir.', transcription: 'Мерси́, о рёвуа́р.', translation: 'Спасибо, до свидания.', correct: false }
+      ],
+      correctFeedback: 'Numéro de suivi — трек-номер. По нему посылка отслеживается на сайте и в приложении.',
+      wrongFeedback: 'Уточните, где отслеживать: «je peux suivre le colis sur votre site ?».'
+    }
+  ]
+},
+{
+  id: 'travail',
+  title: '💼 Собеседование',
+  icon: '💼',
+  description: 'Проходим собеседование на работу во Франции',
+  steps: [
+    {
+      situation: 'Вы пришли на собеседование. Рекрутер приглашает вас сесть.',
+      speaker: 'Recruteuse — Рекрутер',
+      greek: 'Bonjour, asseyez-vous. Parlez-moi de vous.',
+      transcription: 'Бонжу́р, асэйе́-ву. Парле́-муа́ дё ву.',
+      translation: 'Здравствуйте, садитесь. Расскажите о себе.',
+      question: 'Кратко представьтесь: имя, опыт, сколько живёте во Франции.',
+      options: [
+        { text: "Je m'appelle Ivan, je suis développeur et j'habite en France depuis deux ans.", transcription: 'Жё мапэ́ль Ива́н, жё сюи́ дёвлопё́р э жаби́т ан франс дёпюи́ дёз-ан.', translation: 'Меня зовут Иван, я разработчик и живу во Франции два года.', correct: true },
+        { text: 'Je suis russe.', transcription: 'Жё сюи́ рюс.', translation: 'Я русский.', correct: false },
+        { text: "Qu'est-ce que vous voulez savoir ?", transcription: 'Кэскё ву вуле́ савуа́р ?', translation: 'Что вы хотите знать?', correct: false },
+        { text: 'Tout est dans mon CV.', transcription: 'Тут-э дан мон сэ-вэ́.', translation: 'Всё есть в моём резюме.', correct: false }
+      ],
+      correctFeedback: 'Три элемента — имя, профессия, срок во Франции — закрывают вопрос «parlez-moi de vous» на A2.',
+      wrongFeedback: 'Ответьте структурно: имя, кем работаете, сколько живёте во Франции.'
+    },
+    {
+      situation: 'Рекрутер спрашивает про уровень французского.',
+      speaker: 'Recruteuse — Рекрутер',
+      greek: 'Quel est votre niveau de français ?',
+      transcription: 'Кэль э вотр нивё́ дё франсэ́ ?',
+      translation: 'Какой у вас уровень французского?',
+      question: 'Ответьте честно и добавьте, что продолжаете учить.',
+      options: [
+        { text: "J'ai le niveau A2 et je continue à apprendre.", transcription: 'Жэ лё нивё́ а-дё э жё контини́ а апра́ндр.', translation: 'У меня уровень A2, и я продолжаю учиться.', correct: true },
+        { text: 'Je parle parfaitement français.', transcription: 'Жё парль парфэтма́н франсэ́.', translation: 'Я говорю по-французски идеально.', correct: false },
+        { text: 'Mon français est nul.', transcription: 'Мон франсэ́ э нюль.', translation: 'Мой французский никуда не годится.', correct: false },
+        { text: 'On peut parler anglais ?', transcription: 'Он пё парле́ англэ́ ?', translation: 'Можем говорить по-английски?', correct: false }
+      ],
+      correctFeedback: 'Честный уровень плюс «je continue à apprendre» читается как зрелость, а не как слабость.',
+      wrongFeedback: 'Не преувеличивайте и не принижайте: назовите уровень и скажите, что продолжаете учиться.'
+    },
+    {
+      situation: 'Рекрутер уточняет ваш статус.',
+      speaker: 'Recruteuse — Рекрутер',
+      greek: 'Vous avez le droit de travailler en France ?',
+      transcription: 'Вуз-аве́ лё друа́ дё травайе́ ан франс ?',
+      translation: 'У вас есть право работать во Франции?',
+      question: 'Скажите, что у вас вид на жительство с правом работы.',
+      options: [
+        { text: "Oui, j'ai un titre de séjour qui autorise le travail.", transcription: 'Уи́, жэ эн титр дё сежу́р ки оториз лё трава́й.', translation: 'Да, у меня вид на жительство с правом работы.', correct: true },
+        { text: "Je crois que oui.", transcription: 'Жё круа́ кё уи́.', translation: 'Кажется, да.', correct: false },
+        { text: "J'ai un visa touriste.", transcription: 'Жэ эн виза́ тури́ст.', translation: 'У меня туристическая виза.', correct: false },
+        { text: 'On verra plus tard.', transcription: 'Он верра́ плю тар.', translation: 'Разберёмся позже.', correct: false }
+      ],
+      correctFeedback: 'Вопрос о праве на работу задают всем иностранцам. Ответ должен быть однозначным.',
+      wrongFeedback: 'Отвечайте определённо: «j\'ai un titre de séjour qui autorise le travail».'
+    },
+    {
+      situation: 'Рекрутер спрашивает о зарплатных ожиданиях.',
+      speaker: 'Recruteuse — Рекрутер',
+      greek: 'Quelles sont vos prétentions salariales ?',
+      transcription: 'Кэль сон во претансьо́н салярья́ль ?',
+      translation: 'Какие у вас зарплатные ожидания?',
+      question: 'Назовите вилку и уточните, брутто или нетто.',
+      options: [
+        { text: "Entre trente-cinq et quarante mille par an. C'est en brut ?", transcription: 'Антр трант-сэ́нк э кара́нт миль пар ан. Сэт-ан брют ?', translation: 'От тридцати пяти до сорока тысяч в год. Это брутто?', correct: true },
+        { text: 'Ce que vous voulez.', transcription: 'Сё кё ву вуле́.', translation: 'Сколько хотите.', correct: false },
+        { text: "Je n'ai pas d'idée.", transcription: 'Жё нэ па диде́.', translation: 'Понятия не имею.', correct: false },
+        { text: 'Le maximum possible.', transcription: 'Лё максимю́м поси́бль.', translation: 'Максимально возможное.', correct: false }
+      ],
+      correctFeedback: 'Во Франции зарплату обсуждают в годовом выражении и всегда уточняют brut или net — разница около четверти.',
+      wrongFeedback: 'Назовите вилку и уточните brut/net: «c\'est en brut ?». Без этого цифра ничего не значит.'
+    },
+    {
+      situation: 'Собеседование заканчивается.',
+      speaker: 'Recruteuse — Рекрутер',
+      greek: 'Très bien. Vous avez des questions ?',
+      transcription: 'Трэ бье́н. Вуз-аве́ де кэстьо́н ?',
+      translation: 'Отлично. У вас есть вопросы?',
+      question: 'Спросите о следующих этапах.',
+      options: [
+        { text: "Oui, quelles sont les prochaines étapes ?", transcription: 'Уи́, кэль сон ле прошэ́н эта́п ?', translation: 'Да, какие следующие этапы?', correct: true },
+        { text: 'Non, aucune.', transcription: 'Нон, окю́н.', translation: 'Нет, никаких.', correct: false },
+        { text: 'Je suis pris ?', transcription: 'Жё сюи́ при ?', translation: 'Меня берут?', correct: false },
+        { text: 'Quand est-ce que je commence ?', transcription: 'Кант-эскё жё кома́нс ?', translation: 'Когда я начинаю?', correct: false }
+      ],
+      correctFeedback: 'Отсутствие вопросов во французской практике читается как отсутствие интереса. Вопрос об этапах — беспроигрышный.',
+      wrongFeedback: 'Спросите про следующие шаги: «quelles sont les prochaines étapes ?».'
+    }
+  ]
+},
+{
+  id: 'voisins',
+  title: '🏘️ Соседи',
+  icon: '🏘️',
+  description: 'Знакомимся с соседями и решаем вопрос с шумом',
+  steps: [
+    {
+      situation: 'Вы только въехали и встретили соседку на лестнице.',
+      speaker: 'Voisine — Соседка',
+      greek: 'Bonjour ! Vous êtes nouveaux dans l\'immeuble ?',
+      transcription: 'Бонжу́р ! Вуз-эт нуво́ дан лимё́бль ?',
+      translation: 'Здравствуйте! Вы новые в доме?',
+      question: 'Подтвердите и скажите, что въехали на третий этаж.',
+      options: [
+        { text: "Oui, on vient d'emménager au troisième étage.", transcription: 'Уи́, он вье́н дамена́жэ о труазье́м эта́ж.', translation: 'Да, мы недавно въехали на третий этаж.', correct: true },
+        { text: 'Oui.', transcription: 'Уи́.', translation: 'Да.', correct: false },
+        { text: "Ce n'est pas votre affaire.", transcription: 'Сё нэ па вотр афэ́р.', translation: 'Это не ваше дело.', correct: false },
+        { text: 'Je ne parle pas français.', transcription: 'Жё нё парль па франсэ́.', translation: 'Я не говорю по-французски.', correct: false }
+      ],
+      correctFeedback: 'Venir de + инфинитив означает «только что сделать»: on vient d\'emménager — мы только въехали.',
+      wrongFeedback: 'Ответьте развёрнуто — знакомство с соседями снимает половину будущих бытовых проблем.'
+    },
+    {
+      situation: 'Соседка предупреждает про правила дома.',
+      speaker: 'Voisine — Соседка',
+      greek: 'Ici, on évite le bruit après vingt-deux heures.',
+      transcription: 'Иси́, он эви́т лё брюи́ апрэ́ вэнт-дёз-ёр.',
+      translation: 'У нас стараются не шуметь после двадцати двух.',
+      question: 'Скажите, что поняли, и предупредите про субботнюю вечеринку.',
+      options: [
+        { text: "D'accord. On fait une petite fête samedi, désolé d'avance.", transcription: 'Дако́р. Он фэ юн пёти́т фэт самди́, дезоле́ дава́нс.', translation: 'Хорошо. В субботу у нас небольшой праздник, заранее извиняюсь.', correct: true },
+        { text: 'On fait ce qu\'on veut chez nous.', transcription: 'Он фэ сё кон вё ше ну.', translation: 'У себя дома мы делаем что хотим.', correct: false },
+        { text: 'Pas de problème, on ne fait jamais de bruit.', transcription: 'Па дё проблэ́м, он нё фэ жамэ́ дё брюи́.', translation: 'Без проблем, мы никогда не шумим.', correct: false },
+        { text: 'Vingt-deux heures, c\'est tôt.', transcription: 'Вэнт-дёз-ёр, сэ то.', translation: 'Двадцать два — это рано.', correct: false }
+      ],
+      correctFeedback: 'Предупредить заранее — французская норма. Предупреждённый сосед терпит, непредупреждённый жалуется.',
+      wrongFeedback: 'Лучший ход — согласиться и сразу предупредить о планируемом шуме.'
+    },
+    {
+      situation: 'Через месяц сверху постоянно шумят по ночам. Вы стучитесь к соседу.',
+      speaker: 'Voisin — Сосед сверху',
+      greek: 'Oui ? Bonsoir, il y a un problème ?',
+      transcription: 'Уи́ ? Бонсуа́р, иль-я эн проблэ́м ?',
+      translation: 'Да? Добрый вечер, что-то случилось?',
+      question: 'Вежливо скажите, что вечером у вас очень слышно шум.',
+      options: [
+        { text: "Bonsoir, excusez-moi, on entend beaucoup de bruit le soir.", transcription: 'Бонсуа́р, экскюзэ́-муа́, он анта́н боку́ дё брюи́ лё суа́р.', translation: 'Добрый вечер, извините, вечером очень слышно шум.', correct: true },
+        { text: 'Vous faites trop de bruit, ça suffit !', transcription: 'Ву фэт тро дё брюи́, са сюфи́ !', translation: 'Вы слишком шумите, хватит!', correct: false },
+        { text: "J'appelle la police.", transcription: 'Жапэ́ль ля поли́с.', translation: 'Я вызываю полицию.', correct: false },
+        { text: 'Rien, bonne soirée.', transcription: 'Рье́н, бон суарэ́.', translation: 'Ничего, хорошего вечера.', correct: false }
+      ],
+      correctFeedback: 'Безличное «on entend» снимает обвинение: вы описываете факт, а не нападаете.',
+      wrongFeedback: 'Начните с извинения и нейтральной формулировки — конфликт с соседом решается разговором, а не полицией.'
+    },
+    {
+      situation: 'Сосед извиняется и объясняет.',
+      speaker: 'Voisin — Сосед сверху',
+      greek: 'Ah, désolé ! C\'est notre fils, il fait de la batterie.',
+      transcription: 'А, дезоле́ ! Сэ нотр фис, иль фэ дё ля батри́.',
+      translation: 'А, извините! Это наш сын, он играет на ударных.',
+      question: 'Предложите договориться о времени.',
+      options: [
+        { text: "On peut trouver un arrangement, avant vingt heures par exemple ?", transcription: 'Он пё трувэ́ эн аранжма́н, ава́н вэнт-ёр пар эгзампль ?', translation: 'Можем договориться, например, до двадцати часов?', correct: true },
+        { text: "Qu'il arrête complètement.", transcription: 'Киль арэ́т комплетма́н.', translation: 'Пусть прекратит совсем.', correct: false },
+        { text: 'Ce n\'est pas grave alors.', transcription: 'Сё нэ па грав ало́р.', translation: 'Тогда ничего страшного.', correct: false },
+        { text: 'Je vais écrire au syndic.', transcription: 'Жё вэ экри́р о сэнди́к.', translation: 'Я напишу управляющему.', correct: false }
+      ],
+      correctFeedback: 'Предложение компромисса на этом этапе почти всегда работает. К syndic обращаются, когда разговор не помог.',
+      wrongFeedback: 'Предложите конкретный компромисс по времени — это стандартный французский способ решать такие вопросы.'
+    },
+    {
+      situation: 'Договорились. Сосед благодарит.',
+      speaker: 'Voisin — Сосед сверху',
+      greek: 'C\'est noté, merci d\'être venu nous voir directement.',
+      transcription: 'Сэ нотэ́, мерси́ дэтр вёню́ ну вуа́р дирэктёма́н.',
+      translation: 'Договорились, спасибо, что зашли к нам напрямую.',
+      question: 'Попрощайтесь по-соседски.',
+      options: [
+        { text: "Merci à vous, bonne soirée et à bientôt !", transcription: 'Мерси́ а ву, бон суарэ́ э а бьенто́ !', translation: 'Спасибо вам, хорошего вечера и до скорого!', correct: true },
+        { text: 'Voilà.', transcription: 'Вуаля́.', translation: 'Вот и всё.', correct: false },
+        { text: "J'espère que ça va durer.", transcription: 'Жеспэ́р кё са ва дюрэ́.', translation: 'Надеюсь, это продлится.', correct: false },
+        { text: 'Sinon je reviens.', transcription: 'Сино́н жё рёвье́н.', translation: 'Иначе я вернусь.', correct: false }
+      ],
+      correctFeedback: 'Тёплое прощание закрепляет результат: с соседями вам жить дальше.',
+      wrongFeedback: 'Закончите доброжелательно: «bonne soirée et à bientôt».'
+    }
+  ]
+},
+{
+  id: 'telephone',
+  title: '📱 Оператор связи',
+  icon: '📱',
+  description: 'Подключаем интернет и мобильный тариф',
+  steps: [
+    {
+      situation: 'Вы пришли в салон оператора подключить интернет дома.',
+      speaker: 'Conseiller — Консультант',
+      greek: 'Bonjour, je peux vous renseigner ?',
+      transcription: 'Бонжу́р, жё пё ву рансэнье́ ?',
+      translation: 'Здравствуйте, могу вас проконсультировать?',
+      question: 'Скажите, что хотите подключить интернет в новой квартире.',
+      options: [
+        { text: "Bonjour, je voudrais un abonnement internet pour mon nouvel appartement.", transcription: 'Бонжу́р, жё вудрэ́ эн абонма́н энтернэ́т пур мон нувэ́ль апартёма́н.', translation: 'Здравствуйте, я хотел бы подключить интернет в новой квартире.', correct: true },
+        { text: 'Bonjour, je veux internet.', transcription: 'Бонжу́р, жё вё энтернэ́т.', translation: 'Здравствуйте, я хочу интернет.', correct: false },
+        { text: 'Bonjour, mon internet ne marche pas.', transcription: 'Бонжу́р, мон энтернэ́т нё марш па.', translation: 'Здравствуйте, у меня не работает интернет.', correct: false },
+        { text: 'Bonjour, je regarde les téléphones.', transcription: 'Бонжу́р, жё рёга́рд ле телефо́н.', translation: 'Здравствуйте, я смотрю телефоны.', correct: false }
+      ],
+      correctFeedback: 'Abonnement — подписка, договор на услугу. Именно это слово нужно и для интернета, и для мобильной связи.',
+      wrongFeedback: 'Скажите «je voudrais un abonnement internet» — «je veux» звучит требовательно.'
+    },
+    {
+      situation: 'Консультант проверяет адрес.',
+      speaker: 'Conseiller — Консультант',
+      greek: 'Votre adresse est éligible à la fibre. Vous avez un justificatif de domicile ?',
+      transcription: 'Вотр адрэ́с эт-элижи́бль а ля фибр. Вуз-аве́ эн жюстификати́ф дё домиси́ль ?',
+      translation: 'Ваш адрес подходит для оптоволокна. У вас есть подтверждение адреса?',
+      question: 'Скажите, что у вас есть договор аренды.',
+      options: [
+        { text: "Oui, j'ai mon contrat de location.", transcription: 'Уи́, жэ мон контра́ дё локасьо́н.', translation: 'Да, у меня есть договор аренды.', correct: true },
+        { text: "J'ai seulement mon passeport.", transcription: 'Жэ сёльма́н мон паспо́р.', translation: 'У меня только паспорт.', correct: false },
+        { text: 'Qu\'est-ce que c\'est ?', transcription: 'Кэскё сэ ?', translation: 'Что это такое?', correct: false },
+        { text: 'Je l\'apporterai demain.', transcription: 'Жё лапортёрэ́ дёмэ́н.', translation: 'Я принесу его завтра.', correct: false }
+      ],
+      correctFeedback: 'Договор аренды — самый универсальный justificatif de domicile для новоприбывших.',
+      wrongFeedback: 'Паспорт подтверждает личность, но не адрес. Нужен bail или счёт за коммунальные услуги.'
+    },
+    {
+      situation: 'Консультант показывает тарифы.',
+      speaker: 'Conseiller — Консультант',
+      greek: 'Cette offre est à trente euros par mois pendant un an, puis quarante.',
+      transcription: 'Сэт офр эт-а тра́нт ёро́ пар муа́ панда́н эн ан, пюи́ кара́нт.',
+      translation: 'Это предложение — тридцать евро в месяц первый год, потом сорок.',
+      question: 'Спросите про срок обязательства по договору.',
+      options: [
+        { text: "Il y a un engagement de combien de temps ?", transcription: 'Иль-я эн ангажма́н дё комбье́н дё тан ?', translation: 'На какой срок обязательство?', correct: true },
+        { text: 'Trente euros, ça va.', transcription: 'Тра́нт ёро́, са ва.', translation: 'Тридцать евро — нормально.', correct: false },
+        { text: 'Vous avez moins cher ?', transcription: 'Вуз-аве́ муэ́н шэр ?', translation: 'У вас есть дешевле?', correct: false },
+        { text: 'Je prends.', transcription: 'Жё пран.', translation: 'Беру.', correct: false }
+      ],
+      correctFeedback: 'Engagement — срок, в течение которого нельзя расторгнуть договор без штрафа. Это главный вопрос перед подписанием.',
+      wrongFeedback: 'Спросите про engagement: 12 или 24 месяца — от этого зависит, сможете ли вы уйти.'
+    },
+    {
+      situation: 'Консультант объясняет условия расторжения.',
+      speaker: 'Conseiller — Консультант',
+      greek: 'Douze mois. Après, vous pouvez résilier quand vous voulez.',
+      transcription: 'Дуз муа́. Апрэ́, ву пуве́ резилье́ кан ву вуле́.',
+      translation: 'Двенадцать месяцев. Потом можете расторгнуть в любой момент.',
+      question: 'Уточните, как именно расторгают договор.',
+      options: [
+        { text: "Et pour résilier, il faut envoyer une lettre recommandée ?", transcription: 'Э пур резилье́, иль фо анвуайе́ юн летр рёкомандэ́ ?', translation: 'А чтобы расторгнуть, нужно отправить заказное письмо?', correct: true },
+        { text: 'Je ne résilierai jamais.', transcription: 'Жё нё резильерэ́ жамэ́.', translation: 'Я никогда не буду расторгать.', correct: false },
+        { text: 'D\'accord, c\'est bon.', transcription: 'Дако́р, сэ бон.', translation: 'Хорошо, годится.', correct: false },
+        { text: 'Douze mois, c\'est long.', transcription: 'Дуз муа́, сэ лон.', translation: 'Двенадцать месяцев — это долго.', correct: false }
+      ],
+      correctFeedback: 'Порядок расторжения лучше выяснить при подписании: через год вспоминать будет некому.',
+      wrongFeedback: 'Спросите заранее, как расторгать — обычно нужно заказное письмо с уведомлением.'
+    },
+    {
+      situation: 'Договор подписан. Консультант отдаёт роутер.',
+      speaker: 'Conseiller — Консультант',
+      greek: 'Voici votre box. L\'activation prend quarante-huit heures.',
+      transcription: 'Вуаси́ вотр бокс. Лактивасьо́н пран карант-юи́т ёр.',
+      translation: 'Вот ваш роутер. Активация занимает сорок восемь часов.',
+      question: 'Уточните, что делать, если через два дня не заработает.',
+      options: [
+        { text: "Et si ça ne marche pas après deux jours, je fais quoi ?", transcription: 'Э си са нё марш па апрэ́ дё жур, жё фэ куа́ ?', translation: 'А если через два дня не заработает, что мне делать?', correct: true },
+        { text: 'Quarante-huit heures, c\'est trop long.', transcription: 'Карант-юи́т ёр, сэ тро лон.', translation: 'Сорок восемь часов — слишком долго.', correct: false },
+        { text: 'Merci, au revoir.', transcription: 'Мерси́, о рёвуа́р.', translation: 'Спасибо, до свидания.', correct: false },
+        { text: 'Je vais l\'installer moi-même.', transcription: 'Жё вэ ленсталэ́ муа́-мэм.', translation: 'Я установлю его сам.', correct: false }
+      ],
+      correctFeedback: 'Условная конструкция «si ça ne marche pas» пригодится в любом разговоре о технике и услугах.',
+      wrongFeedback: 'Спросите заранее про план Б: «et si ça ne marche pas, je fais quoi ?».'
+    }
+  ]
+},
+{
+  id: 'mairie',
+  title: '🏛️ В мэрии',
+  icon: '🏛️',
+  description: 'Заказываем документы и оформляем справки',
+  steps: [
+    {
+      situation: 'Вам нужно заверить копии документов и получить справку.',
+      speaker: 'Agent — Сотрудник мэрии',
+      greek: 'Bonjour, vous venez pour quoi ?',
+      transcription: 'Бонжу́р, ву вёнэ́ пур куа́ ?',
+      translation: 'Здравствуйте, вы по какому вопросу?',
+      question: 'Скажите, что вам нужна справка о проживании.',
+      options: [
+        { text: "Bonjour, j'aurais besoin d'un justificatif de domicile.", transcription: 'Бонжу́р, жорэ́ бёзуэ́н дэн жюстификати́ф дё домиси́ль.', translation: 'Здравствуйте, мне нужна справка о месте проживания.', correct: true },
+        { text: 'Bonjour, je veux des papiers.', transcription: 'Бонжу́р, жё вё де папье́.', translation: 'Здравствуйте, я хочу бумаги.', correct: false },
+        { text: 'Bonjour, je cherche la préfecture.', transcription: 'Бонжу́р, жё шерш ля префектю́р.', translation: 'Здравствуйте, я ищу префектуру.', correct: false },
+        { text: 'Bonjour, c\'est urgent.', transcription: 'Бонжу́р, сэт-юржа́н.', translation: 'Здравствуйте, это срочно.', correct: false }
+      ],
+      correctFeedback: '«J\'aurais besoin de…» — самая вежливая форма запроса в любом французском учреждении.',
+      wrongFeedback: 'Назовите документ конкретно: «j\'aurais besoin d\'un justificatif de domicile».'
+    },
+    {
+      situation: 'Сотрудник спрашивает, для чего справка.',
+      speaker: 'Agent — Сотрудник мэрии',
+      greek: 'C\'est pour quel organisme ?',
+      transcription: 'Сэ пур кэль органи́зм ?',
+      translation: 'Для какой организации?',
+      question: 'Скажите, что для префектуры, для продления вида на жительство.',
+      options: [
+        { text: "Pour la préfecture, c'est pour le renouvellement de mon titre de séjour.", transcription: 'Пур ля префектю́р, сэ пур лё рёнувельма́н дё мон титр дё сежу́р.', translation: 'Для префектуры, для продления вида на жительство.', correct: true },
+        { text: 'Pour moi.', transcription: 'Пур муа́.', translation: 'Для меня.', correct: false },
+        { text: 'Je ne sais pas encore.', transcription: 'Жё нё сэ па анко́р.', translation: 'Я пока не знаю.', correct: false },
+        { text: 'Ça n\'a pas d\'importance.', transcription: 'Са на па дэмпорта́нс.', translation: 'Это неважно.', correct: false }
+      ],
+      correctFeedback: 'От назначения зависит форма документа — сотруднику это нужно знать, а не из любопытства.',
+      wrongFeedback: 'Назовите организацию и цель: разные учреждения требуют разные формы справки.'
+    },
+    {
+      situation: 'Сотрудник просит документы.',
+      speaker: 'Agent — Сотрудник мэрии',
+      greek: 'Votre pièce d\'identité et une facture récente, s\'il vous plaît.',
+      transcription: 'Вотр пьес дидантитэ́ э юн фактю́р ресант, силь ву плэ.',
+      translation: 'Ваше удостоверение личности и свежий счёт, пожалуйста.',
+      question: 'Уточните, подойдёт ли счёт за интернет.',
+      options: [
+        { text: "Une facture internet, ça convient ?", transcription: 'Юн фактю́р энтернэ́т, са конвье́н ?', translation: 'Счёт за интернет подойдёт?', correct: true },
+        { text: 'Je n\'ai pas de factures.', transcription: 'Жё нэ па дё фактю́р.', translation: 'У меня нет счетов.', correct: false },
+        { text: 'Voilà mon passeport seulement.', transcription: 'Вуаля́ мон паспо́р сёльма́н.', translation: 'Вот только мой паспорт.', correct: false },
+        { text: 'Elle date de l\'année dernière.', transcription: 'Эль дат дё лянэ́ дернье́р.', translation: 'Он прошлогодний.', correct: false }
+      ],
+      correctFeedback: '«Ça convient ?» — «подойдёт?». Универсальный вопрос при сдаче любых документов.',
+      wrongFeedback: 'Уточните заранее, годится ли ваш документ: «ça convient ?».'
+    },
+    {
+      situation: 'Документы приняты.',
+      speaker: 'Agent — Сотрудник мэрии',
+      greek: 'Parfait. Le document sera prêt dans une semaine.',
+      transcription: 'Парфэ́. Лё докюма́н сёра́ прэ дан юн сёмэ́н.',
+      translation: 'Отлично. Документ будет готов через неделю.',
+      question: 'Спросите, придёт ли уведомление или нужно прийти самому.',
+      options: [
+        { text: "Vous me préviendrez ou je dois repasser ?", transcription: 'Ву мё превьендрэ́ у жё дуа́ рёпасэ́ ?', translation: 'Вы меня предупредите или мне зайти самому?', correct: true },
+        { text: 'Une semaine, c\'est long.', transcription: 'Юн сёмэ́н, сэ лон.', translation: 'Неделя — это долго.', correct: false },
+        { text: 'D\'accord, merci.', transcription: 'Дако́р, мерси́.', translation: 'Хорошо, спасибо.', correct: false },
+        { text: 'Envoyez-le par la poste.', transcription: 'Анвуайе́-лё пар ля пост.', translation: 'Отправьте его почтой.', correct: false }
+      ],
+      correctFeedback: 'Repasser — «зайти снова». Уточнить способ получения документа стоит всегда.',
+      wrongFeedback: 'Спросите, как узнаете о готовности: «vous me préviendrez ou je dois repasser ?».'
+    },
+    {
+      situation: 'Вы уже уходите, но вспомнили ещё один вопрос.',
+      speaker: 'Agent — Сотрудник мэрии',
+      greek: 'Autre chose ?',
+      transcription: 'Отр шоз ?',
+      translation: 'Что-нибудь ещё?',
+      question: 'Спросите, где заверяют копии документов.',
+      options: [
+        { text: "Oui, où est-ce qu'on peut certifier des copies ?", transcription: 'Уи́, у эскон пё сертифье́ де копи́ ?', translation: 'Да, где можно заверить копии?', correct: true },
+        { text: 'Non, c\'est tout.', transcription: 'Нон, сэ ту.', translation: 'Нет, это всё.', correct: false },
+        { text: 'Vous fermez à quelle heure ?', transcription: 'Ву фермэ́ а кэль ёр ?', translation: 'Во сколько вы закрываетесь?', correct: false },
+        { text: 'Merci beaucoup.', transcription: 'Мерси́ боку́.', translation: 'Большое спасибо.', correct: false }
+      ],
+      correctFeedback: 'Один визит — несколько вопросов. Во французских учреждениях это нормально и экономит вам следующую поездку.',
+      wrongFeedback: 'Раз спросили — задавайте вопрос: «où est-ce qu\'on peut certifier des copies ?».'
+    }
+  ]
+},
+{
+  id: 'coiffeur',
+  title: '💇 У парикмахера',
+  icon: '💇',
+  description: 'Записываемся и объясняем, какую стрижку хотим',
+  steps: [
+    {
+      situation: 'Вы звоните в парикмахерскую записаться.',
+      speaker: 'Coiffeuse — Парикмахер',
+      greek: 'Salon Émile, bonjour !',
+      transcription: 'Сало́н Эми́ль, бонжу́р !',
+      translation: 'Салон «Эмиль», здравствуйте!',
+      question: 'Скажите, что хотите записаться на стрижку.',
+      options: [
+        { text: "Bonjour, je voudrais prendre rendez-vous pour une coupe.", transcription: 'Бонжу́р, жё вудрэ́ пра́ндр рандэву́ пур юн куп.', translation: 'Здравствуйте, я хотел бы записаться на стрижку.', correct: true },
+        { text: 'Bonjour, je viens maintenant.', transcription: 'Бонжу́р, жё вье́н мэнтёна́н.', translation: 'Здравствуйте, я сейчас приду.', correct: false },
+        { text: 'Bonjour, vous coupez les cheveux ?', transcription: 'Бонжу́р, ву купэ́ ле шёвё́ ?', translation: 'Здравствуйте, вы стрижёте волосы?', correct: false },
+        { text: 'Bonjour, combien ça coûte ?', transcription: 'Бонжу́р, комбье́н са кут ?', translation: 'Здравствуйте, сколько стоит?', correct: false }
+      ],
+      correctFeedback: 'Une coupe — стрижка. «Prendre rendez-vous» работает и у врача, и в салоне, и в банке.',
+      wrongFeedback: 'Начните с записи: «je voudrais prendre rendez-vous pour une coupe».'
+    },
+    {
+      situation: 'Парикмахер предлагает время.',
+      speaker: 'Coiffeuse — Парикмахер',
+      greek: 'J\'ai jeudi à quinze heures ou samedi matin.',
+      transcription: 'Жэ жёди́ а кэнз-ёр у самди́ матэ́н.',
+      translation: 'Есть четверг в пятнадцать или субботнее утро.',
+      question: 'Выберите субботу и уточните точное время.',
+      options: [
+        { text: "Samedi matin, ce serait à quelle heure ?", transcription: 'Самди́ матэ́н, сё сёрэ́ а кэль ёр ?', translation: 'Субботнее утро — во сколько именно?', correct: true },
+        { text: 'Samedi.', transcription: 'Самди́.', translation: 'Суббота.', correct: false },
+        { text: 'Les deux, ça va.', transcription: 'Ле дё, са ва.', translation: 'Оба варианта подходят.', correct: false },
+        { text: 'Je rappellerai.', transcription: 'Жё рапельрэ́.', translation: 'Я перезвоню.', correct: false }
+      ],
+      correctFeedback: 'Уточнять время сразу — правильный рефлекс: «matin» может значить и восемь утра, и половину двенадцатого.',
+      wrongFeedback: 'Выберите день и уточните час: «ce serait à quelle heure ?».'
+    },
+    {
+      situation: 'Вы пришли, вас усадили в кресло.',
+      speaker: 'Coiffeuse — Парикмахер',
+      greek: 'Alors, qu\'est-ce qu\'on fait aujourd\'hui ?',
+      transcription: 'Ало́р, кэскон фэ ожурдюи́ ?',
+      translation: 'Итак, что делаем сегодня?',
+      question: 'Попросите подровнять кончики и не укорачивать сильно.',
+      options: [
+        { text: "Juste les pointes, s'il vous plaît, pas trop court.", transcription: 'Жюст ле пуэ́нт, силь ву плэ, па тро кур.', translation: 'Только кончики, пожалуйста, не слишком коротко.', correct: true },
+        { text: 'Comme vous voulez.', transcription: 'Ком ву вуле́.', translation: 'Как хотите.', correct: false },
+        { text: 'Coupez tout.', transcription: 'Купэ́ ту.', translation: 'Отрежьте всё.', correct: false },
+        { text: 'Je ne sais pas.', transcription: 'Жё нё сэ па.', translation: 'Я не знаю.', correct: false }
+      ],
+      correctFeedback: 'Две ключевые формулы: «juste les pointes» (только кончики) и «pas trop court» (не слишком коротко).',
+      wrongFeedback: '«Comme vous voulez» — рискованный ответ. Скажите конкретно: «juste les pointes, pas trop court».'
+    },
+    {
+      situation: 'Парикмахер уточняет детали.',
+      speaker: 'Coiffeuse — Парикмахер',
+      greek: 'Et on garde la longueur devant ?',
+      transcription: 'Э он гард ля лонгё́р дёва́н ?',
+      translation: 'Спереди длину оставляем?',
+      question: 'Согласитесь и попросите сделать чуть короче по бокам.',
+      options: [
+        { text: "Oui, on garde devant, mais un peu plus court sur les côtés.", transcription: 'Уи́, он гард дёва́н, мэ эн пё плю кур сюр ле котэ́.', translation: 'Да, спереди оставляем, но по бокам чуть короче.', correct: true },
+        { text: 'Oui oui.', transcription: 'Уи́ уи́.', translation: 'Да-да.', correct: false },
+        { text: 'Non.', transcription: 'Нон.', translation: 'Нет.', correct: false },
+        { text: 'Faites comme d\'habitude.', transcription: 'Фэт ком дабитю́д.', translation: 'Сделайте как обычно.', correct: false }
+      ],
+      correctFeedback: 'Sur les côtés — по бокам, devant — спереди, derrière — сзади. Три слова закрывают всю стрижку.',
+      wrongFeedback: 'Отвечайте по существу и добавляйте уточнение: «un peu plus court sur les côtés».'
+    },
+    {
+      situation: 'Стрижка закончена, вам показывают результат.',
+      speaker: 'Coiffeuse — Парикмахер',
+      greek: 'Ça vous va comme ça ?',
+      transcription: 'Са ву ва ком са ?',
+      translation: 'Так вам подходит?',
+      question: 'Скажите, что нравится, и спросите про оплату.',
+      options: [
+        { text: "C'est très bien, merci. Je peux payer par carte ?", transcription: 'Сэ трэ бье́н, мерси́. Жё пё пэйе́ пар карт ?', translation: 'Очень хорошо, спасибо. Можно оплатить картой?', correct: true },
+        { text: 'Bof.', transcription: 'Боф.', translation: 'Так себе.', correct: false },
+        { text: 'C\'est trop court !', transcription: 'Сэ тро кур !', translation: 'Слишком коротко!', correct: false },
+        { text: 'Oui.', transcription: 'Уи́.', translation: 'Да.', correct: false }
+      ],
+      correctFeedback: 'Чаевые в парикмахерской необязательны, но пару евро часто оставляют — обслуживание уже включено в цену.',
+      wrongFeedback: 'Оцените результат и сразу переходите к оплате: «c\'est très bien, merci. Je peux payer par carte ?».'
+    }
+  ]
+},
+{
+  id: 'sport',
+  title: '🏋️ Спортзал',
+  icon: '🏋️',
+  description: 'Записываемся в зал и разбираемся с абонементом',
+  steps: [
+    {
+      situation: 'Вы пришли в спортзал узнать про абонемент.',
+      speaker: 'Coach — Сотрудник зала',
+      greek: 'Bonjour ! Vous voulez visiter la salle ?',
+      transcription: 'Бонжу́р ! Ву вуле́ визитэ́ ля саль ?',
+      translation: 'Здравствуйте! Хотите посмотреть зал?',
+      question: 'Скажите, что хотели бы записаться и узнать цены.',
+      options: [
+        { text: "Bonjour, oui. Je voudrais m'inscrire, quels sont vos tarifs ?", transcription: 'Бонжу́р, уи́. Жё вудрэ́ мэнскри́р, кэль сон во тари́ф ?', translation: 'Здравствуйте, да. Я хотел бы записаться, какие у вас цены?', correct: true },
+        { text: 'Bonjour, je regarde seulement.', transcription: 'Бонжу́р, жё рёга́рд сёльма́н.', translation: 'Здравствуйте, я просто смотрю.', correct: false },
+        { text: 'Bonjour, c\'est gratuit ?', transcription: 'Бонжу́р, сэ гратюи́ ?', translation: 'Здравствуйте, это бесплатно?', correct: false },
+        { text: 'Bonjour, où sont les douches ?', transcription: 'Бонжу́р, у сон ле душ ?', translation: 'Здравствуйте, где душевые?', correct: false }
+      ],
+      correctFeedback: 'S\'inscrire — записаться, вступить. Тот же глагол используют для школы и курсов.',
+      wrongFeedback: 'Скажите прямо: «je voudrais m\'inscrire» и спросите тарифы.'
+    },
+    {
+      situation: 'Сотрудник называет цену.',
+      speaker: 'Coach — Сотрудник зала',
+      greek: 'Vingt-neuf euros par mois, avec engagement d\'un an.',
+      transcription: 'Вэнт-нёф ёро́ пар муа́, авек ангажма́н дэн ан.',
+      translation: 'Двадцать девять евро в месяц, с обязательством на год.',
+      question: 'Спросите, есть ли вариант без годового обязательства.',
+      options: [
+        { text: "Il y a une formule sans engagement ?", transcription: 'Иль-я юн формю́ль сан-з-ангажма́н ?', translation: 'Есть вариант без обязательства?', correct: true },
+        { text: 'Un an, d\'accord.', transcription: 'Эн ан, дако́р.', translation: 'Год, хорошо.', correct: false },
+        { text: 'C\'est trop cher.', transcription: 'Сэ тро шэр.', translation: 'Это слишком дорого.', correct: false },
+        { text: 'Je réfléchis.', transcription: 'Жё рефлеши́.', translation: 'Я подумаю.', correct: false }
+      ],
+      correctFeedback: 'Sans engagement — без обязательства. Такой тариф дороже помесячно, но его можно прекратить в любой момент.',
+      wrongFeedback: 'Спросите про «formule sans engagement» — годовой договор во Франции расторгнуть непросто.'
+    },
+    {
+      situation: 'Сотрудник просит документы.',
+      speaker: 'Coach — Сотрудник зала',
+      greek: 'Il me faut une pièce d\'identité, un RIB et un certificat médical.',
+      transcription: 'Иль мё фо юн пьес дидантитэ́, эн риб э эн сертифика́ медика́ль.',
+      translation: 'Мне нужно удостоверение личности, реквизиты счёта и медицинская справка.',
+      question: 'Скажите, что справки нет, и спросите, где её взять.',
+      options: [
+        { text: "Je n'ai pas de certificat médical, où est-ce que je peux l'obtenir ?", transcription: 'Жё нэ па дё сертифика́ медика́ль, у эскё жё пё лёбтёни́р ?', translation: 'У меня нет медицинской справки, где её можно получить?', correct: true },
+        { text: 'Je n\'en ai pas besoin.', transcription: 'Жё нан э па бёзуэ́н.', translation: 'Мне она не нужна.', correct: false },
+        { text: 'Je l\'apporterai un jour.', transcription: 'Жё лапортёрэ́ эн жур.', translation: 'Как-нибудь принесу.', correct: false },
+        { text: 'C\'est obligatoire ?', transcription: 'Сэт-облигатуа́р ?', translation: 'Это обязательно?', correct: false }
+      ],
+      correctFeedback: 'Certificat médical выдаёт терапевт на обычном приёме — это несложная процедура.',
+      wrongFeedback: 'Признайте, что справки нет, и спросите, где её получить: у médecin traitant.'
+    },
+    {
+      situation: 'Вы принесли справку, абонемент оформлен. Первая тренировка.',
+      speaker: 'Coach — Сотрудник зала',
+      greek: 'Vous avez déjà fait de la musculation ?',
+      transcription: 'Вуз-аве́ дежа́ фэ дё ля мюскюлясьо́н ?',
+      translation: 'Вы раньше занимались силовыми?',
+      question: 'Скажите, что вы новичок, и попросите показать упражнения.',
+      options: [
+        { text: "Je débute, vous pouvez me montrer les mouvements ?", transcription: 'Жё дебю́т, ву пуве́ мё монтрэ́ ле мувма́н ?', translation: 'Я новичок, можете показать мне движения?', correct: true },
+        { text: 'Oui, beaucoup.', transcription: 'Уи́, боку́.', translation: 'Да, много.', correct: false },
+        { text: 'Je me débrouille.', transcription: 'Жё мё дебру́й.', translation: 'Я разберусь.', correct: false },
+        { text: 'Non.', transcription: 'Нон.', translation: 'Нет.', correct: false }
+      ],
+      correctFeedback: 'Débuter — начинать. Признать себя новичком — самый быстрый способ получить нормальный инструктаж.',
+      wrongFeedback: 'Скажите «je débute» и попросите показать движения — так вы избежите травм.'
+    },
+    {
+      situation: 'Через полгода вы переезжаете в другой город.',
+      speaker: 'Coach — Сотрудник зала',
+      greek: 'Vous voulez suspendre ou résilier ?',
+      transcription: 'Ву вуле́ сюспа́ндр у резилье́ ?',
+      translation: 'Вы хотите приостановить или расторгнуть?',
+      question: 'Скажите, что расторгаете из-за переезда.',
+      options: [
+        { text: "Résilier, je déménage dans une autre ville.", transcription: 'Резилье́, жё демена́ж дан юн отр виль.', translation: 'Расторгнуть, я переезжаю в другой город.', correct: true },
+        { text: 'Je ne viens plus, c\'est tout.', transcription: 'Жё нё вье́н плю, сэ ту.', translation: 'Я просто больше не приду.', correct: false },
+        { text: 'Arrêtez les prélèvements.', transcription: 'Арэтэ́ ле прелевма́н.', translation: 'Прекратите списания.', correct: false },
+        { text: 'Suspendre, peut-être.', transcription: 'Сюспа́ндр, пётэ́тр.', translation: 'Приостановить, наверное.', correct: false }
+      ],
+      correctFeedback: 'Переезд — уважительная причина досрочного расторжения. К письму прикладывают подтверждение нового адреса.',
+      wrongFeedback: 'Перестать ходить недостаточно: списания продолжатся. Нужно «résilier» с указанием причины.'
+    }
+  ]
+},
+{
+  id: 'taxi',
+  title: '🚕 В такси',
+  icon: '🚕',
+  description: 'Вызываем такси и объясняем маршрут',
+  steps: [
+    {
+      situation: 'Вы у вокзала, подходите к стоянке такси.',
+      speaker: 'Chauffeur — Водитель',
+      greek: 'Bonjour, vous allez où ?',
+      transcription: 'Бонжу́р, вуз-алэ́ у ?',
+      translation: 'Здравствуйте, вам куда?',
+      question: 'Назовите адрес.',
+      options: [
+        { text: "Bonjour, au douze rue de la Paix, s'il vous plaît.", transcription: 'Бонжу́р, о дуз рю дё ля пэ, силь ву плэ.', translation: 'Здравствуйте, на улицу Мира, дом двенадцать, пожалуйста.', correct: true },
+        { text: 'Bonjour, rue de la Paix douze.', transcription: 'Бонжу́р, рю дё ля пэ дуз.', translation: 'Здравствуйте, улица Мира двенадцать.', correct: false },
+        { text: 'Bonjour, au centre.', transcription: 'Бонжу́р, о сантр.', translation: 'Здравствуйте, в центр.', correct: false },
+        { text: 'Bonjour, vous connaissez la ville ?', transcription: 'Бонжу́р, ву конэсэ́ ля виль ?', translation: 'Здравствуйте, вы знаете город?', correct: false }
+      ],
+      correctFeedback: 'Во французском адресе номер дома идёт перед улицей: «au douze rue de la Paix».',
+      wrongFeedback: 'Порядок обратный русскому: сначала номер, потом улица — «au douze rue de la Paix».'
+    },
+    {
+      situation: 'Водитель трогается с места.',
+      speaker: 'Chauffeur — Водитель',
+      greek: 'C\'est parti. Il y a des travaux, ça peut prendre vingt minutes.',
+      transcription: 'Сэ парти́. Иль-я де траво́, са пё пра́ндр вэн миню́т.',
+      translation: 'Поехали. Там ремонт дороги, может занять двадцать минут.',
+      question: 'Спросите примерную стоимость поездки.',
+      options: [
+        { text: "D'accord. Ça coûtera combien à peu près ?", transcription: 'Дако́р. Са кутёра́ комбье́н а пё прэ ?', translation: 'Хорошо. Сколько примерно будет стоить?', correct: true },
+        { text: 'Vingt minutes, c\'est long.', transcription: 'Вэн миню́т, сэ лон.', translation: 'Двадцать минут — долго.', correct: false },
+        { text: 'Prenez un autre chemin.', transcription: 'Пренэ́ эн отр шёмэ́н.', translation: 'Поезжайте другой дорогой.', correct: false },
+        { text: 'Pas de problème.', transcription: 'Па дё проблэ́м.', translation: 'Без проблем.', correct: false }
+      ],
+      correctFeedback: 'À peu près — «примерно». Спросить цену заранее совершенно нормально и снимает споры в конце.',
+      wrongFeedback: 'Уточните ориентировочную сумму: «ça coûtera combien à peu près ?».'
+    },
+    {
+      situation: 'Вы вспомнили, что нужно заехать в аптеку.',
+      speaker: 'Chauffeur — Водитель',
+      greek: 'On y sera dans un quart d\'heure.',
+      transcription: 'Он-и сёра́ дан-з-эн кар дёр.',
+      translation: 'Будем на месте через четверть часа.',
+      question: 'Попросите остановиться у аптеки на две минуты.',
+      options: [
+        { text: "Vous pouvez vous arrêter deux minutes à la pharmacie ?", transcription: 'Ву пуве́ вуз-арэтэ́ дё миню́т а ля фармаси́ ?', translation: 'Можете остановиться на две минуты у аптеки?', correct: true },
+        { text: 'Stop !', transcription: 'Стоп !', translation: 'Стоп!', correct: false },
+        { text: 'Je descends ici.', transcription: 'Жё десан иси́.', translation: 'Я выхожу здесь.', correct: false },
+        { text: 'À la pharmacie.', transcription: 'А ля фармаси́.', translation: 'В аптеку.', correct: false }
+      ],
+      correctFeedback: 'Возвратный глагол s\'arrêter — остановиться. Просьба через «vous pouvez» звучит вежливо.',
+      wrongFeedback: 'Сформулируйте как просьбу: «vous pouvez vous arrêter deux minutes ?».'
+    },
+    {
+      situation: 'Вы приехали. Счётчик показывает сумму.',
+      speaker: 'Chauffeur — Водитель',
+      greek: 'Voilà, ça fait dix-huit euros quarante.',
+      transcription: 'Вуаля́, са фэ диз-юи́т ёро́ кара́нт.',
+      translation: 'Вот, восемнадцать евро сорок.',
+      question: 'Спросите, принимает ли он карту.',
+      options: [
+        { text: "Vous prenez la carte ?", transcription: 'Ву прёнэ́ ля карт ?', translation: 'Вы принимаете карту?', correct: true },
+        { text: 'Je n\'ai pas de monnaie.', transcription: 'Жё нэ па дё монэ́.', translation: 'У меня нет мелочи.', correct: false },
+        { text: 'C\'est cher.', transcription: 'Сэ шэр.', translation: 'Это дорого.', correct: false },
+        { text: 'Vous acceptez les roubles ?', transcription: 'Вуз-аксептэ́ ле рубль ?', translation: 'Вы принимаете рубли?', correct: false }
+      ],
+      correctFeedback: 'Такси во Франции обязаны принимать карту, но спросить всё равно стоит — терминал бывает «сломан».',
+      wrongFeedback: 'Спросите про способ оплаты: «vous prenez la carte ?».'
+    },
+    {
+      situation: 'Вы расплатились и выходите.',
+      speaker: 'Chauffeur — Водитель',
+      greek: 'Voici votre reçu. Bonne soirée !',
+      transcription: 'Вуаси́ вотр рёсю́. Бон суарэ́ !',
+      translation: 'Вот ваш чек. Хорошего вечера!',
+      question: 'Поблагодарите и попрощайтесь.',
+      options: [
+        { text: "Merci beaucoup, bonne soirée à vous !", transcription: 'Мерси́ боку́, бон суарэ́ а ву !', translation: 'Большое спасибо, и вам хорошего вечера!', correct: true },
+        { text: 'Ok, salut.', transcription: 'Оке́, салю́.', translation: 'Окей, пока.', correct: false },
+        { text: 'Gardez la monnaie.', transcription: 'Гардэ́ ля монэ́.', translation: 'Сдачи не надо.', correct: false },
+        { text: 'Au revoir.', transcription: 'О рёвуа́р.', translation: 'До свидания.', correct: false }
+      ],
+      correctFeedback: 'Reçu — чек. Он пригодится, если вы забыли что-то в машине или возмещаете поездку по работе.',
+      wrongFeedback: '«Salut» — только для друзей. С водителем — «merci, bonne soirée».'
+    }
+  ]
+},
+{
+  id: 'urgences',
+  title: '🚨 Экстренная ситуация',
+  icon: '🚨',
+  description: 'Вызываем скорую и объясняем, что случилось',
+  steps: [
+    {
+      situation: 'Соседу стало плохо. Вы звоните по номеру 15.',
+      speaker: 'SAMU — Оператор скорой',
+      greek: 'SAMU, j\'écoute. Quelle est votre urgence ?',
+      transcription: 'Самю́, жекут. Кэль э вотр юржа́нс ?',
+      translation: 'Скорая, слушаю. Что у вас случилось?',
+      question: 'Скажите, что вашему соседу плохо и нужна скорая.',
+      options: [
+        { text: "Mon voisin ne se sent pas bien, j'ai besoin d'une ambulance.", transcription: 'Мон вуазэ́н нё сё сан па бье́н, жэ бёзуэ́н дюн амбюла́нс.', translation: 'Моему соседу плохо, мне нужна скорая.', correct: true },
+        { text: 'Venez vite !', transcription: 'Вёнэ́ вит !', translation: 'Приезжайте быстро!', correct: false },
+        { text: 'Il y a un problème.', transcription: 'Иль-я эн проблэ́м.', translation: 'Тут проблема.', correct: false },
+        { text: 'Je ne parle pas bien français.', transcription: 'Жё нё парль па бье́н франсэ́.', translation: 'Я плохо говорю по-французски.', correct: false }
+      ],
+      correctFeedback: 'Сразу называйте суть: кому плохо и что нужно. Оператор задаст остальные вопросы сам.',
+      wrongFeedback: 'Первая фраза должна содержать суть: кто пострадал и что требуется.'
+    },
+    {
+      situation: 'Оператор просит адрес.',
+      speaker: 'SAMU — Оператор скорой',
+      greek: 'Donnez-moi l\'adresse exacte et l\'étage.',
+      transcription: 'Донэ́-муа́ лядрэ́с эгза́кт э летажё́.',
+      translation: 'Назовите точный адрес и этаж.',
+      question: 'Назовите адрес, этаж и код домофона.',
+      options: [
+        { text: "Quinze rue Victor Hugo, quatrième étage, le code est 4512.", transcription: 'Кэнз рю Викто́р Юго́, катрье́м эта́ж, лё код э катр-сэнк-эн-дё.', translation: 'Улица Виктора Гюго пятнадцать, четвёртый этаж, код 4512.', correct: true },
+        { text: 'Près de la boulangerie.', transcription: 'Прэ дё ля буланжри́.', translation: 'Рядом с булочной.', correct: false },
+        { text: 'Je vous envoie l\'adresse par SMS.', transcription: 'Жё вуз-анвуа́ лядрэ́с пар эс-эм-эс.', translation: 'Я пришлю адрес сообщением.', correct: false },
+        { text: 'Au centre-ville.', transcription: 'О сантр-виль.', translation: 'В центре города.', correct: false }
+      ],
+      correctFeedback: 'Держите адрес и код домофона записанными в телефоне — в стрессе их проще прочитать, чем вспомнить.',
+      wrongFeedback: 'Нужен точный адрес, этаж и код входа: без них бригада потеряет минуты у двери.'
+    },
+    {
+      situation: 'Оператор уточняет состояние.',
+      speaker: 'SAMU — Оператор скорой',
+      greek: 'Il est conscient ? Il respire ?',
+      transcription: 'Иль э консья́н ? Иль респи́р ?',
+      translation: 'Он в сознании? Он дышит?',
+      question: 'Скажите, что он в сознании, но у него сильно болит грудь.',
+      options: [
+        { text: "Oui, il est conscient, mais il a très mal à la poitrine.", transcription: 'Уи́, иль э консья́н, мэ иль а трэ маль а ля пуатри́н.', translation: 'Да, он в сознании, но у него сильно болит грудь.', correct: true },
+        { text: 'Je crois que oui.', transcription: 'Жё круа́ кё уи́.', translation: 'Кажется, да.', correct: false },
+        { text: 'Il va mal.', transcription: 'Иль ва маль.', translation: 'Ему плохо.', correct: false },
+        { text: 'Je ne sais pas.', transcription: 'Жё нё сэ па.', translation: 'Я не знаю.', correct: false }
+      ],
+      correctFeedback: 'Боль в груди — ключевой симптом, от которого зависит приоритет вызова. Называйте её сразу.',
+      wrongFeedback: 'Отвечайте конкретно: в сознании или нет, и что именно болит.'
+    },
+    {
+      situation: 'Оператор даёт указания.',
+      speaker: 'SAMU — Оператор скорой',
+      greek: 'Restez avec lui, ne le faites pas bouger. L\'équipe arrive.',
+      transcription: 'Рэстэ́ авек люи́, нё лё фэт па бужэ́. Лёки́п ари́в.',
+      translation: 'Оставайтесь с ним, не давайте ему двигаться. Бригада едет.',
+      question: 'Подтвердите и спросите, сколько ждать.',
+      options: [
+        { text: "D'accord, je reste avec lui. Ils arrivent dans combien de temps ?", transcription: 'Дако́р, жё рэст авек люи́. Иль-з-ари́в дан комбье́н дё тан ?', translation: 'Хорошо, я остаюсь с ним. Через сколько они приедут?', correct: true },
+        { text: 'Je dois partir.', transcription: 'Жё дуа́ парти́р.', translation: 'Мне надо уходить.', correct: false },
+        { text: 'Je le mets dans ma voiture.', transcription: 'Жё лё мэ дан ма вуатю́р.', translation: 'Я посажу его в свою машину.', correct: false },
+        { text: 'Merci, au revoir.', transcription: 'Мерси́, о рёвуа́р.', translation: 'Спасибо, до свидания.', correct: false }
+      ],
+      correctFeedback: 'Указание не двигать пострадавшего важно выполнять буквально. Трубку кладут, когда скажет оператор.',
+      wrongFeedback: 'Подтвердите, что остаётесь, и уточните время прибытия — не кладите трубку первым.'
+    },
+    {
+      situation: 'Скорая приехала, врач задаёт вопросы.',
+      speaker: 'Urgentiste — Врач скорой',
+      greek: 'Il prend des médicaments ? Il a des antécédents ?',
+      transcription: 'Иль пран де медикама́н ? Иль а дез-антеседа́н ?',
+      translation: 'Он принимает лекарства? Есть хронические заболевания?',
+      question: 'Скажите, что не знаете, но его жена сейчас подойдёт.',
+      options: [
+        { text: "Je ne sais pas, mais sa femme arrive tout de suite.", transcription: 'Жё нё сэ па, мэ са фам ари́в ту дё сюи́т.', translation: 'Я не знаю, но его жена сейчас подойдёт.', correct: true },
+        { text: 'Non, rien.', transcription: 'Нон, рье́н.', translation: 'Нет, ничего.', correct: false },
+        { text: 'Peut-être du cœur.', transcription: 'Пётэ́тр дю кёр.', translation: 'Может быть, сердечное.', correct: false },
+        { text: 'Je suis juste le voisin.', transcription: 'Жё сюи́ жюст лё вуазэ́н.', translation: 'Я просто сосед.', correct: false }
+      ],
+      correctFeedback: 'В медицинских вопросах честное «je ne sais pas» безопаснее догадки. Antécédents — история болезней.',
+      wrongFeedback: 'Не угадывайте: скажите, что не знаете, и укажите, кто может ответить.'
+    }
+  ]
 }
 ];
 

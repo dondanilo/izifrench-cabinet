@@ -1,18 +1,18 @@
 // ============================================================
 // FIREBASE
 // ============================================================
-// TODO(Трек B): подставить конфиг Firebase-проекта izi-french.
+// Конфиг Firebase-проекта izi-french (подставлен 2026-09-21).
 // Firebase Console -> Project settings -> Your apps -> Web app -> SDK setup.
 // Сразу после создания проекта: Authentication -> Sign-in method -> Google,
 // и Authentication -> Settings -> Authorized domains -> cabinet.izifrench.com
 // (без этого вход «сбрасывается» — типовая грабля новых кабинетов).
 const firebaseConfig = {
-  apiKey: "TODO_FIREBASE_API_KEY",
+  apiKey: "AIzaSyD7dA7BPbP75qHk1_5FngeUOv2jDLIyEAY",
   authDomain: "izi-french.firebaseapp.com",
   projectId: "izi-french",
   storageBucket: "izi-french.firebasestorage.app",
-  messagingSenderId: "TODO_SENDER_ID",
-  appId: "TODO_APP_ID"
+  messagingSenderId: "156685756129",
+  appId: "1:156685756129:web:14e02117b3c1de607a79a0"
 };
 
 firebase.initializeApp(firebaseConfig);

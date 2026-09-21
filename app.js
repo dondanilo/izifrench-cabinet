@@ -230,6 +230,14 @@ async function saveUserEmail() {
   } catch (e) { console.error('saveUserEmail error:', e); }
 }
 
+// Нативная обёртка (iOS через Capacitor). На нативе подписка идёт через Apple IAP
+// (RevenueCat) и Firebase-логин для покупки не нужен, поэтому цены показываем гостю
+// сразу, без стены входа. Требование аккаунта до показа цены — известный убийца
+// конверсии на новом приложении (у IziSerb: 63 установки, 0 триалов).
+function isNativeApp() {
+  return !!(window.Capacitor && typeof window.Capacitor.isNativePlatform === 'function' && window.Capacitor.isNativePlatform());
+}
+
 // Check subscription status: active / trialing = OK, else paywall
 async function checkSubscription() {
   if (!currentUser) return false;
@@ -597,6 +605,7 @@ function showPaywall() {
   // В iOS-приложении оплата обязана идти через Apple IAP (гайдлайн 3.1.1), а не
   // через внешний LemonSqueezy. native-iap.js регистрирует __iziIapPaywall и сам
   // навешивает нативную покупку на кнопки. На вебе хук undefined → обычный флоу.
+  updatePaywallUi();
   if (typeof window.__iziIapPaywall === 'function') { window.__iziIapPaywall(); return; }
 
   const monthlyUrl = `https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID?checkout[custom][user_id]=${currentUser?.uid || ''}`;
@@ -605,6 +614,18 @@ function showPaywall() {
   document.getElementById('paywall-monthly-btn').href = monthlyUrl;
   document.getElementById('paywall-annual-btn').href = annualUrl;
   showScreen('screen-paywall');
+}
+
+// Гостю на нативе нечего «выходить» — ему нужен путь назад ко входу (там же restore).
+function updatePaywallUi() {
+  const out = document.getElementById('paywall-signout-btn');
+  if (out) out.style.display = currentUser ? 'block' : 'none';
+  const skip = document.getElementById('paywall-skip-btn');
+  if (skip) skip.style.display = (!currentUser && isNativeApp()) ? 'block' : 'none';
+}
+
+function closePaywall() {
+  showScreen('screen-login');
 }
 
 // ============================================================
@@ -662,6 +683,19 @@ async function init() {
       }
     } else {
       currentUser = null;
+      // Гость на нативе не упирается в экран входа: Apple-подписка оформляется без
+      // Firebase-аккаунта, поэтому сразу показываем цены. Если покупка уже есть на
+      // устройстве (restore по Apple ID) — пускаем в контент.
+      if (isNativeApp()) {
+        if (window.__iziNativeSubscription === true) {
+          await loadState();
+          renderHome();
+          showScreen(state.onboardingDone ? 'screen-home' : 'screen-onboarding');
+        } else {
+          showPaywall();
+        }
+        return;
+      }
       showScreen('screen-login');
     }
   });

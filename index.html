@@ -111,14 +111,31 @@
         <div class="paywall-plan paywall-plan-popular">
           <div class="paywall-plan-badge">Выгоднее на 45%</div>
           <div class="paywall-plan-name">Годовая</div>
-          <div class="paywall-plan-price">€4.99 <span>/мес</span></div>
-          <div class="paywall-plan-billed">€59.88 в год</div>
+          <!-- Гайдлайн 3.1.2(c): самым крупным элементом обязана быть СУММА СПИСАНИЯ,
+               а расчётная цена за месяц — мелким. Обратный порядок (€4.99 крупно,
+               €59.88 мелко) — то, за что Apple завернула билд 18 у IziGreek. -->
+          <div class="paywall-plan-price">€59.88 <span>/год</span></div>
+          <div class="paywall-plan-billed">≈ €4.99 в месяц</div>
           <a id="paywall-annual-btn" href="#" target="_blank" class="paywall-btn-primary">Начать — 7 дней бесплатно</a>
         </div>
       </div>
 
-      <p class="paywall-note">7 дней бесплатно · Отмена в любой момент</p>
-      <button class="paywall-signout" onclick="signOut()">Выйти из аккаунта</button>
+      <p class="paywall-note">7 дней бесплатно · Далее подписка продлевается автоматически, пока её не отменить · Отмена в любой момент</p>
+
+      <!-- Гайдлайн 3.1.2(c): в самом потоке покупки обязаны быть РАБОЧИЕ ссылки на
+           условия использования (EULA) и политику конфиденциальности — за их отсутствие
+           Apple отклоняет билд. В приложении target="_blank" перехватывает Capacitor
+           (открывает Safari), на вебе ссылка работает штатно. -->
+      <p class="paywall-legal">
+        <a href="https://izifrench.com/terms.html" target="_blank" rel="noopener">Условия использования</a>
+        <span class="paywall-legal-sep">·</span>
+        <a href="https://izifrench.com/privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+      </p>
+
+      <!-- Гость на нативе попадает на пейволл первым экраном — ему нужен путь назад
+           ко входу (там же восстановление покупки), а не «Выйти из аккаунта». -->
+      <button id="paywall-skip-btn" class="paywall-skip" onclick="closePaywall()" style="display:none">Не сейчас</button>
+      <button id="paywall-signout-btn" class="paywall-signout" onclick="signOut()">Выйти из аккаунта</button>
     </div>
   </div>
 

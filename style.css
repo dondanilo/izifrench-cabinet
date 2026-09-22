@@ -1387,6 +1387,20 @@ body {
 }
 .paywall-skip:active { opacity: .6; }
 
+/* Гостевые кнопки: вход из шапки и возврат с экрана входа (пробник, канон семьи). */
+.btn-guest-login {
+  background: var(--green); color: #fff; border: none;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px;
+  padding: 8px 18px; border-radius: 20px; cursor: pointer;
+  align-items: center; justify-content: center;
+}
+.btn-guest-login:active { opacity: .85; }
+.btn-login-back {
+  display: block; width: 100%; background: none; border: none;
+  color: var(--gray); font-size: 15px; cursor: pointer; padding: 12px; margin-top: 12px;
+}
+.btn-login-back:active { opacity: .6; }
+
 /* ==================== SCROLL TO TOP ==================== */
 #scroll-top-btn {
   position: fixed;

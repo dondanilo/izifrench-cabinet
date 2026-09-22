@@ -230,6 +230,14 @@ async function saveUserEmail() {
   } catch (e) { console.error('saveUserEmail error:', e); }
 }
 
+// Пробные уроки: гость и вошедший без подписки проходят TRIAL_LESSONS уроков,
+// дальше — модалка с предложением оформить доступ. Канон семьи: у турка и немца 5,
+// у серба и грека 2. Берём 5 — так же, как в самом свежем (турецком) кабинете,
+// и так же, как обещает описание в App Store.
+const TRIAL_LESSONS = 5;
+let hasSubscription = false;
+let pendingUpgrade = false;   // гость нажал «оформить» → после входа сразу пейволл
+
 // Нативная обёртка (iOS через Capacitor). На нативе подписка идёт через Apple IAP
 // (RevenueCat) и Firebase-логин для покупки не нужен, поэтому цены показываем гостю
 // сразу, без стены входа. Требование аккаунта до показа цены — известный убийца
@@ -605,7 +613,7 @@ function showPaywall() {
   // В iOS-приложении оплата обязана идти через Apple IAP (гайдлайн 3.1.1), а не
   // через внешний LemonSqueezy. native-iap.js регистрирует __iziIapPaywall и сам
   // навешивает нативную покупку на кнопки. На вебе хук undefined → обычный флоу.
-  updatePaywallUi();
+  updateGuestUi();
   if (typeof window.__iziIapPaywall === 'function') { window.__iziIapPaywall(); return; }
 
   const monthlyUrl = `https://izifrench.lemonsqueezy.com/checkout/buy/MONTHLY_PRODUCT_ID?checkout[custom][user_id]=${currentUser?.uid || ''}`;
@@ -616,16 +624,11 @@ function showPaywall() {
   showScreen('screen-paywall');
 }
 
-// Гостю на нативе нечего «выходить» — ему нужен путь назад ко входу (там же restore).
-function updatePaywallUi() {
-  const out = document.getElementById('paywall-signout-btn');
-  if (out) out.style.display = currentUser ? 'block' : 'none';
-  const skip = document.getElementById('paywall-skip-btn');
-  if (skip) skip.style.display = (!currentUser && isNativeApp()) ? 'block' : 'none';
-}
-
 function closePaywall() {
-  showScreen('screen-login');
+  // Уйти с пейволла, ничего не купив. У гостя остаются пробные уроки,
+  // поэтому возвращаем на главную, а не на экран входа.
+  if (typeof showHome === 'function') showHome();
+  else showScreen('screen-home');
 }
 
 // ============================================================
@@ -666,37 +669,38 @@ async function init() {
       checkStreak();
       renderUserInfo();
 
-      const hasAccess = await checkSubscription();
-      if (hasAccess) {
-        renderHome();
-        if (!state.onboardingDone) {
-          showScreen('screen-onboarding');
-        } else {
-          showScreen('screen-home');
-          // Silently refresh push subscription for returning users
-          if (pushPermission() === 'granted') {
-            setTimeout(setupPushNotifications, 3000);
-          }
-        }
+      hasSubscription = await checkSubscription();
+      updateGuestUi();
+
+      // Гость нажал «оформить доступ» до входа → после входа сразу ведём на пейволл.
+      if (pendingUpgrade) {
+        pendingUpgrade = false;
+        if (!hasSubscription) { showPaywall(); return; }
+      }
+
+      // Вошедший без подписки НЕ упирается в пейволл сразу — у него остаются
+      // пробные уроки (trialGate), пейволл всплывает по их исчерпании. Так и
+      // ревьюер, и пользователь видят контент, а не глухую стену.
+      renderHome();
+      if (!state.onboardingDone) {
+        showScreen('screen-onboarding');
       } else {
-        showPaywall();
+        showScreen('screen-home');
+        if (isNativeApp() || pushPermission() === 'granted') {
+          setTimeout(setupPushNotifications, 3000);
+        }
       }
     } else {
+      // Гость: работаем на локальном прогрессе, вход не форсим — ни в вебе, ни на нативе.
       currentUser = null;
-      // Гость на нативе не упирается в экран входа: Apple-подписка оформляется без
-      // Firebase-аккаунта, поэтому сразу показываем цены. Если покупка уже есть на
-      // устройстве (restore по Apple ID) — пускаем в контент.
-      if (isNativeApp()) {
-        if (window.__iziNativeSubscription === true) {
-          await loadState();
-          renderHome();
-          showScreen(state.onboardingDone ? 'screen-home' : 'screen-onboarding');
-        } else {
-          showPaywall();
-        }
-        return;
-      }
-      showScreen('screen-login');
+      hasSubscription = false;
+      pendingUpgrade = false;
+      await loadState();
+      checkStreak();
+      updateGuestUi();
+      renderHome();
+      if (!state.onboardingDone) showScreen('screen-onboarding');
+      else showScreen('screen-home');
     }
   });
 }
@@ -1351,10 +1355,69 @@ function pluralRu(n, forms) {
   if (r >= 2 && r <= 4) return forms[1];
   return forms[2];
 }
-// В IziFrench доступ гейтится целиком на входе (checkSubscription → showPaywall):
-// до карточек доходит только пользователь с активным доступом. Заглушка на будущее,
-// если появится модель «N бесплатных занятий» (как trialGate у грека).
-function trialGate() { return true; }
+// Пропускать ли в контент. Гостю дан пробник, дальше — окно с объяснением.
+// Прогресс гостя живёт в localStorage и переносится в аккаунт при входе.
+function trialGate() {
+  // __iziNativeSubscription — подписка Apple: гость без аккаунта тоже может её иметь,
+  // а onAuthStateChanged гостю сбрасывает hasSubscription в false → без этой проверки
+  // оплативший гость после перезапуска упрётся в пробник.
+  if (hasSubscription || window.__iziNativeSubscription === true) return true;
+  if ((state.lessonsCompleted || 0) < TRIAL_LESSONS) return true;
+  showTrialModal();
+  return false;
+}
+
+function showTrialModal() {
+  const cta = document.getElementById('trial-cta');
+  // На нативе логин для покупки не нужен → «Выбрать план» и гостю.
+  if (cta) cta.textContent = (currentUser || isNativeApp()) ? 'Выбрать план' : 'Войти и открыть доступ';
+  const m = document.getElementById('trial-modal');
+  if (m) m.style.display = 'flex';
+}
+
+function dismissTrialModal() {
+  const m = document.getElementById('trial-modal');
+  if (m) m.style.display = 'none';
+}
+
+function trialUpgrade() {
+  dismissTrialModal();
+  if (currentUser || isNativeApp()) {
+    // Вошёл ИЛИ натив-гость → сразу планы. На нативе RevenueCat покажет цены и
+    // оформит Apple-триал без Firebase-логина.
+    showPaywall();
+  } else {
+    pendingUpgrade = true;  // веб-гость — сперва вход
+    showLoginPromo();
+  }
+}
+
+// Кнопка возврата на главную — только гостю с уже пройденным онбордингом
+// (на самом первом запуске уходить с экрана входа некуда).
+function updateLoginBackBtn() {
+  const back = document.getElementById('login-back-btn');
+  if (back) back.style.display = state.onboardingDone ? 'block' : 'none';
+}
+
+function showLoginPromo() {
+  const sub = document.querySelector('#screen-login .login-subtitle');
+  if (sub) sub.textContent = 'Бесплатные уроки пройдены. Войди, чтобы продолжить и сохранить прогресс.';
+  updateLoginBackBtn();
+  showScreen('screen-login');
+}
+
+// Что показываем гостю, а что вошедшему.
+function updateGuestUi() {
+  const isGuest = !currentUser;
+  const loginBtn = document.getElementById('guest-login-btn');
+  const avatarBtn = document.getElementById('user-avatar-btn');
+  if (loginBtn) loginBtn.style.display = isGuest ? 'inline-flex' : 'none';
+  if (avatarBtn) avatarBtn.style.display = isGuest ? 'none' : 'inline-flex';
+  const pwSignout = document.getElementById('paywall-signout-btn');
+  if (pwSignout) pwSignout.style.display = isGuest ? 'none' : '';
+  const skip = document.getElementById('paywall-skip-btn');
+  if (skip) skip.style.display = isGuest ? 'block' : 'none';
+}
 
 const FC_BATCH = 10; // пауза «продолжим/хватит» каждые 10 слов
 let fcState = {

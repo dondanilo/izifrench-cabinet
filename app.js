@@ -1673,6 +1673,17 @@ function playFlashWord() {
 // SCENARIOS
 // ============================================================
 function showScenarios() {
+  // Описание собираем из данных, а не хардкодим: раньше там навсегда осталось
+  // «8 реальных ситуаций», хотя сценариев стало 20 — и это попало в скриншот
+  // для App Store.
+  const desc = document.getElementById('scenarios-desc');
+  if (desc) {
+    const n = SCENARIOS.length;
+    // без toLowerCase: иначе CAF превращается в «caf»
+    const names = SCENARIOS.slice(0, 8).map(s => s.title.replace(/^\S+\s/, ''));
+    desc.textContent = `${n} ${pluralRu(n, ['реальная ситуация','реальные ситуации','реальных ситуаций'])}: `
+      + names.join(', ') + ' и другие.';
+  }
   const container = document.getElementById('scenarios-list');
   container.innerHTML = SCENARIOS.map(s => {
     const done = state.scenariosCompleted.includes(s.id);
@@ -1682,7 +1693,7 @@ function showScenarios() {
       <div class="scenario-info">
         <div class="scenario-title">${s.title}</div>
         <div class="scenario-desc">${s.description}</div>
-        <div class="scenario-meta">${s.steps.length} шага · ${s.steps.length * XP_PER_SCENARIO_STEP} XP</div>
+        <div class="scenario-meta">${s.steps.length} ${pluralRu(s.steps.length, ['шаг','шага','шагов'])} · ${s.steps.length * XP_PER_SCENARIO_STEP} XP</div>
       </div>
       <div class="scenario-arrow">${done ? '✅' : '→'}</div>
     </div>`;

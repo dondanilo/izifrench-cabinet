@@ -3964,10 +3964,10 @@ function finishTeachPhase() {
 }
 
 // ============================================================
-// TODO(контент): весь текстовый материал ниже — тексты, письма, аудио-скрипты,
-// вопросы мок-теста — унаследован от IziSpanish (экзамен DELE) и подлежит
-// полной переписке под DELF A2/B1. Технические константы уже французские.
-// EXAM PREP — подготовка к экзамену
+// EXAM PREP — подготовка к DELF A2 / B1
+// Материал переписан под французский экзамен 2026-09-24: структура частей,
+// проходной балл 50/100 с порогом 5 в каждой части, passé composé против
+// imparfait, ситуации из французского быта (префектура, CAF, syndic).
 // ============================================================
 function showExamPrep() {
   showScreen('screen-exam');
@@ -3994,88 +3994,97 @@ function showExamSection(section) {
 function getExamStructureHTML() {
   return `
 <div class="exam-info-banner">
-  <div class="exam-info-row"><span>📍 Организатор</span><strong>Кипрский университет (UCY) + Минобр</strong></div>
-  <div class="exam-info-row"><span>💶 Стоимость</span><strong>€90</strong></div>
-  <div class="exam-info-row"><span>📅 Сессии</span><strong>Январь · Май · Сентябрь</strong></div>
-  <div class="exam-info-row"><span>🎯 Для гражданства</span><strong>A2 (5 лет) · B1 (4 года)</strong></div>
+  <div class="exam-info-row"><span>📍 Организатор</span><strong>France Éducation international</strong></div>
+  <div class="exam-info-row"><span>🏛️ Где сдают</span><strong>Alliance Française и аккредитованные центры</strong></div>
+  <div class="exam-info-row"><span>📅 Сессии</span><strong>Несколько раз в год, даты у центра</strong></div>
+  <div class="exam-info-row"><span>🎯 Для гражданства</span><strong>B2 (с 2026 года, было B1)</strong></div>
+</div>
+
+<div class="exam-note-block">
+  DELF — государственный диплом Министерства образования Франции. Он бессрочный:
+  сдал один раз — действует всю жизнь, в отличие от TCF и TEF, у которых срок два года.
+  Уровни A1, A2, B1, B2; выше идёт DALF (C1, C2).
 </div>
 
 <div class="exam-part-card">
   <div class="exam-part-header">
     <span class="exam-part-num">1</span>
-    <div><div class="exam-part-title">🎧 Аудирование</div><div class="exam-part-time">~20 минут · 25 баллов</div></div>
+    <div><div class="exam-part-title">🎧 Compréhension de l'oral</div><div class="exam-part-time">~25 минут · 25 баллов</div></div>
   </div>
-  <div class="exam-part-desc">3–4 коротких диалога — слушаешь и отвечаешь на вопросы.</div>
+  <div class="exam-part-desc">Аудирование. Записи звучат <strong>дважды</strong>, между прослушиваниями есть пауза на ответы.</div>
   <div class="exam-part-label">Типы заданий:</div>
   <ul class="exam-part-list">
-    <li>Верно / Неверно / Не упоминается</li>
     <li>Выбор из 3 вариантов (A/B/C)</li>
-    <li>Записать ключевое слово или цифру</li>
+    <li>Записать цифру: время, цену, номер, дату</li>
+    <li>Короткий ответ своими словами</li>
   </ul>
   <div class="exam-part-example">
-    <b>Примеры ситуаций:</b> таксист и пассажир · звонок в ресторан · диалог в магазине · объявление по радио
+    <b>Примеры ситуаций:</b> объявление на вокзале · автоответчик врача · разговор коллег · репортаж по радио · сообщение из школы
   </div>
 </div>
 
 <div class="exam-part-card">
   <div class="exam-part-header">
     <span class="exam-part-num">2</span>
-    <div><div class="exam-part-title">📖 Чтение</div><div class="exam-part-time">~30 минут · 25 баллов</div></div>
+    <div><div class="exam-part-title">📖 Compréhension des écrits</div><div class="exam-part-time">30 мин (A2) · 45 мин (B1) · 25 баллов</div></div>
   </div>
-  <div class="exam-part-desc">2–3 текста (объявления, письма, статьи) — читаешь и отвечаешь.</div>
+  <div class="exam-part-desc">Чтение. На A2 — короткие бытовые документы, на B1 добавляется текст с аргументацией.</div>
   <div class="exam-part-label">Типы заданий:</div>
   <ul class="exam-part-list">
-    <li>Верно / Неверно по тексту</li>
-    <li>Вставить слово из списка в пропуск</li>
-    <li>Соединить части предложений</li>
-    <li>Ответить на вопросы по тексту</li>
+    <li>Vrai / Faux с обязательной <strong>цитатой из текста</strong></li>
+    <li>Выбор из вариантов</li>
+    <li>Найти соответствие: объявление ↔ человек</li>
+    <li>Ответить на вопрос по тексту</li>
   </ul>
   <div class="exam-part-example">
-    <b>Примеры тем:</b> объявление о мероприятии · письмо от друга · расписание · меню · реклама
+    <b>Примеры текстов:</b> письмо из CAF · объявление об аренде · программа праздника · статья о транспорте · форум с отзывами
   </div>
 </div>
 
 <div class="exam-part-card">
   <div class="exam-part-header">
     <span class="exam-part-num">3</span>
-    <div><div class="exam-part-title">✍️ Письмо</div><div class="exam-part-time">~45 минут · 25 баллов</div></div>
+    <div><div class="exam-part-title">✍️ Production écrite</div><div class="exam-part-time">45 минут · 25 баллов</div></div>
   </div>
-  <div class="exam-part-desc"><strong>2 текста по 80–100 слов каждый.</strong> Артикли и предлоги считаются как слова.</div>
-  <div class="exam-part-label">Задание 1 — Письмо другу (неформальное):</div>
+  <div class="exam-part-desc">
+    <strong>A2: два коротких текста по 60–80 слов.</strong><br>
+    <strong>B1: один текст на 160–180 слов</strong> — рассказ, письмо или изложение позиции.
+  </div>
+  <div class="exam-part-label">Что просят на A2:</div>
   <ul class="exam-part-list">
-    <li>Рассказать о событии, поездке, покупке</li>
-    <li>Описать свой день / выходные / праздник</li>
-    <li>Пригласить на встречу</li>
+    <li>Рассказать о событии в прошлом: поездка, праздник, переезд</li>
+    <li>Написать письмо: пригласить, поблагодарить, извиниться</li>
   </ul>
-  <div class="exam-part-label" style="margin-top:8px">Задание 2 — Официальный текст:</div>
+  <div class="exam-part-label" style="margin-top:8px">Что просят на B1:</div>
   <ul class="exam-part-list">
-    <li>Заявление (в школу, муниципалитет)</li>
-    <li>Запрос информации (о курсах, событии)</li>
-    <li>Объявление (продаю / ищу / предлагаю)</li>
+    <li>Изложить своё мнение и обосновать его</li>
+    <li>Описать опыт и чувства по поводу события</li>
+    <li>Написать письмо с просьбой или жалобой</li>
   </ul>
-  <div class="exam-part-example">💡 Структура важнее словарного запаса. Выучи шаблоны — и этот блок станет самым лёгким.</div>
+  <div class="exam-part-example">💡 Количество слов считают: за недобор снимают баллы. Структура и связки важнее редкой лексики.</div>
 </div>
 
 <div class="exam-part-card">
   <div class="exam-part-header">
     <span class="exam-part-num">4</span>
-    <div><div class="exam-part-title">🗣️ Говорение</div><div class="exam-part-time">~15 минут · 25 баллов</div></div>
+    <div><div class="exam-part-title">🗣️ Production orale</div><div class="exam-part-time">6–8 мин (A2) · ~15 мин (B1) · 25 баллов</div></div>
   </div>
-  <div class="exam-part-desc">Разговор с экзаменатором и с другим участником. 3 этапа:</div>
+  <div class="exam-part-desc">Разговор один на один с экзаменатором. Перед началом дают <strong>10 минут на подготовку</strong>. Три части:</div>
   <ul class="exam-part-list">
-    <li><strong>Представление себя</strong> — кто ты, семья, работа, Кипр</li>
-    <li><strong>Описание картинки</strong> — что видишь, что происходит</li>
-    <li><strong>Диалог с партнёром</strong> — вместе решаете ситуацию</li>
+    <li><strong>Entretien dirigé</strong> — вопросы о себе: кто ты, чем занимаешься, как оказался во Франции</li>
+    <li><strong>Monologue suivi</strong> (A2) — рассказ по вытянутой теме. На B1 — <strong>exercice en interaction</strong>: разыгрываете ситуацию</li>
+    <li><strong>Exercice en interaction</strong> (A2) — бытовая сценка. На B1 — <strong>expression d'un point de vue</strong>: высказываете мнение по короткому тексту</li>
   </ul>
-  <div class="exam-part-example">💡 Говори медленно. Простое правильное предложение лучше сложного с ошибками. Не знаешь слово — опиши его другими словами.</div>
+  <div class="exam-part-example">💡 Тему тянут жребием, обычно из двух на выбор. Говори медленно и связками: d'abord, ensuite, par contre, donc.</div>
 </div>
 
 <div class="exam-scoring-block">
   <div class="exam-scoring-title">⚖️ Проходной балл</div>
-  <div class="exam-scoring-row"><span>Каждая часть</span><span>макс. 25 баллов</span></div>
+  <div class="exam-scoring-row"><span>Каждая из четырёх частей</span><span>макс. 25 баллов</span></div>
   <div class="exam-scoring-row"><span>Итого максимум</span><span>100 баллов</span></div>
-  <div class="exam-scoring-row exam-scoring-pass"><span>Минимум для сдачи</span><span>60 баллов</span></div>
-  <div class="exam-scoring-note">Можно слабо написать одну часть и компенсировать другими.</div>
+  <div class="exam-scoring-row exam-scoring-pass"><span>Минимум для сдачи</span><span>50 из 100</span></div>
+  <div class="exam-scoring-row exam-scoring-pass"><span>И при этом в каждой части</span><span>не меньше 5 из 25</span></div>
+  <div class="exam-scoring-note">Слабую часть можно вытянуть остальными, но ноль в одной топит весь экзамен: порог 5 баллов обязателен для каждой.</div>
 </div>`;
 }
 
@@ -4086,19 +4095,20 @@ function sp(text) {
 function getExamSpeakingHTML() {
   return `
 <div class="speaking-intro">
-  Говорение — <strong>3 этапа</strong>, ~15 минут. Оценивают правильность, словарный запас и уверенность. Говори медленно — это плюс, не минус.
+  Production orale — <strong>3 части</strong>. На A2 это 6–8 минут, на B1 около 15. Перед началом дают <strong>10 минут на подготовку</strong>. Оценивают связность речи, словарь и грамматику; медленная правильная речь лучше быстрой с ошибками.
 </div>
 
-<div class="speaking-stage-header">Этап 1 · Представление себя</div>
-<div class="speaking-stage-hint">Собеседник задаёт вопросы о тебе. Знай ответы наизусть.</div>
+<div class="speaking-stage-header">Часть 1 · Entretien dirigé</div>
+<div class="speaking-stage-hint">Экзаменатор расспрашивает о тебе. Ответы стоит знать наизусть — это единственная часть, которую можно полностью подготовить заранее.</div>
 
 ${[
-  ['¿Cómo se llama usted?','Как вас зовут?','Me llamo Olga Ivánova.','Меня зовут Ольга Иванова.'],
-  ['¿De dónde es usted?','Откуда вы?','Soy de Rusia, de Moscú.','Я из России, из Москвы.'],
-  ['¿Cuánto tiempo hace que vive en España?','Сколько времени вы живёте во Франции?','Vivo en España desde hace cuatro años.','Я живу во Франции уже четыре года.'],
-  ['¿En qué trabaja usted?','Кем вы работаете?','Soy contable y trabajo en una empresa.','Я бухгалтер и работаю в компании.'],
-  ['¿Tiene usted familia?','У вас есть семья?','Sí, estoy casada y tengo dos hijos.','Да, я замужем и у меня двое детей.'],
-  ['¿Por qué aprende español?','Почему вы учите французский?','Aprendo español para poder comunicarme con mis vecinos y viajar por los países hispanohablantes.','Учу французский, чтобы общаться с соседями и путешествовать по испаноязычным странам.'],
+  ['Comment vous appelez-vous ?','Как вас зовут?','Je m\'appelle Olga Ivanova.','Меня зовут Ольга Иванова.'],
+  ['D\'où venez-vous ?','Откуда вы?','Je viens de Russie, de Moscou.','Я из России, из Москвы.'],
+  ['Depuis combien de temps habitez-vous en France ?','Сколько времени вы живёте во Франции?','J\'habite en France depuis quatre ans.','Я живу во Франции четыре года.'],
+  ['Qu\'est-ce que vous faites dans la vie ?','Чем вы занимаетесь?','Je suis comptable, je travaille dans une petite entreprise à Lyon.','Я бухгалтер, работаю в небольшой компании в Лионе.'],
+  ['Parlez-moi de votre famille.','Расскажите о своей семье.','Je suis mariée et j\'ai deux enfants. Ils vont à l\'école ici.','Я замужем, у меня двое детей. Они ходят здесь в школу.'],
+  ['Pourquoi apprenez-vous le français ?','Почему вы учите французский?','J\'apprends le français pour parler avec mes voisins, comprendre les papiers administratifs et me sentir chez moi ici.','Учу французский, чтобы говорить с соседями, понимать документы и чувствовать себя здесь дома.'],
+  ['Qu\'est-ce que vous aimez faire le week-end ?','Чем любите заниматься в выходные?','Le week-end, je vais au marché et je me promène au bord de la rivière avec ma famille.','По выходным хожу на рынок и гуляю с семьёй у реки.'],
 ].map(([q,qru,a,aru]) => `
   <div class="speaking-qa-card">
     <div class="speaking-q-row">
@@ -4113,189 +4123,192 @@ ${[
     <div class="speaking-aru">${aru}</div>
   </div>`).join('')}
 
-<div class="speaking-stage-header">Этап 2 · Описание картинки</div>
-<div class="speaking-stage-hint">Дают фото — нужно описать что видишь. Используй эти фразы:</div>
+<div class="speaking-stage-header">Часть 2 · Monologue suivi (A2)</div>
+<div class="speaking-stage-hint">Тянешь карточку с темой и рассказываешь минуту-две. На B1 вместо монолога — разыгранная ситуация. Эти связки нужны и там, и там:</div>
 
 <div class="speaking-phrases-card">
 ${[
-  ['En la foto veo...','На фотографии я вижу...'],
-  ['En el centro de la imagen hay...','В центре картинки есть...'],
-  ['Al fondo veo...','На заднем плане я вижу...'],
-  ['Creo que es...','Думаю, что это...'],
-  ['Parece que las personas...','Похоже, что люди...'],
-  ['El tiempo parece...','Погода, кажется,...'],
-  ['Me gusta esta foto porque...','Мне нравится эта фотография, потому что...'],
-].map(([gr,ru]) => `
+  ['D\'abord, je voudrais dire que…','Сначала я хотел бы сказать, что…'],
+  ['Ensuite, il y a aussi…','Затем есть ещё…'],
+  ['Par exemple, quand je…','Например, когда я…'],
+  ['À mon avis, c\'est important parce que…','На мой взгляд, это важно, потому что…'],
+  ['Par contre, je pense que…','С другой стороны, я думаю, что…'],
+  ['Pour conclure, je dirais que…','В заключение я бы сказал, что…'],
+  ['Ça dépend des situations.','Это зависит от ситуации.'],
+].map(([fr,ru]) => `
   <div class="speaking-phrase-row">
     <div class="speaking-phrase-left">
-      <div class="speaking-phrase-gr">${gr}</div>
+      <div class="speaking-phrase-gr">${fr}</div>
       <div class="speaking-phrase-ru">${ru}</div>
     </div>
-    <button class="speaking-tts-btn" ${sp(gr)}>🔊</button>
+    <button class="speaking-tts-btn" ${sp(fr)}>🔊</button>
   </div>`).join('')}
 </div>
 
-<div class="speaking-stage-header">Этап 3 · Диалог с партнёром</div>
-<div class="speaking-stage-hint">Вместе с другим участником решаете ситуацию. Типичные темы:</div>
+<div class="speaking-stage-header">Часть 3 · Exercice en interaction</div>
+<div class="speaking-stage-hint">Бытовая сценка с экзаменатором: ты решаешь задачу, он играет вторую роль. Типичные ситуации во Франции:</div>
 
 ${[
-  ['🍽️ Выбрать ресторан',['¿Adónde vamos a comer?','¿Qué prefieres, pescado o carne?','¿Cuánto cuesta más o menos?','¿A qué hora quedamos?']],
-  ['✈️ Спланировать поездку',['¿Adónde quieres ir?','¿Cuándo estás libre?','¿Cuántos días nos quedamos?','¿Cómo vamos, en avión o en barco?']],
-  ['🎉 Организовать праздник',['¿Cuándo hacemos la fiesta?','¿A quién invitamos?','¿Qué comida vamos a traer?','¿Quién trae la música?']],
-  ['🛒 Купить подержанную вещь',['¿En qué estado está?','¿Cuánto tiempo lo tiene?','¿Puede bajar un poco el precio?','¿Cuándo podemos recogerlo?']],
+  ['🏥 Записаться к врачу',['Bonjour, je voudrais prendre rendez-vous.','C\'est assez urgent, j\'ai de la fièvre depuis trois jours.','Vous avez quelque chose cette semaine ?','Est-ce que vous prenez de nouveaux patients ?']],
+  ['🏠 Снять квартиру',['Je suis intéressé par l\'annonce.','Est-ce que les charges sont comprises ?','Quand est-ce que je peux visiter ?','Il faut un garant ou la garantie Visale suffit ?']],
+  ['🎒 Записать ребёнка в школу',['Je voudrais inscrire mon enfant à l\'école.','Quels documents faut-il apporter ?','Il ne parle pas encore bien français.','Est-ce qu\'il y a une cantine ?']],
+  ['🛍️ Вернуть покупку',['Je voudrais échanger cet article.','Voici le ticket de caisse.','Il ne me va pas, c\'est trop petit.','Est-ce que je peux avoir un remboursement ?']],
+  ['🚆 Купить билет и поменять его',['Un aller-retour pour Lyon, s\'il vous plaît.','Le train part de quel quai ?','Je peux changer mon billet pour demain ?','Il y a un supplément ?']],
 ].map(([title, phrases]) => `
   <details class="speaking-topic-card">
     <summary>${title}</summary>
     <div class="speaking-topic-phrases">
-      ${phrases.map(p => `
+      ${phrases.map(ph => `
         <div class="speaking-topic-phrase-row">
-          <span>${p}</span>
-          <button class="speaking-tts-btn" ${sp(p)}>🔊</button>
+          <span>${ph}</span>
+          <button class="speaking-tts-btn" ${sp(ph)}>🔊</button>
         </div>`).join('')}
     </div>
   </details>`).join('')}
 
 <div class="speaking-tip-block">
-  💡 <strong>Если не знаешь слово</strong> — скажи <em onclick="${sp('¿Cómo se dice en español?')}" style="cursor:pointer;color:#9B59B6">«¿Cómo se dice en español?»</em> (Как это по-французски?) или опиши его другими словами. Собеседник это ценит.
+  💡 <strong>Забыл слово</strong> — не молчи. Скажи <em ${sp('Comment dit-on… en français ?')} style="cursor:pointer;color:#9B59B6">«Comment dit-on… en français ?»</em> или опиши другими словами: «c\'est une chose pour…». Экзаменатор оценивает умение выкручиваться, а не словарь.
 </div>`;
 }
 
 function getExamWritingHTML() {
   return `
 <div class="writing-intro">
-  На экзамене нужно написать <strong>2 текста по 80–100 слов</strong> за 45 минут.<br>
-  Выучи эти шаблоны — и письмо станет самой лёгкой частью.
+  <strong>A2:</strong> два коротких текста по 60–80 слов за 45 минут.<br>
+  <strong>B1:</strong> один текст на 160–180 слов — мнение, рассказ или письмо.<br>
+  Слова считают. Шаблон ниже закрывает структуру, остаётся подставить тему.
 </div>
 
-<!-- ===== ПИСЬМО ДРУГУ ===== -->
+<!-- ===== НЕФОРМАЛЬНОЕ ПИСЬМО ===== -->
 <div class="writing-type-header">📩 Тип 1 — Письмо другу (неформальное)</div>
 
 <div class="writing-template-card">
   <div class="writing-template-title">Универсальный шаблон</div>
   <div class="writing-block writing-block-open">
     <div class="writing-block-label">Обращение</div>
-    <div class="writing-greek">Querida María, / ¡Hola Pablo!</div>
-    <div class="writing-ru">Дорогая Мария, / Привет Пабло!</div>
+    <div class="writing-greek">Salut Marie, / Cher Paul,</div>
+    <div class="writing-ru">Привет, Мари, / Дорогой Поль,</div>
   </div>
   <div class="writing-block">
     <div class="writing-block-label">Начало — как дела</div>
-    <div class="writing-greek">¿Cómo estás? Espero que estés bien.</div>
+    <div class="writing-greek">Comment vas-tu ? J'espère que tout va bien pour toi.</div>
     <div class="writing-ru">Как ты? Надеюсь, у тебя всё хорошо.</div>
   </div>
   <div class="writing-block">
     <div class="writing-block-label">Основная часть (меняется по теме)</div>
-    <div class="writing-greek">Te escribo porque quiero contarte sobre...</div>
-    <div class="writing-ru">Пишу тебе, потому что хочу рассказать о...</div>
+    <div class="writing-greek">Je t'écris parce que je voudrais te raconter…</div>
+    <div class="writing-ru">Пишу тебе, потому что хочу рассказать…</div>
   </div>
   <div class="writing-block">
     <div class="writing-block-label">Вопрос в конце</div>
-    <div class="writing-greek">¿Y tú qué tal? ¿Cómo lo estás pasando?</div>
-    <div class="writing-ru">А ты как? Как проводишь время?</div>
+    <div class="writing-greek">Et toi, quoi de neuf ? Donne-moi de tes nouvelles.</div>
+    <div class="writing-ru">А у тебя что нового? Напиши, как дела.</div>
   </div>
   <div class="writing-block writing-block-close">
     <div class="writing-block-label">Закрытие</div>
-    <div class="writing-greek">¡Nos vemos pronto! Un abrazo muy fuerte,<br><em>Olga</em></div>
-    <div class="writing-ru">Увидимся скоро! Крепко обнимаю, Ольга</div>
+    <div class="writing-greek">À bientôt ! Je t'embrasse,<br><em>Olga</em></div>
+    <div class="writing-ru">До скорого! Обнимаю, Ольга</div>
   </div>
 </div>
 
-<div class="writing-topics-label">📋 Темы которые дают на экзамене + что писать:</div>
+<div class="writing-topics-label">📋 Темы, которые дают, и что писать:</div>
 
 <details class="writing-topic">
-  <summary>🛍️ Поход в торговый центр</summary>
+  <summary>🥐 Переезд и первые впечатления</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">El domingo fui al centro comercial con mi familia. Compré un par de zapatos y un vestido. La ropa estaba muy barata porque había rebajas. Después comimos en un restaurante en la tercera planta. ¡Estaba buenísimo!</div>
-    <div class="writing-ru">В воскресенье я ходила в торговый центр с семьёй. Купила пару туфель и платье. Одежда была очень дешёвой, потому что были распродажи. Потом мы поели в ресторане на третьем этаже. Было очень вкусно!</div>
+    <div class="writing-greek">Je t'écris de Lyon : nous avons enfin déménagé le mois dernier. L'appartement est petit mais lumineux, et il y a une boulangerie juste en bas. Les voisins sont très gentils : ils sont venus se présenter le premier soir. Le plus difficile, c'est l'administration — j'ai passé deux heures à la préfecture. Et toi, quoi de neuf ?</div>
+    <div class="writing-ru">Пишу тебе из Лиона: в прошлом месяце мы наконец переехали. Квартира маленькая, но светлая, а прямо внизу булочная. Соседи очень славные: пришли познакомиться в первый же вечер. Самое трудное — бюрократия, я провела два часа в префектуре. А у тебя что нового?</div>
   </div>
 </details>
 
 <details class="writing-topic">
-  <summary>🎂 День рождения / праздник</summary>
+  <summary>🎉 Праздник или день рождения</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">Ayer fue mi cumpleaños e hice una pequeña fiesta en casa. Vinieron mis amigos y mi familia. Comimos, bailamos y nos reímos mucho. ¡Recibí muchos regalos! Fue una noche maravillosa que nunca olvidaré.</div>
-    <div class="writing-ru">Вчера был мой день рождения, и я устроила небольшую вечеринку дома. Пришли мои друзья и моя семья. Мы ели, танцевали и много смеялись. Я получила много подарков! Это был чудесный вечер, который я никогда не забуду.</div>
+    <div class="writing-greek">Samedi dernier, j'ai fêté mon anniversaire à la maison. J'ai invité mes collègues et quelques voisins. Nous avons mangé une tarte aux pommes que j'ai préparée moi-même et nous avons beaucoup ri. Un ami a apporté sa guitare et nous avons chanté jusqu'à minuit. C'était une soirée vraiment réussie.</div>
+    <div class="writing-ru">В прошлую субботу я отмечала день рождения дома. Позвала коллег и нескольких соседей. Мы ели яблочный пирог, который я испекла сама, и много смеялись. Друг принёс гитару, и мы пели до полуночи. Вечер получился отличный.</div>
   </div>
 </details>
 
 <details class="writing-topic">
-  <summary>🏖️ Поездка / отпуск</summary>
+  <summary>🏖️ Поездка или отпуск</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">En agosto fui de vacaciones a España con mi marido. Nos alojamos en un hotel cerca del mar. Cada día nadábamos y visitábamos monumentos antiguos. El tiempo fue estupendo. ¡Quiero volver el año que viene!</div>
-    <div class="writing-ru">В августе я ездила в отпуск во Францию с мужем. Мы жили в отеле рядом с морем. Каждый день мы купались и посещали древние памятники. Погода была прекрасной. Хочу поехать снова в следующем году!</div>
+    <div class="writing-greek">En août, nous sommes partis une semaine en Bretagne. Nous avons loué une petite maison près de la mer. Il a plu deux jours, mais après il a fait très beau. Nous nous sommes promenés le long de la côte et nous avons mangé des crêpes tous les soirs. Je te conseille vraiment cette région.</div>
+    <div class="writing-ru">В августе мы уехали на неделю в Бретань. Сняли маленький дом у моря. Два дня шёл дождь, зато потом была прекрасная погода. Мы гуляли вдоль побережья и каждый вечер ели блины. Очень советую тебе этот край.</div>
   </div>
 </details>
 
 <details class="writing-topic">
-  <summary>📅 Приглашение на встречу</summary>
+  <summary>📅 Приглашение</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">Quiero invitarte a mi casa el sábado a las 7 de la tarde. Vamos a hacer una pequeña cena con amigos. ¡Habrá comida, música y mucha diversión! ¿Puedes venir? Contéstame pronto.</div>
-    <div class="writing-ru">Хочу пригласить тебя ко мне в субботу в 7 вечера. Мы устроим небольшой ужин с друзьями. Будет еда, музыка и много веселья! Сможешь прийти? Ответь мне скорее.</div>
+    <div class="writing-greek">Je voudrais t'inviter chez moi samedi prochain vers dix-neuf heures. On fête la fin des travaux dans l'appartement. Il y aura quelques amis, de la musique et surtout beaucoup à manger. Tu peux venir avec ta sœur si tu veux. Dis-moi vite si tu es libre !</div>
+    <div class="writing-ru">Хочу позвать тебя к себе в следующую субботу около семи вечера. Отмечаем окончание ремонта в квартире. Будут друзья, музыка и, главное, много еды. Можешь прийти с сестрой, если хочешь. Ответь поскорее, свободна ли ты!</div>
   </div>
 </details>
 
 <!-- ===== ОФИЦИАЛЬНОЕ ПИСЬМО ===== -->
-<div class="writing-type-header" style="margin-top:8px">🏛️ Тип 2 — Официальное письмо / заявление</div>
+<div class="writing-type-header" style="margin-top:8px">🏛️ Тип 2 — Официальное письмо</div>
 
 <div class="writing-template-card">
   <div class="writing-template-title">Универсальный шаблон</div>
   <div class="writing-block writing-block-open">
-    <div class="writing-block-label">Кому (адресат)</div>
-    <div class="writing-greek">A la Dirección / Estimado Director,</div>
-    <div class="writing-ru">В адрес Дирекции / Уважаемый директор,</div>
+    <div class="writing-block-label">Обращение</div>
+    <div class="writing-greek">Madame, Monsieur,</div>
+    <div class="writing-ru">Уважаемые господа,</div>
   </div>
   <div class="writing-block">
     <div class="writing-block-label">Тема</div>
-    <div class="writing-greek">Asunto: Solicitud de información / inscripción</div>
-    <div class="writing-ru">Тема: Запрос информации / заявление о записи</div>
+    <div class="writing-greek">Objet : demande d'information / demande d'inscription</div>
+    <div class="writing-ru">Тема: запрос информации / заявление о записи</div>
   </div>
   <div class="writing-block">
-    <div class="writing-block-label">Представление себя</div>
-    <div class="writing-greek">Me llamo [nombre] y vivo en Valencia desde hace tres años.</div>
-    <div class="writing-ru">Меня зовут [имя], и я живу в Валенсии уже три года.</div>
+    <div class="writing-block-label">Кто вы</div>
+    <div class="writing-greek">Je m'appelle Olga Ivanova et j'habite à Lyon depuis trois ans.</div>
+    <div class="writing-ru">Меня зовут Ольга Иванова, я живу в Лионе три года.</div>
   </div>
   <div class="writing-block">
     <div class="writing-block-label">Цель письма</div>
-    <div class="writing-greek">Le escribo porque me gustaría saber / inscribirme / solicitar...</div>
-    <div class="writing-ru">Пишу вам, потому что хотел(а) бы узнать / записаться / попросить...</div>
+    <div class="writing-greek">Je vous écris afin de vous demander des informations concernant…</div>
+    <div class="writing-ru">Пишу вам, чтобы запросить информацию о…</div>
   </div>
   <div class="writing-block">
-    <div class="writing-block-label">Вопрос / просьба</div>
-    <div class="writing-greek">Me gustaría saber: ¿Cuál es el horario? ¿Cuánto cuesta? ¿Cuándo empieza?</div>
-    <div class="writing-ru">Хотел(а) бы узнать: Какое расписание? Сколько стоит? Когда начинается?</div>
+    <div class="writing-block-label">Вопросы</div>
+    <div class="writing-greek">Pourriez-vous me préciser les horaires, le tarif et les documents nécessaires ?</div>
+    <div class="writing-ru">Не могли бы вы уточнить расписание, стоимость и необходимые документы?</div>
   </div>
   <div class="writing-block writing-block-close">
     <div class="writing-block-label">Закрытие</div>
-    <div class="writing-greek">Le agradezco de antemano.<br>Atentamente,<br><em>[Nombre Apellido]</em></div>
-    <div class="writing-ru">Заранее благодарю вас.<br>С уважением,<br><em>[Имя Фамилия]</em></div>
+    <div class="writing-greek">Dans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, mes salutations distinguées.<br><em>Olga Ivanova</em></div>
+    <div class="writing-ru">В ожидании вашего ответа примите, госпожа, господин, мои наилучшие пожелания. Ольга Иванова</div>
   </div>
 </div>
 
 <details class="writing-topic">
   <summary>📚 Запрос о курсах французского</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">Le escribo porque estoy interesado/a en asistir a clases de español en su centro. Me gustaría saber: cuándo empiezan las clases, cuántas veces por semana se imparten, cuánto cuesta la inscripción y si hay clases para el nivel A2.</div>
-    <div class="writing-ru">Пишу вам, потому что заинтересован(а) в посещении курсов французского языка в вашем центре. Хотел(а) бы узнать: когда начинаются занятия, сколько раз в неделю они проходят, сколько стоит запись и есть ли занятия для уровня A2.</div>
+    <div class="writing-greek">Je vous écris afin d'obtenir des informations sur vos cours de français. Je suis de niveau A2 et je souhaite préparer le DELF B1. Pourriez-vous me préciser quand commencent les cours, combien de séances par semaine sont prévues, quel est le tarif et quels documents il faut fournir pour l'inscription ?</div>
+    <div class="writing-ru">Пишу вам, чтобы получить информацию о курсах французского. У меня уровень A2, и я хочу готовиться к DELF B1. Не могли бы вы уточнить, когда начинаются занятия, сколько их в неделю, какова стоимость и какие документы нужны для записи?</div>
   </div>
 </details>
 
 <details class="writing-topic">
-  <summary>📢 Объявление (продаю / ищу)</summary>
+  <summary>🏠 Жалоба владельцу жилья</summary>
   <div class="writing-topic-body">
-    <div class="writing-greek">Se vende sofá en buen estado. Color: gris. Medidas: 2 metros. Precio: 150 euros, negociable. Motivo de la venta: mudanza. Para más información llamar al 600-123-456. Posibilidad de entrega.</div>
-    <div class="writing-ru">Продаётся диван в хорошем состоянии. Цвет: серый. Размер: 2 метра. Цена: 150 евро, торг уместен. Причина продажи: переезд. Для информации звоните: 600-123-456. Возможна доставка.</div>
+    <div class="writing-greek">Je me permets de vous écrire au sujet du chauffage de mon appartement, qui ne fonctionne plus depuis le 10 janvier. Malgré mes deux appels, aucun technicien n'est venu. La température ne dépasse pas quinze degrés. Je vous demande d'intervenir dans les plus brefs délais.</div>
+    <div class="writing-ru">Позволю себе написать вам по поводу отопления в моей квартире, которое не работает с 10 января. Несмотря на два моих звонка, мастер так и не пришёл. Температура не поднимается выше пятнадцати градусов. Прошу вас вмешаться в кратчайшие сроки.</div>
   </div>
 </details>
 
 <div class="writing-phrases-block">
   <div class="writing-phrases-title">🔑 Ключевые фразы — выучи наизусть</div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Te escribo porque...</span><span class="writing-phrase-ru">Пишу тебе, потому что...</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Quiero decirte que...</span><span class="writing-phrase-ru">Хочу сказать тебе, что...</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">¡Fue estupendo!</span><span class="writing-phrase-ru">Было очень здорово!</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Me alegré mucho de que...</span><span class="writing-phrase-ru">Я очень обрадовалась, что...</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">¡Tengo muchas ganas de verte!</span><span class="writing-phrase-ru">Не могу дождаться встречи с тобой!</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Gracias por tu carta.</span><span class="writing-phrase-ru">Спасибо за твоё письмо.</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Me gustaría saber...</span><span class="writing-phrase-ru">Хотел(а) бы узнать...</span></div>
-  <div class="writing-phrase-row"><span class="writing-phrase-gr">Le agradezco de antemano.</span><span class="writing-phrase-ru">Заранее благодарю вас.</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Je t'écris parce que…</span><span class="writing-phrase-ru">Пишу тебе, потому что…</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Je voudrais te raconter que…</span><span class="writing-phrase-ru">Хочу тебе рассказать, что…</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">C'était vraiment super !</span><span class="writing-phrase-ru">Было правда здорово!</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">J'ai été très content(e) de…</span><span class="writing-phrase-ru">Я был(а) очень рад(а)…</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">J'ai hâte de te voir !</span><span class="writing-phrase-ru">Не могу дождаться встречи!</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Merci pour ta lettre.</span><span class="writing-phrase-ru">Спасибо за твоё письмо.</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Je vous écris afin de…</span><span class="writing-phrase-ru">Пишу вам, чтобы…</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Pourriez-vous me préciser…</span><span class="writing-phrase-ru">Не могли бы вы уточнить…</span></div>
+  <div class="writing-phrase-row"><span class="writing-phrase-gr">Je vous prie d'agréer mes salutations distinguées.</span><span class="writing-phrase-ru">Примите мои наилучшие пожелания (офиц. концовка)</span></div>
 </div>`;
 }
 
@@ -4303,207 +4316,215 @@ function getExamGrammarHTML() {
   return `
 <div class="gram-nav">Нажми на тему:</div>
 <div class="gram-toc">
-  <button class="gram-toc-btn" onclick="document.getElementById('gr1').scrollIntoView({behavior:'smooth'})">Настоящее</button>
-  <button class="gram-toc-btn" onclick="document.getElementById('gr2').scrollIntoView({behavior:'smooth'})">Прошедшее</button>
-  <button class="gram-toc-btn" onclick="document.getElementById('gr3').scrollIntoView({behavior:'smooth'})">Будущее</button>
-  <button class="gram-toc-btn" onclick="document.getElementById('gr4').scrollIntoView({behavior:'smooth'})">Артикли</button>
-  <button class="gram-toc-btn" onclick="document.getElementById('gr5').scrollIntoView({behavior:'smooth'})">Предлоги</button>
-  <button class="gram-toc-btn" onclick="document.getElementById('gr6').scrollIntoView({behavior:'smooth'})">Конструкции</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr1').scrollIntoView({behavior:'smooth'})">Présent</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr2').scrollIntoView({behavior:'smooth'})">Passé composé</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr3').scrollIntoView({behavior:'smooth'})">Imparfait</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr4').scrollIntoView({behavior:'smooth'})">Будущее</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr5').scrollIntoView({behavior:'smooth'})">Артикли</button>
+  <button class="gram-toc-btn" onclick="document.getElementById('gr6').scrollIntoView({behavior:'smooth'})">Связки</button>
 </div>
 
 <div id="gr1" class="gram-block">
-  <div class="gram-title">🔵 Настоящее время</div>
-  <div class="gram-subtitle">Спряжение -AR: hablar, trabajar, llegar, necesitar, comprar, escuchar</div>
+  <div class="gram-title">🔵 Présent</div>
+  <div class="gram-subtitle">Первая группа, -ER: parler, travailler, habiter, acheter, écouter</div>
   <table class="gram-table">
-    <tr><td>yo</td><td>habl<b>o</b></td><td>trabaj<b>o</b></td></tr>
-    <tr><td>tú</td><td>habl<b>as</b></td><td>trabaj<b>as</b></td></tr>
-    <tr><td>él/ella</td><td>habl<b>a</b></td><td>trabaj<b>a</b></td></tr>
-    <tr><td>nosotros</td><td>habl<b>amos</b></td><td>trabaj<b>amos</b></td></tr>
-    <tr><td>vosotros</td><td>habl<b>áis</b></td><td>trabaj<b>áis</b></td></tr>
-    <tr><td>ellos</td><td>habl<b>an</b></td><td>trabaj<b>an</b></td></tr>
+    <tr><td>je</td><td>parl<b>e</b></td><td>travaill<b>e</b></td></tr>
+    <tr><td>tu</td><td>parl<b>es</b></td><td>travaill<b>es</b></td></tr>
+    <tr><td>il/elle</td><td>parl<b>e</b></td><td>travaill<b>e</b></td></tr>
+    <tr><td>nous</td><td>parl<b>ons</b></td><td>travaill<b>ons</b></td></tr>
+    <tr><td>vous</td><td>parl<b>ez</b></td><td>travaill<b>ez</b></td></tr>
+    <tr><td>ils/elles</td><td>parl<b>ent</b></td><td>travaill<b>ent</b></td></tr>
   </table>
-  <div class="gram-subtitle" style="margin-top:10px">Спряжение -ER: comer, aprender, leer, beber</div>
+  <div class="gram-tip">💡 Формы je / tu / il / ils звучат ОДИНАКОВО — ПАРЛЬ. Разница только на письме, и экзаменатор это проверяет именно в письменной части.</div>
+  <div class="gram-subtitle" style="margin-top:10px">Вторая группа, -IR с -iss-: finir, choisir, réussir</div>
   <table class="gram-table">
-    <tr><td>yo</td><td>com<b>o</b></td><td>tú</td><td>com<b>es</b></td></tr>
-    <tr><td>él/ella</td><td>com<b>e</b></td><td>nosotros</td><td>com<b>emos</b></td></tr>
-    <tr><td>vosotros</td><td>com<b>éis</b></td><td>ellos</td><td>com<b>en</b></td></tr>
+    <tr><td>je finis</td><td>tu finis</td><td>il finit</td></tr>
+    <tr><td>nous finissons</td><td>vous finissez</td><td>ils finissent</td></tr>
   </table>
-  <div class="gram-subtitle" style="margin-top:10px">Неправильные — учи отдельно</div>
+  <div class="gram-subtitle" style="margin-top:10px">Неправильные — учить отдельно</div>
   <table class="gram-table">
-    <tr><td>ser</td><td>soy / eres / es / somos / sois / son</td></tr>
-    <tr><td>tener</td><td>tengo / tienes / tiene / tenemos / tenéis / tienen</td></tr>
+    <tr><td>être</td><td>suis / es / est / sommes / êtes / sont</td></tr>
+    <tr><td>avoir</td><td>ai / as / a / avons / avez / ont</td></tr>
+    <tr><td>aller</td><td>vais / vas / va / allons / allez / vont</td></tr>
+    <tr><td>faire</td><td>fais / fais / fait / faisons / faites / font</td></tr>
   </table>
 </div>
 
 <div id="gr2" class="gram-block">
-  <div class="gram-title">🟠 Прошедшее время (pretérito indefinido)</div>
-  <div class="gram-tip">💡 Самое важное для письма и говорения — рассказываешь о том, что уже произошло.</div>
-  <div class="gram-subtitle" style="margin-top:8px">Правило для -AR глаголов: убери -ar, добавь -é/-aste/-ó/-amos/-asteis/-aron</div>
+  <div class="gram-title">🟠 Passé composé</div>
+  <div class="gram-tip">💡 Главное время для письма и говорения: всё, что уже случилось. Строится из двух частей — вспомогательный глагол плюс причастие.</div>
+  <div class="gram-subtitle" style="margin-top:8px">С AVOIR — подавляющее большинство глаголов</div>
   <table class="gram-table">
-    <tr><th>Сейчас</th><th>В прошлом</th><th>Перевод</th></tr>
-    <tr><td>hablar</td><td>habl<b>é</b></td><td>я поговорил(а)</td></tr>
-    <tr><td>comprar</td><td>compr<b>é</b></td><td>я купил(а)</td></tr>
-    <tr><td>trabajar</td><td>trabaj<b>é</b></td><td>я поработал(а)</td></tr>
-    <tr><td>llegar</td><td>lleg<b>ué</b></td><td>я прибыл(а)</td></tr>
-    <tr><td>hacer</td><td>hice</td><td>я сделал(а)</td></tr>
+    <tr><th>Инфинитив</th><th>Причастие</th><th>Пример</th></tr>
+    <tr><td>parler</td><td>parl<b>é</b></td><td>j'ai parlé — я поговорил</td></tr>
+    <tr><td>finir</td><td>fin<b>i</b></td><td>j'ai fini — я закончил</td></tr>
+    <tr><td>attendre</td><td>attend<b>u</b></td><td>j'ai attendu — я подождал</td></tr>
+    <tr><td>faire</td><td>fait</td><td>j'ai fait — я сделал</td></tr>
+    <tr><td>prendre</td><td>pris</td><td>j'ai pris — я взял</td></tr>
+    <tr><td>voir</td><td>vu</td><td>j'ai vu — я увидел</td></tr>
   </table>
-  <div class="gram-subtitle" style="margin-top:10px">Неправильные прошедшие — выучи наизусть</div>
+  <div class="gram-subtitle" style="margin-top:10px">С ÊTRE — движение, изменение состояния и все возвратные</div>
   <table class="gram-table">
-    <tr><th>Глагол</th><th>yo</th><th>él/ella</th></tr>
-    <tr><td>ir (идти)</td><td><b>fui</b></td><td>fue</td></tr>
-    <tr><td>tener (иметь)</td><td><b>tuve</b></td><td>tuvo</td></tr>
-    <tr><td>estar (быть/находиться)</td><td><b>estuve</b></td><td>estuvo</td></tr>
-    <tr><td>decir (говорить)</td><td><b>dije</b></td><td>dijo</td></tr>
-    <tr><td>ver (видеть)</td><td><b>vi</b></td><td>vio</td></tr>
-    <tr><td>venir (приходить)</td><td><b>vine</b></td><td>vino</td></tr>
-    <tr><td>hacer (делать)</td><td><b>hice</b></td><td>hizo</td></tr>
+    <tr><td colspan="2">aller · venir · arriver · partir · entrer · sortir · monter · descendre · rester · tomber · naître · mourir</td></tr>
+    <tr><td>je suis allé(e)</td><td>я пошёл / пошла</td></tr>
+    <tr><td>elle est partie</td><td>она уехала</td></tr>
+    <tr><td>nous sommes restés</td><td>мы остались</td></tr>
+    <tr><td>je me suis levé(e)</td><td>я встал(а)</td></tr>
   </table>
-  <div class="gram-example-sent">
-    <div>Ayer <b>fui</b> al supermercado. — Вчера я ходил(а) в супермаркет.</div>
-    <div>El fin de semana <b>vi</b> a mis amigos. — На выходных я видел(а) друзей.</div>
-    <div>¡La noche <b>fue</b> muy bonita! — Вечер был очень приятный!</div>
-  </div>
+  <div class="gram-tip">⚠️ С être причастие согласуется с подлежащим: elle est allé<b>e</b>, ils sont allé<b>s</b>, elles sont allé<b>es</b>. На письме это ловят в первую очередь.</div>
 </div>
 
 <div id="gr3" class="gram-block">
-  <div class="gram-title">🟢 Будущее время</div>
-  <div class="gram-rule"><b>ir a</b> + infinitivo (глагол ir в настоящем + a + инфинитив)</div>
+  <div class="gram-title">🟣 Imparfait</div>
+  <div class="gram-subtitle">Фон, привычка, описание. Берём форму nous в présent, убираем -ons, добавляем окончания</div>
   <table class="gram-table">
-    <tr><th>Настоящее</th><th>Будущее</th><th>Перевод</th></tr>
-    <tr><td>ir</td><td><b>voy a ir</b></td><td>я пойду / поеду</td></tr>
-    <tr><td>hacer</td><td><b>voy a hacer</b></td><td>я сделаю</td></tr>
-    <tr><td>comprar</td><td><b>voy a comprar</b></td><td>я куплю</td></tr>
-    <tr><td>hablar</td><td><b>voy a hablar</b></td><td>я поговорю</td></tr>
-    <tr><td>venir</td><td><b>voy a venir</b></td><td>я приду</td></tr>
+    <tr><td>je parl<b>ais</b></td><td>tu parl<b>ais</b></td><td>il parl<b>ait</b></td></tr>
+    <tr><td>nous parl<b>ions</b></td><td>vous parl<b>iez</b></td><td>ils parl<b>aient</b></td></tr>
   </table>
-  <div class="gram-example-sent">
-    <div>Mañana <b>voy a ir</b> al trabajo. — Завтра я пойду на работу.</div>
-    <div>En verano <b>vamos a viajar</b> a España. — Летом мы поедем во Францию.</div>
-  </div>
-  <div class="gram-tip">💡 no + ir a: No voy a ir — я не пойду</div>
+  <div class="gram-subtitle" style="margin-top:10px">Passé composé или imparfait?</div>
+  <table class="gram-table">
+    <tr><th>Смысл</th><th>Время</th><th>Пример</th></tr>
+    <tr><td>Однократное событие</td><td>passé composé</td><td>Hier, j'ai visité un appartement.</td></tr>
+    <tr><td>Повторялось раньше</td><td>imparfait</td><td>Avant, je visitais des appartements chaque samedi.</td></tr>
+    <tr><td>Описание обстановки</td><td>imparfait</td><td>Il faisait froid, la rue était vide.</td></tr>
+    <tr><td>Событие на фоне</td><td>оба</td><td>Je dormais quand le téléphone a sonné.</td></tr>
+  </table>
+  <div class="gram-tip">💡 На B1 умение развести эти два времени — половина оценки за письменную часть.</div>
 </div>
 
 <div id="gr4" class="gram-block">
-  <div class="gram-title">🔷 Артикли (род и число)</div>
-  <div class="gram-subtitle">Единственное число</div>
+  <div class="gram-title">🟢 Будущее</div>
   <table class="gram-table">
-    <tr><th></th><th>м.р.</th><th>ж.р.</th></tr>
-    <tr><td>определённый</td><td><b>el</b> amigo</td><td><b>la</b> amiga</td></tr>
-    <tr><td>неопределённый</td><td><b>un</b> amigo</td><td><b>una</b> amiga</td></tr>
+    <tr><th>Форма</th><th>Как строится</th><th>Пример</th></tr>
+    <tr><td>Futur proche</td><td>aller + инфинитив</td><td>Je vais partir demain.</td></tr>
+    <tr><td>Futur simple</td><td>инфинитив + ai/as/a/ons/ez/ont</td><td>Je partirai demain.</td></tr>
   </table>
-  <div class="gram-subtitle" style="margin-top:10px">Множественное число</div>
+  <div class="gram-subtitle" style="margin-top:10px">Неправильные основы futur simple</div>
   <table class="gram-table">
-    <tr><th></th><th>м.р.</th><th>ж.р.</th></tr>
-    <tr><td>определённый</td><td><b>los</b> amigos</td><td><b>las</b> amigas</td></tr>
-    <tr><td>неопределённый</td><td><b>unos</b> amigos</td><td><b>unas</b> amigas</td></tr>
+    <tr><td>être → ser-</td><td>avoir → aur-</td><td>aller → ir-</td></tr>
+    <tr><td>faire → fer-</td><td>venir → viendr-</td><td>pouvoir → pourr-</td></tr>
+    <tr><td>vouloir → voudr-</td><td>devoir → devr-</td><td>voir → verr-</td></tr>
   </table>
-  <div class="gram-example-sent">
-    <div>Mi amigo vive en Valencia. — Мой друг живёт в Валенсии.</div>
-    <div>Veo <b>a</b> mi amigo cada día. — Я вижу своего друга каждый день.</div>
-  </div>
-  <div class="gram-tip">💡 Перед человеком в роли дополнения ставится предлог <b>a</b> — «личное a»: Veo a mi amigo (не Veo mi amigo).</div>
 </div>
 
 <div id="gr5" class="gram-block">
-  <div class="gram-title">🟡 Предлоги (+ слияние с артиклем)</div>
-  <div class="gram-subtitle">a + el → al, de + el → del</div>
+  <div class="gram-title">🔶 Артикли и предлоги</div>
   <table class="gram-table">
-    <tr><th>Предлог</th><th>Значение</th><th>Пример</th></tr>
-    <tr><td><b>a / al</b></td><td>направление (куда)</td><td>voy al cine — иду в кино</td></tr>
-    <tr><td><b>en</b></td><td>место (где)</td><td>vivo en Madrid — я живу в Мадриде</td></tr>
-    <tr><td><b>de / del</b></td><td>из, от</td><td>vengo del trabajo — я иду с работы</td></tr>
-    <tr><td><b>con</b></td><td>с (вместе)</td><td>con mi marido — с мужем</td></tr>
-    <tr><td><b>para</b></td><td>для</td><td>para la familia — для семьи</td></tr>
-    <tr><td><b>después de / antes de</b></td><td>после / до</td><td>después de comer — после еды</td></tr>
+    <tr><th>Тип</th><th>Формы</th><th>Когда</th></tr>
+    <tr><td>Определённый</td><td>le / la / les</td><td>Известный предмет или понятие целиком</td></tr>
+    <tr><td>Неопределённый</td><td>un / une / des</td><td>Первое упоминание</td></tr>
+    <tr><td>Частичный</td><td>du / de la</td><td>Неисчисляемое: du pain, de l'eau</td></tr>
+  </table>
+  <div class="gram-tip">⚠️ После отрицания un/une/des/du превращаются в <b>de</b>: J'ai une voiture → Je n'ai pas <b>de</b> voiture. Определённый артикль не меняется: Je n'aime pas le café.</div>
+  <div class="gram-subtitle" style="margin-top:10px">Слияние предлогов</div>
+  <table class="gram-table">
+    <tr><td>à + le = <b>au</b></td><td>à + les = <b>aux</b></td></tr>
+    <tr><td>de + le = <b>du</b></td><td>de + les = <b>des</b></td></tr>
+  </table>
+  <div class="gram-subtitle" style="margin-top:10px">Страны</div>
+  <table class="gram-table">
+    <tr><td>en France, en Russie</td><td>женский род (обычно на -e)</td></tr>
+    <tr><td>au Portugal, au Canada</td><td>мужской род</td></tr>
+    <tr><td>aux États-Unis</td><td>множественное число</td></tr>
+    <tr><td>à Paris, à Lyon</td><td>города</td></tr>
   </table>
 </div>
 
 <div id="gr6" class="gram-block">
-  <div class="gram-title">🟣 Ключевые конструкции A2</div>
+  <div class="gram-title">🔗 Связки — за них дают баллы</div>
+  <div class="gram-tip">💡 На B1 оценивают связность текста отдельным критерием. Три-четыре связки в письме поднимают оценку заметнее, чем редкие слова.</div>
   <table class="gram-table">
-    <tr><th>Конструкция</th><th>Пример</th><th>Перевод</th></tr>
-    <tr><td><b>quiero</b> + инф.</td><td>Quiero ir a casa.</td><td>Хочу пойти домой.</td></tr>
-    <tr><td><b>puedo</b> + инф.</td><td>¿Puedo ayudarte?</td><td>Могу тебе помочь?</td></tr>
-    <tr><td><b>tengo que</b> + инф.</td><td>Tengo que estudiar.</td><td>Нужно учиться.</td></tr>
-    <tr><td><b>no</b> + гл.</td><td>No entiendo.</td><td>Я не понимаю.</td></tr>
-    <tr><td><b>porque</b></td><td>Fui porque quería...</td><td>Пошёл(а), потому что...</td></tr>
-    <tr><td><b>cuando</b></td><td>Cuando era pequeña...</td><td>Когда я была маленькой...</td></tr>
+    <tr><th>Связка</th><th>Перевод</th><th>Зачем</th></tr>
+    <tr><td>d'abord</td><td>сначала</td><td>начать перечисление</td></tr>
+    <tr><td>ensuite / puis</td><td>затем</td><td>продолжить</td></tr>
+    <tr><td>de plus</td><td>кроме того</td><td>добавить довод</td></tr>
+    <tr><td>par contre</td><td>зато, напротив</td><td>противопоставить</td></tr>
+    <tr><td>cependant</td><td>однако</td><td>то же, но формальнее</td></tr>
+    <tr><td>parce que</td><td>потому что</td><td>причина</td></tr>
+    <tr><td>c'est pourquoi</td><td>поэтому</td><td>следствие</td></tr>
+    <tr><td>enfin / pour conclure</td><td>наконец / в заключение</td><td>закончить</td></tr>
   </table>
-  <div class="gram-tip">💡 puedo + quiero + tengo que — три конструкции, которые покрывают 70% разговорных ситуаций.</div>
 </div>`;
 }
 
 function getExamTipsHTML() {
   return `
-<div class="tips-intro">Практические советы для эффективной практики речи, письма и аудирования на французском.</div>
+<div class="tips-intro">Что реально влияет на балл DELF A2 и B1 — по устройству самого экзамена, а не по общим советам «учите слова».</div>
 <div class="tip-item">
   <div class="tip-num">1</div>
   <div class="tip-body">
-    <div class="tip-title">Структура практики A2/B1</div>
-    <div class="tip-text">4 части: аудирование (слушать и отвечать), чтение (понять текст), письмо (написать письмо/описание), говорение (диалог с собеседником). Полезно тренировать каждую часть отдельно.</div>
+    <div class="tip-title">Четыре части, и каждая обязательна</div>
+    <div class="tip-text">Аудирование, чтение, письмо, говорение — по 25 баллов. Для диплома нужно 50 из 100, НО минимум 5 баллов в каждой части. Ноль в одной топит весь экзамен, даже если остальные сданы блестяще. Поэтому слабую часть нельзя игнорировать — её надо дотянуть хотя бы до порога.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">2</div>
   <div class="tip-body">
-    <div class="tip-title">Уровень A2 vs B1</div>
-    <div class="tip-text">A2 достаточно для базового общения (магазин, транспорт, врач). B1 даёт больше свободы в разговоре и позволяет писать развёрнутые тексты. Если уверенно владеешь A2 — пробуй тренироваться на B1, лишним точно не будет.</div>
+    <div class="tip-title">A2 или B1 — что выбрать</div>
+    <div class="tip-text">A2 подтверждает бытовое выживание: магазин, врач, транспорт. B1 — уровень, на котором можно работать и спорить. Для натурализации с 2026 года требуется B2, так что B1 — промежуточная ступень, а не финиш. Если A2 даётся уверенно, идите сразу на B1: разница в цене невелика, а диплом бессрочный.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">3</div>
   <div class="tip-body">
-    <div class="tip-title">Приоритет: спряжение yo/tú/él</div>
-    <div class="tip-text">90% разговора — три лица: я, ты, он/она. Выучи спряжение 30 ключевых глаголов для этих лиц — и ты уже можешь строить предложения.</div>
+    <div class="tip-title">Запись слушают дважды</div>
+    <div class="tip-text">В отличие от многих экзаменов, на DELF каждую запись включают два раза с паузой между. Первый раз слушайте целиком, не записывая — ловите общий смысл. Второй раз заполняйте ответы. Попытка записывать с первого прослушивания — типичная ошибка, теряется нить.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">4</div>
   <div class="tip-body">
-    <div class="tip-title">quiero + глагол — твоё главное оружие</div>
-    <div class="tip-text">«Я хочу [что-то сделать]» — эта конструкция работает в магазине, банке, у врача, в любом учреждении. Выучи quiero + базовые глаголы и ты можешь попросить что угодно.</div>
+    <div class="tip-title">Vrai/Faux требует цитату</div>
+    <div class="tip-text">В чтении задание «верно или неверно» почти всегда просит justification — выписать фразу из текста. Без цитаты балл не засчитают, даже если галочка стоит правильно. Привыкайте сразу подчёркивать нужную строку.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">5</div>
   <div class="tip-body">
-    <div class="tip-title">Аудирование: слушай фоново</div>
-    <div class="tip-text">Включай испаноязычное радио или подкасты фоном дома. Не пытайся всё понять — просто привыкай к ритму языка. 30 минут в день = +20% на аудировании через месяц.</div>
+    <div class="tip-title">Слова считают</div>
+    <div class="tip-text">На письме указано «60–80 слов» или «160–180» — это не рекомендация. За недобор снимают баллы. Научитесь на глаз определять объём: в среднем строка рукописного текста — около 10 слов. Считать в конце некогда.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">6</div>
   <div class="tip-body">
-    <div class="tip-title">Письмо: 3 шаблона покрывают всё</div>
-    <div class="tip-text">Выучи 3 шаблона письма: 1) представление себя и семьи, 2) описание своего дня/распорядка, 3) что тебе нравится/не нравится в испаноязычной стране. Эти темы встречаются чаще всего.</div>
+    <div class="tip-title">Связки дороже редких слов</div>
+    <div class="tip-text">Связность текста — отдельный критерий оценки. Три-четыре d'abord / ensuite / par contre / c'est pourquoi поднимут оценку сильнее, чем попытка вставить сложное слово, в котором легко ошибиться.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">7</div>
   <div class="tip-body">
-    <div class="tip-title">Говорение: медленно и уверенно</div>
-    <div class="tip-text">Говори медленно — важна правильность, а не скорость. Простое предложение, сказанное без ошибок, лучше сложного с запинками.</div>
+    <div class="tip-title">Десять минут подготовки к устному</div>
+    <div class="tip-text">Перед говорением дают время с листом бумаги. Не пишите готовый текст — читать по бумажке запрещено и это видно. Записывайте только опорные слова и связки: три-четыре пункта плана хватает.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">8</div>
   <div class="tip-body">
-    <div class="tip-title">Чтение: смотри на контекст, не на каждое слово</div>
-    <div class="tip-text">Не нужно понимать каждое слово. Читай абзац целиком — контекст обычно даёт понимание общего смысла. Вопросы всегда о главной идее, а не о деталях.</div>
+    <div class="tip-title">Не знаешь слово — опиши его</div>
+    <div class="tip-text">Экзаменатор оценивает не словарь, а способность донести мысль. «C'est une chose pour ouvrir les bouteilles» вместо забытого tire-bouchon — это плюс, а не минус. Молчание и переход на русский — минус.</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">9</div>
   <div class="tip-body">
-    <div class="tip-title">Минимальный словарный запас A2</div>
-    <div class="tip-text">~600-800 слов. Приоритет: числа, дни/месяцы, семья, еда, работа, здоровье, транспорт, магазины. Все эти темы есть в разделе «Карточки» этого приложения.</div>
+    <div class="tip-title">Passé composé против imparfait</div>
+    <div class="tip-text">Половина письменных ошибок на B1 — здесь. Правило простое: случилось однажды — passé composé, происходило регулярно или описывает фон — imparfait. Потренируйтесь на своей неделе: «вчера я сходил» против «раньше я ходил каждую субботу».</div>
   </div>
 </div>
 <div class="tip-item">
   <div class="tip-num">10</div>
   <div class="tip-body">
-    <div class="tip-title">За месяц активной практики</div>
-    <div class="tip-text">Пройди все сценарии (раздел «Сценарии»), порепетируй диалоги вслух, напиши пробный текст 100–150 слов. Попроси носителя французского проверить или запишись на пробный урок.</div>
+    <div class="tip-title">Слушайте французское радио фоном</div>
+    <div class="tip-text">Тридцать минут в день радио или подкаста для изучающих дают к аудированию больше, чем разбор упражнений. Не старайтесь понять всё — привыкайте к ритму и к тому, как французы глотают звуки.</div>
+  </div>
+</div>
+<div class="tip-item">
+  <div class="tip-num">11</div>
+  <div class="tip-body">
+    <div class="tip-title">Диплом навсегда</div>
+    <div class="tip-text">DELF не истекает, в отличие от TCF и TEF, у которых срок два года. Сдали один раз — предъявляете всю жизнь. Это довод в пользу DELF, если сроки подачи на гражданство пока неясны.</div>
   </div>
 </div>`;
 }
@@ -4512,162 +4533,162 @@ function getExamVocabHTML() {
   const topics = [
     {
       id: 'v1', title: 'Личные данные', emoji: '🪪',
-      hint: 'Представление себя — часть Speaking и Writing',
+      hint: 'Первая часть устного экзамена — entretien dirigé',
       words: [
-        ['el nombre', 'эль но́мбрэ', 'имя'],
-        ['el apellido', 'эль апэйи́до', 'фамилия'],
-        ['la edad', 'ла эда́д', 'возраст'],
-        ['la nacionalidad', 'ла насьоналида́д', 'гражданство/национальность'],
-        ['la dirección', 'ла дирэксьо́н', 'адрес'],
-        ['el número de teléfono', 'эль ну́мэро дэ тэлэ́фоно', 'номер телефона'],
-        ['la experiencia laboral', 'ла экспэрье́нсья лабора́ль', 'опыт работы'],
-        ['casado/a', 'каса́до/а', 'женатый/замужняя'],
-        ['soltero/a', 'сольтэ́ро/а', 'холостой/незамужняя'],
-        ['tengo hijos', 'тэ́нго и́хос', 'у меня есть дети'],
+        ['le nom', 'лё нон', 'фамилия'],
+        ['le prénom', 'лё прено́н', 'имя'],
+        ['la date de naissance', 'ля дат дё нэса́нс', 'дата рождения'],
+        ['la nationalité', 'ля насьоналитэ́', 'гражданство'],
+        ['l\'adresse', 'лядрэ́с', 'адрес'],
+        ['le numéro de téléphone', 'лё нюмеро́ дё телефо́н', 'номер телефона'],
+        ['la situation familiale', 'ля ситюасьо́н фамилья́ль', 'семейное положение'],
+        ['marié(e)', 'марие́', 'женат / замужем'],
+        ['célibataire', 'селибатэ́р', 'холост / не замужем'],
+        ['j\'ai deux enfants', 'жэ дёз-анфа́н', 'у меня двое детей'],
       ]
     },
     {
       id: 'v2', title: 'Семья', emoji: '👨‍👩‍👧',
-      hint: 'Часто встречается в темах Speaking',
+      hint: 'Частая тема монолога и письма другу',
       words: [
-        ['el esposo / el marido', 'эль эспо́со / эль мари́до', 'супруг'],
-        ['la esposa / la mujer', 'ла эспо́са / ла мухэ́р', 'супруга'],
-        ['los hijos', 'лос и́хос', 'дети'],
-        ['el hijo', 'эль и́хо', 'сын'],
-        ['la hija', 'ла и́ха', 'дочь'],
-        ['los padres', 'лос па́дрэс', 'родители'],
-        ['el abuelo', 'эль абуэ́ло', 'дедушка'],
-        ['la abuela', 'ла абуэ́ла', 'бабушка'],
-        ['el hermano', 'эль эрма́но', 'брат'],
-        ['la hermana', 'ла эрма́на', 'сестра'],
+        ['le mari', 'лё мари́', 'муж'],
+        ['la femme', 'ля фам', 'жена'],
+        ['les enfants', 'лез-анфа́н', 'дети'],
+        ['le fils', 'лё фис', 'сын'],
+        ['la fille', 'ля фий', 'дочь'],
+        ['les parents', 'ле пара́н', 'родители'],
+        ['le frère', 'лё фрэр', 'брат'],
+        ['la sœur', 'ля сёр', 'сестра'],
+        ['les grands-parents', 'ле гран-пара́н', 'бабушка и дедушка'],
+        ['s\'occuper de', 'сокюпэ́ дё', 'заботиться о'],
       ]
     },
     {
       id: 'v3', title: 'Работа и профессия', emoji: '💼',
-      hint: 'Ключевая тема Writing Level A2–B1',
+      hint: 'Спросят почти наверняка: qu\'est-ce que vous faites ?',
       words: [
-        ['el trabajo', 'эль трабáхо', 'работа'],
-        ['el jefe / el empleador', 'эль хэ́фэ / эль эмплэадо́р', 'работодатель'],
-        ['el sueldo / el salario', 'эль суэ́льдо / эль сала́рьо', 'зарплата'],
-        ['el horario', 'эль ора́рьо', 'рабочее расписание'],
-        ['las vacaciones / el permiso', 'лас вакасьо́нэс / эль пэрми́со', 'отпуск / разрешение'],
-        ['el médico', 'эль мэ́дико', 'врач'],
-        ['el profesor / la profesora', 'эль профэсо́р / ла профэсо́ра', 'учитель/учительница'],
-        ['el ingeniero / el mecánico', 'эль инхэнье́ро / эль мэка́нико', 'инженер/механик'],
-        ['el contable', 'эль конта́блэ', 'бухгалтер'],
-        ['el empleado', 'эль эмплэа́до', 'сотрудник/служащий'],
+        ['le travail', 'лё трава́й', 'работа'],
+        ['l\'entreprise', 'лянтрёпри́з', 'компания'],
+        ['le collègue', 'лё колле́г', 'коллега'],
+        ['le chef', 'лё шеф', 'начальник'],
+        ['le salaire', 'лё салэ́р', 'зарплата'],
+        ['le contrat', 'лё контра́', 'договор'],
+        ['chercher un emploi', 'шершэ́ эн амплуа́', 'искать работу'],
+        ['l\'entretien d\'embauche', 'лянтрётье́н дамбо́ш', 'собеседование'],
+        ['à temps plein', 'а тан плэн', 'полный рабочий день'],
+        ['le stage', 'лё стаж', 'стажировка'],
       ]
     },
     {
-      id: 'v4', title: 'Дом и жильё', emoji: '🏠',
-      hint: 'Тема письма и диалогов о повседневной жизни',
+      id: 'v4', title: 'Жильё', emoji: '🏠',
+      hint: 'Сценка «снять квартиру» — классика interaction',
       words: [
-        ['el piso / el apartamento', 'эль пи́со / эль апартамэ́нто', 'квартира'],
-        ['la casa', 'ла ка́са', 'дом'],
-        ['el alquiler', 'эль алькилэ́р', 'аренда'],
-        ['el propietario / el dueño', 'эль пропьэта́рьо / эль дуэ́ньо', 'хозяин/собственник'],
-        ['el dormitorio', 'эль дормито́рьо', 'спальня'],
-        ['la cocina', 'ла коси́на', 'кухня'],
-        ['el baño', 'эль ба́ньо', 'ванная'],
-        ['el salón', 'эль салóн', 'гостиная'],
-        ['la planta', 'ла пла́нта', 'этаж'],
-        ['el vecino', 'эль вэси́но', 'сосед'],
+        ['le logement', 'лё ложма́н', 'жильё'],
+        ['l\'appartement', 'ляпартёма́н', 'квартира'],
+        ['le loyer', 'лё луайе́', 'арендная плата'],
+        ['les charges', 'ле шарж', 'коммунальные расходы'],
+        ['le bail', 'лё бай', 'договор аренды'],
+        ['le propriétaire', 'лё проприетэ́р', 'владелец жилья'],
+        ['le locataire', 'лё локатэ́р', 'арендатор'],
+        ['l\'état des lieux', 'лета́ де льё', 'опись состояния жилья'],
+        ['le chauffage', 'лё шофа́ж', 'отопление'],
+        ['déménager', 'деменажэ́', 'переезжать'],
       ]
     },
     {
-      id: 'v5', title: 'Здоровье и медицина', emoji: '🏥',
-      hint: 'Диалог «у врача» — типичный Speaking сценарий',
+      id: 'v5', title: 'Здоровье', emoji: '🏥',
+      hint: 'Запись к врачу — частая ситуация на устном',
       words: [
-        ['el dolor', 'эль долóр', 'боль'],
-        ['duele', 'дуэ́лэ', 'болит'],
-        ['la fiebre', 'ла фьэ́брэ', 'температура/жар'],
-        ['el medicamento', 'эль мэдикамэ́нто', 'лекарство'],
-        ['la receta', 'ла рэсэ́та', 'рецепт'],
-        ['el hospital', 'эль оспита́ль', 'больница'],
-        ['la consulta', 'ла консу́льта', 'кабинет врача'],
-        ['la cita', 'ла си́та', 'запись/встреча'],
-        ['el malestar', 'эль малэста́р', 'недомогание'],
-        ['la alergia', 'ла алэ́рхья', 'аллергия'],
+        ['le médecin', 'лё медсэ́н', 'врач'],
+        ['le rendez-vous', 'лё рандэву́', 'приём, встреча'],
+        ['l\'ordonnance', 'лёрдона́нс', 'рецепт'],
+        ['la pharmacie', 'ля фармаси́', 'аптека'],
+        ['avoir mal à', 'авуа́р маль а', 'испытывать боль в'],
+        ['la fièvre', 'ля фьевр', 'температура'],
+        ['la carte Vitale', 'ля карт вита́ль', 'карта медстраховки'],
+        ['l\'arrêt de travail', 'лярэ́ дё трава́й', 'больничный'],
+        ['les urgences', 'лез-юржа́нс', 'приёмный покой'],
+        ['se soigner', 'сё суанье́', 'лечиться'],
       ]
     },
     {
       id: 'v6', title: 'Транспорт и город', emoji: '🚌',
-      hint: 'Ориентация в городе — стандартная тема Speaking',
+      hint: 'Объявления на вокзале — типичное аудирование',
       words: [
-        ['el autobús', 'эль аутобу́с', 'автобус'],
-        ['el taxi', 'эль та́кси', 'такси'],
-        ['la estación', 'ла эстасьóн', 'станция'],
-        ['la parada', 'ла пара́да', 'остановка'],
-        ['el billete', 'эль бийе́тэ', 'билет'],
-        ['la calle', 'ла ка́йе', 'дорога/улица'],
-        ['todo recto', 'тóдо рэ́кто', 'прямо'],
-        ['a la izquierda', 'а ла искьэ́рда', 'налево'],
-        ['a la derecha', 'а ла дэрэ́ча', 'направо'],
-        ['cerca / lejos', 'сэ́рка / лэ́хос', 'близко / далеко'],
+        ['la gare', 'ля гар', 'вокзал'],
+        ['le quai', 'лё кэ', 'платформа'],
+        ['le billet', 'лё бийе́', 'билет'],
+        ['l\'horaire', 'лёрэ́р', 'расписание'],
+        ['la correspondance', 'ля кореспонда́нс', 'пересадка'],
+        ['le retard', 'лё рёта́р', 'опоздание'],
+        ['la grève', 'ля грэв', 'забастовка'],
+        ['le centre-ville', 'лё сантр-ви́ль', 'центр города'],
+        ['la mairie', 'ля мэри́', 'мэрия'],
+        ['le quartier', 'лё картье́', 'район'],
       ]
     },
     {
       id: 'v7', title: 'Покупки и деньги', emoji: '🛒',
-      hint: 'Диалог в магазине/банке — обязательная тема',
+      hint: 'Сценки в магазине и банке',
       words: [
-        ['la tienda', 'ла тьэ́нда', 'магазин'],
-        ['el precio', 'эль прэ́сьо', 'цена'],
-        ['el recibo / el tique', 'эль рэси́бо / эль ти́кэ', 'чек'],
-        ['barato/a', 'бара́то/а', 'дешёвый'],
-        ['caro/a', 'ка́ро/а', 'дорогой'],
-        ['¿cuánto cuesta?', 'куа́нто куэ́ста', 'сколько стоит?'],
-        ['pagar', 'пага́р', 'платить'],
-        ['el cambio', 'эль ка́мбьо', 'сдача'],
-        ['la tarjeta de crédito', 'ла тархэ́та дэ крэ́дито', 'кредитная карта'],
-        ['el descuento', 'эль дэскуэ́нто', 'скидка'],
+        ['le magasin', 'лё магазэ́н', 'магазин'],
+        ['la caisse', 'ля кэс', 'касса'],
+        ['le prix', 'лё при', 'цена'],
+        ['les soldes', 'ле сольд', 'распродажа'],
+        ['le ticket de caisse', 'лё тикэ́ дё кэс', 'чек'],
+        ['rembourser', 'рамбурсэ́', 'возместить, вернуть деньги'],
+        ['le compte bancaire', 'лё конт банкэ́р', 'банковский счёт'],
+        ['le virement', 'лё вирма́н', 'перевод'],
+        ['cher / bon marché', 'шер / бон маршэ́', 'дорогой / дешёвый'],
+        ['dépenser', 'депансэ́', 'тратить'],
       ]
     },
     {
-      id: 'v8', title: 'Досуг и хобби', emoji: '🎭',
-      hint: 'Рассказ о свободном времени — Speaking тема',
+      id: 'v8', title: 'Досуг и отдых', emoji: '🎭',
+      hint: 'Монолог о себе и письмо другу',
       words: [
-        ['el tiempo libre', 'эль тьэ́мпо ли́брэ', 'свободное время'],
-        ['la afición / el hobby', 'ла афисьо́н / эль хóби', 'хобби'],
-        ['el cine', 'эль си́нэ', 'кино'],
-        ['el teatro', 'эль тэа́тро', 'театр'],
-        ['la música', 'ла му́сика', 'музыка'],
-        ['el deporte', 'эль дэпóртэ', 'спорт'],
-        ['viajar', 'вьяха́р', 'путешествовать'],
-        ['leer', 'лээ́р', 'читать'],
-        ['cocinar', 'косина́р', 'готовить'],
-        ['salir', 'сали́р', 'выходить/гулять'],
+        ['les loisirs', 'ле луази́р', 'досуг'],
+        ['la promenade', 'ля промёна́д', 'прогулка'],
+        ['le cinéma', 'лё синема́', 'кино'],
+        ['le musée', 'лё мюзэ́', 'музей'],
+        ['la randonnée', 'ля рандонэ́', 'поход'],
+        ['faire du sport', 'фэр дю спор', 'заниматься спортом'],
+        ['les vacances', 'ле вака́нс', 'отпуск, каникулы'],
+        ['se reposer', 'сё рёпозэ́', 'отдыхать'],
+        ['se retrouver', 'сё рётрувэ́', 'встречаться'],
+        ['ça me plaît', 'са мё плэ', 'мне это нравится'],
       ]
     },
     {
       id: 'v9', title: 'Время и даты', emoji: '📅',
-      hint: 'Нужны для любого письменного задания',
+      hint: 'В аудировании просят записать время и дату',
       words: [
-        ['ayer', 'айе́р', 'вчера'],
-        ['hoy', 'ой', 'сегодня'],
-        ['mañana', 'манья́на', 'завтра'],
-        ['la semana pasada', 'ла сэма́на паса́да', 'на прошлой неделе'],
-        ['el año que viene', 'эль а́ньо кэ вьэ́нэ', 'в следующем году'],
-        ['a menudo', 'а мэну́до', 'часто'],
-        ['a veces', 'а вэ́сэс', 'иногда'],
-        ['nunca', 'ну́нка', 'никогда'],
-        ['siempre', 'сьэ́мпрэ', 'всегда'],
-        ['últimamente', 'у́льтимамэ́нтэ', 'последнее время / недавно'],
+        ['aujourd\'hui', 'ожурдюи́', 'сегодня'],
+        ['demain', 'дёмэ́н', 'завтра'],
+        ['hier', 'йер', 'вчера'],
+        ['la semaine prochaine', 'ля сёмэ́н прошэ́н', 'на следующей неделе'],
+        ['le mois dernier', 'лё муа́ дернье́', 'в прошлом месяце'],
+        ['tous les jours', 'ту ле жур', 'каждый день'],
+        ['depuis deux ans', 'дёпюи́ дёз-ан', 'вот уже два года'],
+        ['dans une heure', 'дан-з-юн ёр', 'через час'],
+        ['le matin / le soir', 'лё матэ́н / лё суа́р', 'утром / вечером'],
+        ['à quelle heure ?', 'а кэль ёр', 'во сколько?'],
       ]
     },
     {
-      id: 'v10', title: 'Полезные фразы-связки', emoji: '🔗',
-      hint: 'Эти слова поднимают оценку за Writing и Speaking',
+      id: 'v10', title: 'Связки и мнение', emoji: '🔗',
+      hint: 'За них отдельно дают баллы на B1',
       words: [
-        ['también', 'тамбьэ́н', 'также'],
-        ['sin embargo', 'син эмба́рго', 'однако'],
-        ['por lo tanto', 'пор ло та́нто', 'следовательно'],
-        ['por ejemplo', 'пор эхэ́мпло', 'например'],
-        ['por un lado... por otro', 'пор ун ла́до... пор óтро', 'с одной стороны... с другой'],
-        ['estoy de acuerdo / no estoy de acuerdo', 'эстóй дэ акуэ́рдо / но эстóй дэ акуэ́рдо', 'согласен / не согласен'],
-        ['en mi opinión', 'эн ми опиньóн', 'по моему мнению'],
-        ['creo que', 'крэ́о кэ', 'я думаю что'],
-        ['me gustaría', 'мэ густари́а', 'я бы хотел(а)'],
-        ['muchas gracias', 'му́час гра́сьяс', 'большое спасибо'],
+        ['d\'abord', 'дабо́р', 'сначала'],
+        ['ensuite', 'ансюи́т', 'затем'],
+        ['de plus', 'дё плю', 'кроме того'],
+        ['par contre', 'пар контр', 'зато, напротив'],
+        ['cependant', 'сёпанда́н', 'однако'],
+        ['parce que', 'парс кё', 'потому что'],
+        ['c\'est pourquoi', 'сэ пуркуа́', 'поэтому'],
+        ['à mon avis', 'а мон-ави́', 'на мой взгляд'],
+        ['je pense que', 'жё панс кё', 'я думаю, что'],
+        ['pour conclure', 'пур конклю́р', 'в заключение'],
       ]
     },
   ];
@@ -4707,259 +4728,216 @@ ${blocks}`;
 // ===================== EXAM MOCK TEST (sprint 6) =====================
 
 const EXAM_MOCK_QUESTIONS = [
-  // -- GRAMMAR --
+  // -- GRAMMAIRE --
   {
     type: 'grammar',
-    q: 'Выбери правильную форму глагола:\nYo ___ en Valencia.',
-    opts: ['vivo', 'vives', 'vive', 'vivimos'],
+    q: 'Выбери правильную форму:\nJe ___ à Lyon depuis trois ans.',
+    opts: ['habite', 'habites', 'habitons', 'habitent'],
     correct: 0,
-    exp: 'Yo (я) → 1-е лицо ед.ч.: vivo'
+    exp: 'Je → 1-е лицо ед. ч. первой группы: habite'
   },
   {
     type: 'grammar',
-    q: 'Выбери правильную форму:\nMaría ___ café cada mañana.',
-    opts: ['bebe', 'bebo', 'bebéis', 'beben'],
+    q: 'Выбери правильную форму:\nNous ___ au marché tous les samedis.',
+    opts: ['allons', 'allez', 'vais', 'vont'],
     correct: 0,
-    exp: 'María — 3-е лицо ед.ч.: bebe'
+    exp: 'Aller с nous → allons'
   },
   {
     type: 'grammar',
-    q: 'Прошедшее время (pretérito indefinido). Выбери верное:\nAyer yo ___ al supermercado.',
-    opts: ['fui', 'voy', 'voy a ir', 'fuimos'],
+    q: 'Passé composé. Выбери верное:\nHier, je ___ à la préfecture.',
+    opts: ['suis allé', 'ai allé', 'vais', 'irai'],
     correct: 0,
-    exp: 'Pretérito de ir (я ходил/пошёл) → fui'
+    exp: 'Aller — глагол движения, вспомогательный être: je suis allé'
   },
   {
     type: 'grammar',
-    q: 'Будущее время (ir a). Выбери верное:\nMañana nosotros ___ a la playa.',
-    opts: ['vamos a ir', 'voy a ir', 'va a ir', 'vamos'],
+    q: 'Passé composé. Выбери верное:\nElle ___ le dossier hier soir.',
+    opts: ['a préparé', 'est préparé', 'a prépare', 'est préparée'],
     correct: 0,
-    exp: 'Nosotros (мы) + ir a → vamos a ir'
+    exp: 'Préparer идёт с avoir, причастие préparé: elle a préparé'
   },
   {
     type: 'grammar',
-    q: 'Выбери правильный артикль:\n___ profesor es muy bueno.',
-    opts: ['El', 'La', 'Los', 'Las'],
+    q: 'Согласование с être. Выбери верное:\nMes sœurs sont ___ à Paris.',
+    opts: ['arrivées', 'arrivé', 'arrivés', 'arriver'],
     correct: 0,
-    exp: 'profesor — мужской род → el profesor'
+    exp: 'С être причастие согласуется: mes sœurs — женский род мн. ч. → arrivées'
   },
   {
     type: 'grammar',
-    q: 'Личное a. Выбери верное:\nQuiero ___ mi madre.',
-    opts: ['a', 'en', 'de', 'con'],
+    q: 'Отрицание. Выбери верное:\nJe n\'ai pas ___ voiture.',
+    opts: ['de', 'une', 'la', 'des'],
     correct: 0,
-    exp: 'Перед человеком-дополнением ставится «личное a»: quiero a mi madre'
+    exp: 'После отрицания un/une/des превращаются в de'
   },
-  // -- VOCABULARY --
+  {
+    type: 'grammar',
+    q: 'Предлог со страной. Выбери верное:\nJe vais ___ Portugal cet été.',
+    opts: ['au', 'en', 'à', 'aux'],
+    correct: 0,
+    exp: 'Portugal — мужской род, значит au Portugal'
+  },
+  {
+    type: 'grammar',
+    q: 'Слияние предлога. Выбери верное:\nJe parle ___ voisins.',
+    opts: ['aux', 'à les', 'au', 'à la'],
+    correct: 0,
+    exp: 'à + les = aux, формы «à les» не существует'
+  },
+  {
+    type: 'grammar',
+    q: 'Imparfait или passé composé?\nQuand j\'étais petit, je ___ chez ma grand-mère chaque été.',
+    opts: ['allais', 'suis allé', 'irai', 'vais'],
+    correct: 0,
+    exp: 'Повторялось регулярно в прошлом → imparfait: j\'allais'
+  },
+  {
+    type: 'grammar',
+    q: 'Futur simple. Выбери верное:\nDemain, nous ___ le contrat.',
+    opts: ['signerons', 'signons', 'avons signé', 'signions'],
+    correct: 0,
+    exp: 'Futur simple от signer с nous: signerons'
+  },
+
+  // -- VOCABULAIRE --
   {
     type: 'vocab',
-    q: 'Что значит слово «el alquiler»?',
-    opts: ['аренда/арендная плата', 'электричество', 'страховка', 'налог'],
+    q: 'Как называется подтверждение адреса, которое просят в банке и префектуре?',
+    opts: ['un justificatif de domicile', 'un relevé de notes', 'une ordonnance', 'un devis'],
     correct: 0,
-    exp: 'El alquiler = арендная плата, аренда квартиры'
+    exp: 'Justificatif de domicile — счёт за свет, договор аренды и т.п.'
   },
   {
     type: 'vocab',
-    q: 'Выбери верный перевод:\n«Tengo fiebre»',
-    opts: ['У меня температура', 'Мне холодно', 'У меня болит голова', 'Я устал'],
+    q: 'Что такое «bail» ?',
+    opts: ['договор аренды', 'банковская выписка', 'страховка', 'налоговое уведомление'],
     correct: 0,
-    exp: 'Fiebre = жар/температура; tengo fiebre = у меня жар'
+    exp: 'Bail — договор аренды жилья'
   },
   {
     type: 'vocab',
-    q: 'Как по-французски «скидка»?',
-    opts: ['el descuento', 'el recibo', 'el precio', 'el pago'],
+    q: 'Куда обращаются за пособием на жильё?',
+    opts: ['à la CAF', 'à la préfecture', 'à la mairie', 'à la Sécurité sociale'],
     correct: 0,
-    exp: 'El descuento = скидка'
+    exp: 'CAF — Caisse d\'allocations familiales, она платит APL'
   },
   {
     type: 'vocab',
-    q: 'Что значит «a la izquierda»?',
-    opts: ['налево', 'направо', 'прямо', 'назад'],
+    q: 'Что означает «prendre rendez-vous» ?',
+    opts: ['записаться на приём', 'отменить встречу', 'опоздать', 'подписать договор'],
     correct: 0,
-    exp: 'A la izquierda = налево; a la derecha = направо; todo recto = прямо'
+    exp: 'Prendre rendez-vous — записаться, назначить встречу'
   },
-  // -- READING --
+  {
+    type: 'vocab',
+    q: 'Как сказать «мне нужна справка» ?',
+    opts: ['J\'ai besoin d\'une attestation', 'Je suis une attestation', 'J\'attends une attestation', 'Je fais une attestation'],
+    correct: 0,
+    exp: 'Avoir besoin de — нуждаться в чём-то'
+  },
+  {
+    type: 'vocab',
+    q: 'Что такое «récépissé» ?',
+    opts: ['расписка о приёме документов', 'квитанция из магазина', 'рецепт врача', 'счёт за свет'],
+    correct: 0,
+    exp: 'Récépissé выдаёт префектура, он временно заменяет вид на жительство'
+  },
+
+  // -- COMPRÉHENSION DES ÉCRITS --
   {
     type: 'reading',
-    passage: 'Ana es enfermera. Trabaja en un hospital en Valencia. Cada día va al trabajo en autobús.',
-    q: '¿Dónde trabaja Ana?',
-    opts: ['En un hospital', 'En un colegio', 'En una farmacia', 'En el supermercado'],
+    passage: 'Camille est infirmière. Elle travaille à l\'hôpital de Lyon depuis cinq ans. Chaque matin, elle prend le tram à sept heures. Le mardi, elle finit plus tôt et va chercher sa fille à l\'école.',
+    q: 'Où travaille Camille ?',
+    opts: ['À l\'hôpital', 'À l\'école', 'À la pharmacie', 'À la mairie'],
     correct: 0,
-    exp: 'В тексте: «Trabaja en un hospital» — работает в больнице'
+    exp: 'В тексте: «elle travaille à l\'hôpital de Lyon»'
   },
   {
     type: 'reading',
-    passage: 'Ana es enfermera. Trabaja en un hospital en Valencia. Cada día va al trabajo en autobús.',
-    q: '¿Cómo va al trabajo?',
-    opts: ['En autobús', 'En coche', 'En taxi', 'A pie'],
+    passage: 'Camille est infirmière. Elle travaille à l\'hôpital de Lyon depuis cinq ans. Chaque matin, elle prend le tram à sept heures. Le mardi, elle finit plus tôt et va chercher sa fille à l\'école.',
+    q: 'Comment va-t-elle au travail ?',
+    opts: ['En tram', 'En voiture', 'À pied', 'En bus'],
     correct: 0,
-    exp: 'В тексте: «va al trabajo en autobús» — на автобусе'
+    exp: 'В тексте: «elle prend le tram à sept heures»'
   },
   {
-    type: 'grammar',
-    q: 'Выбери правильный предлог:\nVoy ___ trabajo cada día.',
-    opts: ['al', 'del', 'con', 'para'],
+    type: 'reading',
+    passage: 'AVIS AUX LOCATAIRES. En raison de travaux sur la toiture, l\'eau sera coupée mercredi 12 mars de 9h à 16h. Nous vous prions de prévoir une réserve d\'eau. Le syndic reste joignable au 04 78 55 12 30.',
+    q: 'Что произойдёт 12 марта?',
+    opts: ['Отключат воду', 'Отключат отопление', 'Закроют подъезд', 'Отключат электричество'],
     correct: 0,
-    exp: 'Voy al trabajo = иду на работу (al = a + el)'
+    exp: 'В объявлении: «l\'eau sera coupée mercredi 12 mars»'
   },
   {
-    type: 'vocab',
-    q: 'Фраза «en mi opinión» означает:',
-    opts: ['по моему мнению', 'в конце концов', 'с другой стороны', 'например'],
+    type: 'reading',
+    passage: 'AVIS AUX LOCATAIRES. En raison de travaux sur la toiture, l\'eau sera coupée mercredi 12 mars de 9h à 16h. Nous vous prions de prévoir une réserve d\'eau. Le syndic reste joignable au 04 78 55 12 30.',
+    q: 'Кому звонить с вопросами?',
+    opts: ['Управляющему домом (syndic)', 'Владельцу квартиры', 'В мэрию', 'Соседям'],
     correct: 0,
-    exp: 'En mi opinión = по моему мнению — важная фраза для Speaking/Writing'
-  },
-  {
-    type: 'grammar',
-    q: 'Выбери верную конструкцию:\nQuiero ___ a la playa.',
-    opts: ['ir', 'voy', 'que', 'para'],
-    correct: 0,
-    exp: 'Quiero + инфинитив = хочу + гл. (quiero ir = хочу пойти)'
+    exp: 'В объявлении указан телефон syndic — управляющего домом'
   },
 ];
 
-let examTestState = { idx: 0, score: 0, answered: false };
-
-function startExamMockTest() {
-  document.getElementById('exam-detail-title').textContent = '📝 Пробный тест A2';
-  examTestState = { idx: 0, score: 0, answered: false };
-  renderExamTestQuestion();
-  showScreen('screen-exam-detail');
-}
-
-function renderExamTestQuestion() {
-  const body = document.getElementById('exam-detail-body');
-  const { idx, score } = examTestState;
-  const total = EXAM_MOCK_QUESTIONS.length;
-
-  if (idx >= total) {
-    const pct = Math.round(score / total * 100);
-    const medal = pct >= 80 ? '🥇' : pct >= 60 ? '🥈' : '💪';
-    const msg = pct >= 80 ? 'Отличный результат! Ты готов к экзамену.' :
-                pct >= 60 ? 'Хороший результат. Повтори слабые темы.' :
-                'Продолжай учиться — каждая попытка делает тебя лучше.';
-    body.innerHTML = `
-<div class="mock-result">
-  <div class="mock-result-medal">${medal}</div>
-  <div class="mock-result-score">${score} / ${total}</div>
-  <div class="mock-result-pct">${pct}%</div>
-  <div class="mock-result-msg">${msg}</div>
-  <button class="btn-primary" style="margin-top:20px" onclick="startExamMockTest()">Пройти снова</button>
-</div>`;
-    return;
-  }
-
-  const q = EXAM_MOCK_QUESTIONS[idx];
-  const typeLbl = { grammar: '📚 Грамматика', vocab: '📖 Лексика', reading: '📄 Чтение' }[q.type];
-  const passage = q.passage
-    ? `<div class="mock-passage">${q.passage}</div>`
-    : '';
-  const opts = q.opts.map((o, i) => `
-    <button class="mock-opt" id="mock-opt-${i}" onclick="selectExamTestOpt(${i})">${String.fromCharCode(65+i)}. ${o}</button>
-  `).join('');
-
-  body.innerHTML = `
-<div class="mock-progress-row">
-  <div class="mock-progress-bar"><div class="mock-progress-fill" style="width:${idx/total*100}%"></div></div>
-  <span class="mock-progress-lbl">${idx+1} / ${total}</span>
-</div>
-<div class="mock-type-badge">${typeLbl}</div>
-${passage}
-<div class="mock-question">${q.q.replace(/\n/g, '<br>')}</div>
-<div class="mock-opts" id="mock-opts">${opts}</div>
-<div class="mock-explanation" id="mock-exp" style="display:none"></div>
-<button class="btn-primary mock-next-btn" id="mock-next" style="display:none" onclick="nextExamTestQuestion()">
-  ${idx + 1 < total ? 'Следующий вопрос →' : 'Показать результат'}
-</button>`;
-}
-
-function selectExamTestOpt(i) {
-  if (examTestState.answered) return;
-  examTestState.answered = true;
-  const q = EXAM_MOCK_QUESTIONS[examTestState.idx];
-  const correct = q.correct;
-  if (i === correct) examTestState.score++;
-
-  document.querySelectorAll('.mock-opt').forEach((btn, j) => {
-    btn.disabled = true;
-    if (j === correct) btn.classList.add('mock-opt-correct');
-    else if (j === i) btn.classList.add('mock-opt-wrong');
-  });
-
-  const expEl = document.getElementById('mock-exp');
-  expEl.textContent = (i === correct ? '✅ ' : '❌ ') + q.exp;
-  expEl.style.display = 'block';
-  document.getElementById('mock-next').style.display = 'block';
-}
-
-function nextExamTestQuestion() {
-  examTestState.idx++;
-  examTestState.answered = false;
-  renderExamTestQuestion();
-}
-
-// ===================== EXAM LISTENING (sprint 7) =====================
-
 const EXAM_LISTENING_TRACKS = [
   {
-    title: 'Llamada telefónica',
-    titleRu: 'Звонок в клинику',
+    title: 'Message du cabinet médical',
+    titleRu: 'Сообщение из кабинета врача',
     emoji: '📞',
-    text: 'Buenos días, quiero pedir una cita con el médico. Soy Marta Fernández. Tengo dolor de cabeza y fiebre desde ayer. ¿Puedo venir mañana por la mañana a las diez?',
-    textRu: 'Доброе утро, я хочу записаться к врачу. Я Марта Фернандес. У меня болит голова и температура со вчерашнего дня. Могу ли я прийти завтра утром в десять?',
+    text: 'Bonjour Madame Ivanova, c\'est le cabinet du docteur Mercier. Je vous appelle pour confirmer votre rendez-vous de jeudi quatorze heures trente. Pensez à apporter votre carte Vitale et l\'ordonnance précédente. Si vous ne pouvez pas venir, merci de nous prévenir au moins vingt-quatre heures avant.',
+    textRu: 'Здравствуйте, госпожа Иванова, это кабинет доктора Мерсье. Звоню подтвердить ваш приём в четверг в четырнадцать тридцать. Не забудьте карту Vitale и предыдущий рецепт. Если не сможете прийти, предупредите хотя бы за двадцать четыре часа.',
     questions: [
-      { q: '¿Qué quiere Marta?', opts: ['Pedir una cita', 'Comprar medicamentos', 'Hablar con la enfermera', 'Ir al hospital'], correct: 0, exp: 'Marta dice: «quiero pedir una cita» — хочет записаться' },
-      { q: '¿Qué le pasa a Marta?', opts: ['Dolor de cabeza y fiebre', 'Dolor de espalda', 'Frío y tos', 'Dolor de estómago'], correct: 0, exp: 'Ella dice: «tengo dolor de cabeza y fiebre» — головная боль и температура' },
-      { q: '¿Cuándo quiere venir?', opts: ['Mañana por la mañana', 'Esta tarde', 'Pasado mañana', 'El viernes'], correct: 0, exp: 'Ella dice: «mañana por la mañana a las diez» — завтра утром в десять' },
+      { q: 'Quand est le rendez-vous ?', opts: ['Jeudi à 14h30', 'Mardi à 14h30', 'Jeudi à 4h30', 'Vendredi à 15h'], correct: 0, exp: '«votre rendez-vous de jeudi quatorze heures trente»' },
+      { q: 'Que faut-il apporter ?', opts: ['La carte Vitale et l\'ordonnance', 'Le passeport', 'Un justificatif de domicile', 'Rien du tout'], correct: 0, exp: '«apporter votre carte Vitale et l\'ordonnance précédente»' },
+      { q: 'En cas d\'empêchement, il faut prévenir…', opts: ['24 heures avant', '2 heures avant', 'le jour même', 'une semaine avant'], correct: 0, exp: '«au moins vingt-quatre heures avant»' },
     ]
   },
   {
-    title: 'Anuncio en el supermercado',
+    title: 'Annonce en gare',
+    titleRu: 'Объявление на вокзале',
+    emoji: '🚆',
+    text: 'Mesdames et messieurs, votre attention s\'il vous plaît. Le train à destination de Marseille, départ prévu à seize heures dix, partira voie numéro huit avec un retard d\'environ vingt minutes. Nous vous prions de nous excuser pour la gêne occasionnée.',
+    textRu: 'Дамы и господа, внимание. Поезд до Марселя, отправление в шестнадцать десять, отправится с восьмого пути с опозданием примерно на двадцать минут. Приносим извинения за неудобства.',
+    questions: [
+      { q: 'Quelle est la destination ?', opts: ['Marseille', 'Montpellier', 'Metz', 'Mulhouse'], correct: 0, exp: '«à destination de Marseille»' },
+      { q: 'De quelle voie part le train ?', opts: ['Voie 8', 'Voie 18', 'Voie 10', 'Voie 6'], correct: 0, exp: '«partira voie numéro huit»' },
+      { q: 'Quel est le retard ?', opts: ['Environ 20 minutes', 'Environ 10 minutes', 'Une heure', 'Pas de retard'], correct: 0, exp: '«un retard d\'environ vingt minutes»' },
+    ]
+  },
+  {
+    title: 'Message de l\'école',
+    titleRu: 'Сообщение из школы',
+    emoji: '🎒',
+    text: 'Chers parents, nous vous rappelons que la réunion parents-professeurs aura lieu mardi prochain à dix-huit heures dans la salle polyvalente. La sortie scolaire au musée est reportée au vendredi treize. N\'oubliez pas de signer le carnet de liaison de votre enfant.',
+    textRu: 'Уважаемые родители, напоминаем, что родительское собрание состоится в следующий вторник в восемнадцать часов в актовом зале. Экскурсия в музей перенесена на пятницу тринадцатого. Не забудьте подписать дневник связи вашего ребёнка.',
+    questions: [
+      { q: 'Quand a lieu la réunion ?', opts: ['Mardi à 18h', 'Vendredi à 18h', 'Mardi à 8h', 'Lundi à 18h'], correct: 0, exp: '«mardi prochain à dix-huit heures»' },
+      { q: 'Qu\'est-ce qui est reporté ?', opts: ['La sortie au musée', 'La réunion', 'Les vacances', 'Le cours de sport'], correct: 0, exp: '«La sortie scolaire au musée est reportée»' },
+      { q: 'Que doivent faire les parents ?', opts: ['Signer le carnet de liaison', 'Payer la cantine', 'Appeler le directeur', 'Apporter un justificatif'], correct: 0, exp: '«N\'oubliez pas de signer le carnet de liaison»' },
+    ]
+  },
+  {
+    title: 'Annonce au supermarché',
     titleRu: 'Объявление в супермаркете',
     emoji: '🛒',
-    text: 'Estimados clientes, les informamos de que hoy tenemos grandes rebajas en la sección de frutas y verduras. Además, a partir de las seis de la tarde, la tienda cerrará antes por ser día festivo. Gracias por su comprensión.',
-    textRu: 'Уважаемые покупатели, сообщаем вам, что сегодня у нас большие скидки в отделе фруктов и овощей. Также с шести вечера магазин закроется раньше в связи с праздничным днём. Благодарим за понимание.',
+    text: 'Chers clients, nous vous informons que le rayon boulangerie propose aujourd\'hui une réduction de trente pour cent sur toutes les viennoiseries. Par ailleurs, en raison du jour férié, le magasin fermera exceptionnellement à dix-neuf heures. Merci de votre compréhension.',
+    textRu: 'Уважаемые покупатели, сообщаем, что сегодня в хлебном отделе скидка тридцать процентов на всю выпечку. Кроме того, из-за праздничного дня магазин закроется в порядке исключения в девятнадцать часов. Благодарим за понимание.',
     questions: [
-      { q: '¿Dónde hay rebajas?', opts: ['Frutas y verduras', 'Carne y pescado', 'Bebidas', 'Productos de limpieza'], correct: 0, exp: 'En el anuncio: «rebajas en la sección de frutas y verduras»' },
-      { q: '¿Cuándo cierra la tienda?', opts: ['A las seis de la tarde', 'A las ocho', 'A las nueve', 'A las diez'], correct: 0, exp: '«a partir de las seis de la tarde, la tienda cerrará»' },
-      { q: '¿Por qué cierra antes?', opts: ['Por ser día festivo', 'Por una reparación', 'Por una huelga', 'Por limpieza'], correct: 0, exp: '«cerrará antes por ser día festivo» — из-за праздника' },
+      { q: 'Où est la réduction ?', opts: ['Au rayon boulangerie', 'Au rayon fruits', 'Au rayon poisson', 'Au rayon boissons'], correct: 0, exp: '«le rayon boulangerie propose une réduction»' },
+      { q: 'Quelle est la réduction ?', opts: ['30 %', '13 %', '50 %', '3 %'], correct: 0, exp: '«une réduction de trente pour cent»' },
+      { q: 'À quelle heure ferme le magasin ?', opts: ['19h', '21h', '18h', '20h'], correct: 0, exp: '«le magasin fermera exceptionnellement à dix-neuf heures»' },
     ]
   },
   {
-    title: 'Diálogo sobre el alquiler',
-    titleRu: 'Разговор об аренде',
-    emoji: '🏠',
-    text: '— Buenas tardes, vi su anuncio sobre el piso. ¿Todavía está disponible?\n— Sí, lo está. Tiene dos dormitorios, en el tercer piso. El alquiler es de ochocientos euros al mes.\n— ¿Incluye los gastos comunes?\n— Sí, incluye el agua y la basura, pero no la electricidad.',
-    textRu: '— Добрый день, я видел ваше объявление о квартире. Она ещё свободна?\n— Да, свободна. Две спальни, третий этаж. Аренда 800 евро в месяц.\n— Включены ли коммунальные расходы?\n— Да, включает воду и вывоз мусора, но не электричество.',
+    title: 'Conversation entre collègues',
+    titleRu: 'Разговор коллег',
+    emoji: '💼',
+    text: 'Tu viens déjeuner avec nous ? On va au petit restaurant en face, celui qui fait une formule à quinze euros. Il faut y être avant midi et demi, sinon il n\'y a plus de place. Ah, et Julien nous rejoint vers treize heures, il a une réunion avant.',
+    textRu: 'Пойдёшь с нами обедать? Мы идём в маленький ресторан напротив, тот, где комплекс за пятнадцать евро. Надо быть там до половины первого, иначе мест не будет. А, и Жюльен присоединится к нам около часа, у него до этого совещание.',
     questions: [
-      { q: '¿Cuántos dormitorios tiene el piso?', opts: ['Dos', 'Uno', 'Tres', 'Cuatro'], correct: 0, exp: '«Tiene dos dormitorios» — две спальни' },
-      { q: '¿Cuánto es el alquiler?', opts: ['800 euros', '600 euros', '1000 euros', '750 euros'], correct: 0, exp: '«El alquiler es de ochocientos euros» — 800 евро' },
-      { q: '¿Qué NO está incluido en el alquiler?', opts: ['La electricidad', 'El agua', 'La basura', 'La calefacción'], correct: 0, exp: '«pero no la electricidad» — электричество не включено' },
-    ]
-  },
-  {
-    title: 'Mensaje en el contestador',
-    titleRu: 'Сообщение на автоответчике',
-    emoji: '📱',
-    text: 'Hola Pablo, soy Elena. Te llamo para recordarte que mañana tenemos clase de español a las siete de la tarde. La clase es en el centro cultural, en la calle Cervantes. Si no puedes venir, por favor, mándame un mensaje.',
-    textRu: 'Привет, Пабло, это Элена. Звоню напомнить, что завтра у нас урок французского в семь вечера. Занятие проходит в культурном центре на улице Сервантеса. Если не сможешь прийти, пожалуйста, напиши мне сообщение.',
-    questions: [
-      { q: '¿Cuándo es la clase?', opts: ['Mañana a las 7 de la tarde', 'Hoy a las 7', 'Mañana por la mañana', 'Pasado mañana'], correct: 0, exp: '«mañana tenemos clase... a las siete de la tarde» — завтра в 7 вечера' },
-      { q: '¿Dónde es la clase?', opts: ['En el centro cultural', 'En el colegio', 'En la biblioteca', 'En casa de Elena'], correct: 0, exp: '«es en el centro cultural» — в культурном центре' },
-      { q: '¿Qué debe hacer Pablo si no puede venir?', opts: ['Mandar un mensaje', 'Llamar por teléfono', 'Venir más tarde', 'Mandar un correo'], correct: 0, exp: '«mándame un mensaje» — написать сообщение' },
-    ]
-  },
-  {
-    title: 'Indicaciones en la ciudad',
-    titleRu: 'Маршрут по городу',
-    emoji: '🗺️',
-    text: 'Para ir al ayuntamiento, siga todo recto por la calle principal durante doscientos metros. En el primer semáforo, gire a la izquierda. Continúe cien metros más y el ayuntamiento estará a su derecha, al lado del banco.',
-    textRu: 'Чтобы добраться до мэрии, идите прямо по главной улице 200 метров. На первом светофоре поверните налево. Продолжайте ещё 100 метров — мэрия будет справа от вас, рядом с банком.',
-    questions: [
-      { q: '¿Hacia dónde se gira en el semáforo?', opts: ['A la izquierda', 'A la derecha', 'Todo recto', 'Hacia atrás'], correct: 0, exp: '«gire a la izquierda» — поверните налево' },
-      { q: '¿Dónde está el ayuntamiento?', opts: ['A la derecha, al lado del banco', 'A la izquierda', 'Enfrente del semáforo', 'Al lado del colegio'], correct: 0, exp: '«a su derecha, al lado del banco» — справа, рядом с банком' },
-      { q: '¿Cuántos metros hay que ir recto primero?', opts: ['200 metros', '100 metros', '300 metros', '500 metros'], correct: 0, exp: '«todo recto... durante doscientos metros» — 200 метров прямо' },
+      { q: 'Combien coûte la formule ?', opts: ['15 euros', '50 euros', '13 euros', '5 euros'], correct: 0, exp: '«une formule à quinze euros»' },
+      { q: 'Avant quelle heure faut-il arriver ?', opts: ['12h30', '13h', '12h', '11h30'], correct: 0, exp: '«avant midi et demi» — до 12:30' },
+      { q: 'Pourquoi Julien arrive plus tard ?', opts: ['Il a une réunion', 'Il est malade', 'Il déjeune ailleurs', 'Il travaille à distance'], correct: 0, exp: '«il a une réunion avant»' },
     ]
   },
 ];

@@ -187,10 +187,17 @@ let teachState = { module: null, cards: [], currentCard: 0 };
 // ============================================================
 // PERSISTENCE
 // ============================================================
+
+// Ключ localStorage французского кабинета (см. миграцию со старого ключа ниже).
+const STATE_KEY = 'izifrench-state-v1';
+
 async function loadState() {
   // Сначала загружаем из localStorage как fallback
   try {
-    const saved = localStorage.getItem('greek-app-state-v2');
+    // Ключ localStorage. Раньше здесь стоял 'greek-app-state-v2' — хвост от
+    // греческого кабинета, из которого выросла линейка. Читаем и старый ключ,
+    // чтобы у тех, кто успел позаниматься, прогресс не обнулился.
+    const saved = localStorage.getItem(STATE_KEY) || localStorage.getItem('greek-app-state-v2');
     if (saved) state = { ...DEFAULT_STATE, ...JSON.parse(saved) };
   } catch (e) { state = { ...DEFAULT_STATE }; }
 
@@ -200,14 +207,14 @@ async function loadState() {
       const doc = await db.collection('users').doc(currentUser.uid).get();
       if (doc.exists) {
         state = { ...DEFAULT_STATE, ...doc.data() };
-        localStorage.setItem('greek-app-state-v2', JSON.stringify(state));
+        localStorage.setItem(STATE_KEY, JSON.stringify(state));
       }
     } catch (e) { console.error('Firestore load error:', e); }
   }
 }
 
 function saveState() {
-  localStorage.setItem('greek-app-state-v2', JSON.stringify(state));
+  localStorage.setItem(STATE_KEY, JSON.stringify(state));
   if (currentUser) {
     db.collection('users').doc(currentUser.uid)
       .set(state)
@@ -317,7 +324,7 @@ async function confirmDeleteAccount() {
     // (subscriptions/{email} не трогаем — платёжная запись, правила write:false)
 
     // 3. Локальный прогресс
-    try { localStorage.removeItem('greek-app-state-v2'); localStorage.removeItem('apnsToken'); } catch (e) {}
+    try { localStorage.removeItem(STATE_KEY); localStorage.removeItem('greek-app-state-v2'); localStorage.removeItem('apnsToken'); } catch (e) {}
     state = { ...DEFAULT_STATE };
 
     // 4. Сам аккаунт Firebase Auth (в конце — после удаления токен пропадёт)
@@ -354,7 +361,28 @@ function urlBase64ToUint8Array(base64) {
   return Uint8Array.from([...raw].map(c => c.charCodeAt(0)));
 }
 
+// APNs-токен iOS-приложения. native-bridge.js кладёт его в window.__APNS_TOKEN
+// и шлёт событие 'apnsToken'; здесь сохраняем под текущим пользователем.
+// Web Push в WKWebView не существует, поэтому на нативе идём только этим путём.
+async function saveApnsToken(token) {
+  if (!token || !currentUser) return;
+  try {
+    await db.collection('apns_subscriptions').doc(currentUser.uid).set({
+      token,
+      uid: currentUser.uid,
+      platform: 'ios',
+      updatedAt: new Date().toISOString()
+    });
+  } catch (e) { console.error('saveApnsToken error:', e); }
+}
+
 async function setupPushNotifications() {
+  // iOS-приложение: Web Push в WKWebView нет — регистрируемся на APNs через натив.
+  if (isNativeApp()) {
+    if (typeof window.__nativeRegisterPush === 'function') window.__nativeRegisterPush();
+    if (window.__APNS_TOKEN) saveApnsToken(window.__APNS_TOKEN); // токен мог прийти до входа
+    return;
+  }
   if (!('Notification' in window) || !('PushManager' in window)) return;
   if (Notification.permission === 'denied') return;
   try {
@@ -5065,3 +5093,7 @@ function answerListeningQ(trackIdx, qi, oi) {
     document.getElementById('listen-track-result').style.display = 'block';
   }
 }
+
+// native-bridge.js шлёт 'apnsToken', когда APNs выдал device-token — он может
+// прийти и до, и после входа, поэтому слушаем постоянно.
+window.addEventListener('apnsToken', function (e) { saveApnsToken(e.detail); });

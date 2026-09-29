@@ -152,9 +152,11 @@ const XP_PER_CORRECT = 10;
 const XP_PER_SCENARIO_STEP = 15;
 const EXERCISES_PER_LESSON = 10;
 
+// Французская раскладка диакритики. Порядок — по реальной частоте в data.js:
+// é 3002, è 282, à 181, ê 104, ç 98, î 84, û 60, ù 24, ô 24, â 7, ë 2.
 const GREEK_KEYS = [
-  ['á','é','í','ó','ú'],
-  ['ñ','ü'],
+  ['é','è','ê','à','ç'],
+  ['î','ô','û','ù','â','ë','ï','ü'],
 ];
 
 const PRONOUNS = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];

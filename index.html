@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#000091">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="IziFrench">
@@ -255,6 +255,10 @@
         <span class="nav-icon">📝</span>
         <span class="nav-label">Блог</span>
       </button>
+      <button class="nav-btn" onclick="showScenarios()">
+        <span class="nav-icon">🎭</span>
+        <span class="nav-label">Сценарии</span>
+      </button>
       <button class="nav-btn nav-btn-exam nav-btn-wide" onclick="showExamPrep()">
         <span class="nav-icon">🎓</span>
         <span class="nav-label">Подготовка к экзамену</span>
@@ -262,10 +266,6 @@
       <button class="nav-btn nav-btn-speech nav-btn-wide" onclick="showSpeechTraining()">
         <span class="nav-icon">🎤</span>
         <span class="nav-label">Тренировка речи</span>
-      </button>
-      <button class="nav-btn" onclick="showScenarios()">
-        <span class="nav-icon">🎭</span>
-        <span class="nav-label">Сценарии</span>
       </button>
     </div>
 
@@ -287,7 +287,7 @@
       <span class="weak-lesson-arrow">→</span>
     </button>
     <button class="support-btn" onclick="showSupportForm()">💬 Написать в поддержку</button>
-    <button class="support-btn" onclick="showPwaGuide()" style="margin-top:0">📲 Установить как приложение</button>
+    <button class="support-btn js-pwa-install" onclick="showPwaGuide()" style="margin-top:0">📲 Установить как приложение</button>
   </div>
 
   <!-- ==================== PWA GUIDE MODAL ==================== -->

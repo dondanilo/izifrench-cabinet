@@ -259,6 +259,10 @@
         <span class="nav-icon">🎭</span>
         <span class="nav-label">Сценарии</span>
       </button>
+      <button class="nav-btn nav-btn-premium nav-btn-wide" onclick="showPaywall()">
+        <span class="nav-icon">💎</span>
+        <span class="nav-label">Premium — оформить подписку</span>
+      </button>
       <button class="nav-btn nav-btn-exam nav-btn-wide" onclick="showExamPrep()">
         <span class="nav-icon">🎓</span>
         <span class="nav-label">Подготовка к экзамену</span>
@@ -842,6 +846,12 @@
           <div class="settings-stat-label">слов выучено</div>
         </div>
       </div>
+    </div>
+
+    <!-- Подписка: точка входа на пейволл обязана быть доступна всегда.
+         Гайдлайн 2.1(b) — ревьюер не смог найти покупки в билде 3. -->
+    <div class="settings-section">
+      <button class="btn-primary" id="settings-sub-btn" onclick="showPaywall()">Оформить подписку</button>
     </div>
 
     <!-- Sign out -->

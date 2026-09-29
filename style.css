@@ -2207,6 +2207,8 @@ body {
 
 /* ===================== EXAM BUTTON ===================== */
 .nav-btn-exam { border-color: #9B59B6 !important; }
+.nav-btn-premium { border-color: var(--primary) !important; background: rgba(0,0,145,0.04); }
+.nav-btn-premium .nav-label { color: var(--primary); }
 .nav-btn-exam .nav-icon { color: #9B59B6; }
 
 /* ===================== TEACH PHASE ===================== */

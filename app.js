@@ -1445,8 +1445,12 @@ function updateGuestUi() {
   if (avatarBtn) avatarBtn.style.display = isGuest ? 'none' : 'inline-flex';
   const pwSignout = document.getElementById('paywall-signout-btn');
   if (pwSignout) pwSignout.style.display = isGuest ? 'none' : '';
+  // «Не сейчас» показываем ВСЕГДА, не только гостю. На пейволл попадают только
+  // добровольно (кнопка Premium, «Оформить подписку» в настройках, CTA пробной
+  // модалки) — вошедший без подписки иначе оказывался в тупике, где единственный
+  // выход — «Выйти из аккаунта». Гайдлайн 2.1(b): ревьюер обязан уметь вернуться.
   const skip = document.getElementById('paywall-skip-btn');
-  if (skip) skip.style.display = isGuest ? 'block' : 'none';
+  if (skip) skip.style.display = 'block';
 }
 
 const FC_BATCH = 10; // пауза «продолжим/хватит» каждые 10 слов
